@@ -1,4 +1,5 @@
 .DS_Store
+.recommenders/
 
 target/
 pom.xml.tag
