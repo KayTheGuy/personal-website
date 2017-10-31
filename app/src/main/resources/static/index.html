@@ -10,7 +10,7 @@
 <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-<link rel="stylesheet" href="./mdl/material.css">
+<link rel="stylesheet" href="./mdl/material.min.css">
 <link rel="stylesheet" href="./css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script src="./mdl/material.min.js"></script>
@@ -20,24 +20,23 @@
 
 <body>
 	<div class="body-container mdl-layout mdl-js-layout">
-		<header class="mdl-layout__header mdl-layout__header--transparent">
+		<header class="mdl-layout__header mdl-layout__header--transparent mdl-layout--large-screen-only">
 			<div class="mdl-layout__header-row mdl-shadow--4dp" >
 				<!-- Title -->
-				<span class="mdl-layout-title">Title</span>
+				<span class="mdl-layout-title">Projects</span>
 				<!-- Add spacer, to align navigation to the right -->
 				<div class="mdl-layout-spacer"></div>
 				<!-- Navigation -->
 				<nav class="mdl-navigation">
 					<a class="mdl-navigation__link" href="/">Home</a> 
-					<a class="mdl-navigation__link" href="">Projects</a> 
 					<a id="academics" class="mdl-navigation__link" href="/academics">Academics</a>
-					<a class="mdl-navigation__link" href="/">Resume</a> 
-					<a class="mdl-navigation__link" href="/">Contact</a>
+					<a id="resume" class="mdl-navigation__link" href="/resume">Resume</a> 
+					<a id="contact" class="mdl-navigation__link" href="/contact">Contact</a>
 				</nav>
 			</div>
 		</header>
 		<div class="mdl-layout__drawer">
-			<span class="mdl-layout-title">Title</span>
+			<span class="mdl-layout-title">Projects</span>
 			<nav class="mdl-navigation">
 				<a class="mdl-navigation__link" href="">Link</a> 
 				<a class="mdl-navigation__link" href="">Link</a> 
@@ -54,12 +53,12 @@
 			<div class="mdl-mini-footer__middle-section">
 				<div class="mdl-logo mdl-footer-github-logo">
 					<a href="https://github.com/kayhandehghani/PersonalWebSite"
-						role="button" title="GitHub"> <img src="../img/github-logo.svg"
-						alt="Smiley face" height="32" width="32">
+					   role="button" title="GitHub"> <img src="../img/github-logo.svg"
+					   alt="Smiley face" height="32" width="32">
 					</a>
 				</div>
 				<ul class="mdl-mini-footer__link-list">
-					<li><a href="#">Help</a></li>
+					<li><a id="spinnerTest" href="#">Help</a></li>
 					<li><a href="#">Privacy and Terms</a></li>
 					<li><a href="#">User Agreement</a></li>
 				</ul>
