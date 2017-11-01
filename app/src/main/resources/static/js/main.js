@@ -18,13 +18,13 @@ function showSpinner() {
 
 
 $(document).ready(function() {
-	// requesting academics page
-	$('#academics').click(function(e) {
-		e.preventDefault();
-		xhr_get('/academics').done(function(data) {
-			$('#mainContent').append(data);
-		});
-	});
+//	// requesting academics page
+//	$('#academics').click(function(e) {
+//		e.preventDefault();
+//		xhr_get('/academics').done(function(data) {
+//			$('#mainContent').append(data);
+//		});
+//	});
 	
 	// requesting resume file
 	$('#resume').click(function(e) {

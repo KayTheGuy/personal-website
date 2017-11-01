@@ -1,14 +1,14 @@
 body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  background: #34495e;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  	background: #4e4b53;
+}
+
+.mdl-layout__header {
+	background-image: url("/img/g2.gif");
 }
 
 .body-container {
 	min-width: 800px;
-}
-
-.mdl-mini-footer{
-  background: #2c3e50;
 }
 
 #mainContent {
@@ -17,11 +17,11 @@ body {
 }
 
 .mdl-data-table {
-	background-color: #2c3e50;
+	background-color: #4e4b53;
 	color: white;
 }
 
-td:hover {
+.td-row:hover {
 	color: black;
 }
 
@@ -30,6 +30,7 @@ a {
 }
 
 .mdl-mini-footer {
+    background: #4e4b53;
 	color: white;
 }
 
@@ -48,4 +49,29 @@ a {
     transform: translate(-50%, -50%);
   	width: 800px; 
   	height: 800px;
+}
+
+.honor-card {
+  	width: 200px;
+  	height: 80px;
+  	background: #4e4b53; 
+}
+
+.honor-card > .mdl-card__title {
+  background: url('/img/cup.png');
+}
+
+
+
+
+.demo-card-wide.mdl-card {
+  width: 512px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('/img/g1.gif') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
 }
