@@ -1,5 +1,82 @@
-<embed 
-	id="pdf-viewer" class="mdl-shadow--16dp"
-	src="/files/KayhanDehghani.pdf" alt="pdf" 
-	pluginspage="http://www.adobe.com/products/acrobat/readstep2.html"
->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="My personal website">
+<meta name="keywords" content="Kayhan Dehghani">
+<meta name="author" content="Kayhan Dehghani">
+<title>Kayhan Dehghani</title>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link rel="stylesheet" href="/mdl/material.min.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="/mdl/material.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/main.js" defer></script>
+</head>
+
+<body>
+	<div class="body-container mdl-layout mdl-js-layout">
+		<!--  Header -->
+		<header
+			class="mdl-layout__header mdl-layout__header--transparent mdl-layout--large-screen-only">
+			<div class="mdl-layout__header-row mdl-shadow--4dp">
+				<!-- Title -->
+				<span class="mdl-layout-title">Projects</span>
+				<!-- Add spacer, to align navigation to the right -->
+				<div class="mdl-layout-spacer"></div>
+				<!-- Navigation -->
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="/">Home</a> <a id="academics"
+						class="mdl-navigation__link" href="/academics">Academics</a> <a
+						id="resume" class="mdl-navigation__link" href="/resume">Resume</a>
+					<a id="contact" class="mdl-navigation__link" href="/contact">Contact</a>
+				</nav>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">Projects</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" href="">Link</a> <a
+					class="mdl-navigation__link" href="">Link</a> <a
+					class="mdl-navigation__link" href="">Link</a> <a
+					class="mdl-navigation__link" href="">Link</a>
+			</nav>
+		</div>
+
+		<!--  Main content -->
+		<main class="mdl-layout__content">
+
+		<div id="wall_1" class="image">
+		<embed id="pdf-viewer" class="mdl-shadow--16dp"
+				src="/files/KayhanDehghani.pdf" alt="pdf"
+				pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+		</div>
+		</main>
+
+		<!--  Footer -->
+		<footer class="mdl-mini-footer mdl-layout__header-row">
+			<div class="mdl-mini-footer__middle-section">
+				<div class="mdl-logo mdl-footer-github-logo">
+					<a href="https://github.com/kayhandehghani/PersonalWebSite"
+						role="button" title="GitHub"> <img
+						src="../img/github-logo.svg" alt="Smiley face" height="32"
+						width="32">
+					</a>
+				</div>
+				<ul class="mdl-mini-footer__link-list">
+					<li><a id="spinnerTest" href="#">Help</a></li>
+					<li><a href="#">Privacy and Terms</a></li>
+					<li><a href="#">User Agreement</a></li>
+				</ul>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

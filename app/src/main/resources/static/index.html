@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 <meta charset="utf-8">
@@ -10,27 +10,30 @@
 <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-<link rel="stylesheet" href="./mdl/material.min.css">
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="/mdl/material.min.css">
+<link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<script src="./mdl/material.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./js/main.js" defer></script>
+<script src="/mdl/material.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/main.js" defer></script>
 </head>
 
 <body>
 	<div class="body-container mdl-layout mdl-js-layout">
-		<header class="mdl-layout__header mdl-layout__header--transparent mdl-layout--large-screen-only">
-			<div class="mdl-layout__header-row mdl-shadow--4dp" >
+		<!--  Header -->
+		<header
+			class="mdl-layout__header mdl-layout__header--transparent mdl-layout--large-screen-only">
+			<div class="mdl-layout__header-row mdl-shadow--4dp">
 				<!-- Title -->
 				<span class="mdl-layout-title">Projects</span>
 				<!-- Add spacer, to align navigation to the right -->
 				<div class="mdl-layout-spacer"></div>
 				<!-- Navigation -->
 				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="/">Home</a> 
-					<a id="academics" class="mdl-navigation__link" href="/academics">Academics</a>
-					<a id="resume" class="mdl-navigation__link" href="/resume">Resume</a> 
+					<a class="mdl-navigation__link" href="/">Home</a> <a id="academics"
+						class="mdl-navigation__link" href="/academics">Academics</a> <a
+						id="resume" class="mdl-navigation__link" href="/resume">Resume</a>
 					<a id="contact" class="mdl-navigation__link" href="/contact">Contact</a>
 				</nav>
 			</div>
@@ -38,43 +41,48 @@
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Projects</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="">Link</a> 
-				<a class="mdl-navigation__link" href="">Link</a> 
-				<a class="mdl-navigation__link" href="">Link</a> 
-				<a class="mdl-navigation__link" href="">Link</a>
+				<a class="mdl-navigation__link" href="">Link</a> <a
+					class="mdl-navigation__link" href="">Link</a> <a
+					class="mdl-navigation__link" href="">Link</a> <a
+					class="mdl-navigation__link" href="">Link</a>
 			</nav>
 		</div>
+
+		<!--  Main content -->
 		<main class="mdl-layout__content">
-    		<div id="mainContent" class="page-content">
-    		<!--  =========================================== main content goes here --> 
-					<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-					  <div class="mdl-card__title">
-					    <h2 class="mdl-card__title-text">Welcome</h2>
-					  </div>
-					  <div class="mdl-card__supporting-text">
-					    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					    Mauris sagittis pellentesque lacus eleifend lacinia...
-					  </div>
-					  <div class="mdl-card__actions mdl-card--border">
-					    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-					      Get Started
-					    </a>
-					  </div>
-					  <div class="mdl-card__menu">
-					    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-					      <i class="material-icons">share</i>
-					    </button>
-					  </div>
-					</div>
-    		<!--  =========================================== main content goes here --> 
-    		</div>
-  		</main>
-		 <footer class="mdl-mini-footer mdl-layout__header-row">
+
+		<div id="wall_1" class="image"></div>
+		<div id="content_1" class="content">
+			<h1>Welcome</h1>
+			<p id="emagee">
+				<img src="/img/g1.gif" alt="" height="400" width="300" />
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Vestibulum vestibulum libero ut lorem rutrum ultrices. Quisque
+				vehicula, ligula eu aliquet imperdiet, nisi libero tristique arcu,
+				arcu ultrices.</p>
+		</div>
+		<div id="wall_2" class="image"></div>
+		<div id="content_2" class="content">
+			<h1>Courses</h1>
+		</div>
+		<div id="wall_3" class="image"></div>
+		<div id="content_3" class="content">
+
+			<h1>University</h1>
+			<p></p>
+
+		</div>
+		</main>
+
+		<!--  Footer -->
+		<footer class="mdl-mini-footer mdl-layout__header-row">
 			<div class="mdl-mini-footer__middle-section">
 				<div class="mdl-logo mdl-footer-github-logo">
 					<a href="https://github.com/kayhandehghani/PersonalWebSite"
-					   role="button" title="GitHub"> <img src="../img/github-logo.svg"
-					   alt="Smiley face" height="32" width="32">
+						role="button" title="GitHub"> <img
+						src="../img/github-logo.svg" alt="Smiley face" height="32"
+						width="32">
 					</a>
 				</div>
 				<ul class="mdl-mini-footer__link-list">

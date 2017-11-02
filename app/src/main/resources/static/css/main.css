@@ -1,24 +1,34 @@
 body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  	background: #4e4b53;
+  	background: white;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	font-style: normal;
+	margin: 0;
+    padding: 0;
 }
 
 .mdl-layout__header {
-	background-image: url("/img/g2.gif");
 }
 
-.body-container {
-	min-width: 800px;
+.mdl-layout__drawer-button {
+ 	color: black;
 }
 
-#mainContent {
-	padding: 100px;
-	min-width: 850px;
+.mdl-layout__header-row .mdl-navigation__link {
+ 	color: black;
+}
+
+.mdl-layout-title {
+ 	color: black;
 }
 
 .mdl-data-table {
-	background-color: #4e4b53;
-	color: white;
+	background-color: white;
+	color: black;
+	margin: auto;
 }
 
 .td-row:hover {
@@ -26,12 +36,13 @@ body {
 }
 
 a {
-	color: white;
+	color: black;
 }
 
 .mdl-mini-footer {
-    background: #4e4b53;
-	color: white;
+    background: white;
+	color: black;
+	height: 40px;
 }
 
 #spinner {
@@ -40,8 +51,8 @@ a {
 }
 
 #pdf-viewer {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	position: absolute;
     top: 50%;
     left: 50%;
@@ -51,27 +62,77 @@ a {
   	height: 800px;
 }
 
-.honor-card {
-  	width: 200px;
-  	height: 80px;
-  	background: #4e4b53; 
+.image {
+    height: 350px;
+    width: 100%;
+    background: #55e6c5;
+    z-index: 1;
 }
 
-.honor-card > .mdl-card__title {
-  background: url('/img/cup.png');
+.content {
+    height: 600px;
+    width:100%;
+    z-index: 2;
+    color:black;
+    background: white;
+}
+
+.content p {
+    font-size:16px;
+    color: black;
+    font-weight: 300;
+    margin: 30px 120px;
+}
+
+.content h1 {
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+    margin-left: 60px;
+    margin-top: 0px;
+}
+
+h1::first-letter {
+    font-size: 50px;
+    font-weight: 500;
+    color: #e45514;
 }
 
 
-
-
-.demo-card-wide.mdl-card {
-  width: 512px;
+#awards_wall {
+    background: url(/img/g1.gif);
+    background-attachment: fixed;
 }
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('/img/g1.gif') center / cover;
+#awards_content {
+    height: 600px;
 }
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
+
+#courses_wall {
+    background: url(/img/g2.gif);
+    background-attachment: fixed;
+}
+
+#courses_content {
+    height: 900px;
+}
+
+#university_wall {
+    background: url(/img/g1.gif);
+    background-attachment: fixed;
+}
+
+#emagee{
+    float: left;
+}
+
+.paper-container {
+    position: relative;
+    text-align: center;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
