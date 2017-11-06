@@ -17,4 +17,9 @@ public class StaticPagesController {
 	public String getResume() {
 		return "_resume.html";
 	}
+	
+	@RequestMapping(value = "/image-editor", method = RequestMethod.GET)
+	public String getImgEditor() {
+		return "_img.html";
+	}
 }

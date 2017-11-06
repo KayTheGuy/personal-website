@@ -12,11 +12,12 @@
     <![endif]-->
 <link rel="stylesheet" href="/mdl/material.min.css">
 <link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script src="/mdl/material.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/main.js" defer></script>
+<script src="/js/imageEditor.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
 				<div class="mdl-layout-spacer"></div>
 				<!-- Navigation -->
 				<nav class="mdl-navigation">
-					 <a id="academics"
+					<a class="mdl-navigation__link" href="/">Home</a> <a id="academics"
 						class="mdl-navigation__link" href="/academics">Academics</a> <a
 						id="resume" class="mdl-navigation__link" href="/resume">Resume</a>
 					<a id="contact" class="mdl-navigation__link" href="/contact">Contact</a>
@@ -41,8 +42,7 @@
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Projects</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="/image-editor">Image Editor</a> <a
-					class="mdl-navigation__link" href="">Link</a> <a
+				<a class="mdl-navigation__link" href="">Link</a> <a
 					class="mdl-navigation__link" href="">Link</a> <a
 					class="mdl-navigation__link" href="">Link</a>
 			</nav>
@@ -50,28 +50,29 @@
 
 		<!--  Main content -->
 		<main class="mdl-layout__content">
-
-		<div id="wall_1" class="image"></div>
 		<div id="content_1" class="content">
-			<h1><span class="first-letter">W</span>elcome</h1>
-			<p id="emagee">
-				<img src="/img/g1.gif" alt="" height="400" width="300" />
-			</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Vestibulum vestibulum libero ut lorem rutrum ultrices. Quisque
-				vehicula, ligula eu aliquet imperdiet, nisi libero tristique arcu,
-				arcu ultrices.</p>
-		</div>
-		<div id="wall_2" class="image"></div>
-		<div id="content_2" class="content">
-			<h1><span class="first-letter">C</span>ourses</h1>
-		</div>
-		<div id="wall_3" class="image"></div>
-		<div id="content_3" class="content">
-
-			<h1><span class="first-letter">U</span>niversity</h1>
-			<p></p>
-
+			<h1>
+				<span class="first-letter">I</span>mage <span class="first-letter">E</span>ditor
+			</h1>
+			<div class="centered mdl-shadow--16dp">
+				<img id="image-preview" src="/img/g1.gif" alt="image preview" height="400" width="500" />
+				<p id="image-label" class="mdl-badge"></p>
+			</div>
+			<div id="upload-form">
+				<form id="image-form" enctype="multipart/form-data" action="/upload/image"
+					method="post">
+					<input id="image-picker" name="uploadedImg" type="file" accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" />
+					<input id="image-upload" type="submit" value="Press" style="display: none;">
+				</form>
+				<button id="image-button"
+					class="mdl-button mdl-js-button mdl-button--fab mdl-js">
+					<i class="material-icons">add</i>
+				</button>
+				<button id="upload-button" hidden="true"
+					class="mdl-button mdl-js-button mdl-button--fab mdl-js">
+					<i class="material-icons">file_upload</i>
+				</button>
+			</div>
 		</div>
 		</main>
 
