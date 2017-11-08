@@ -10,13 +10,6 @@ function xhr_get(url) {
 	});
 }
 
-function showSpinner() {
-	var spinner = "<div id=\"spinner\" class=\"mdl-spinner mdl-js-spinner is-active \"></div>";
-	$('#mainContent').empty().append(spinner);
-	componentHandler.upgradeElement($('#spinner').get(0));
-}
-
-
 $(document).ready(function() {
 
 });

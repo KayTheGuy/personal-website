@@ -1,12 +1,15 @@
 package com.kayhandehghani.personalwebsite.controllers;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Base64;
 
+import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
@@ -16,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
 
 @RestController
 public class FilesController {
@@ -39,10 +44,18 @@ public class FilesController {
 	
 	@PostMapping("/upload/image")
 	public void editImage(@RequestParam("uploadedImg") MultipartFile file, HttpServletResponse response) throws IOException {
-//		InputStream is = request.getInputStream();
-		System.out.println(file.getName());
-		System.out.println(file.getSize());
-//		System.out.println(is.);
+		String contentType = file.getContentType();
+		String imgType = contentType.substring(contentType.indexOf("/") + 1).toUpperCase();
+		if(imgType.equals("PNG") || imgType.equals("JPG") || imgType.equals("JPEG") || imgType.equals("JPEG-2000")) {
+			BufferedImage orig = ImageIO.read(file.getInputStream());
+			BufferedImage gray = ImageUtility.makeGrayScale(orig);
+			ImageIO.write(gray, imgType, Base64.getEncoder().wrap(response.getOutputStream())); // encode to base64 string
+			response.setContentType(file.getContentType());
+			response.setContentLengthLong(file.getSize());
+			response.flushBuffer();
+		} else { // report type error
+			response.setStatus(HttpServletResponse.SC_NOT_ACCEPTABLE);
+		}
 	}
 		
 }
