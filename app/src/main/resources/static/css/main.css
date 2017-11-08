@@ -150,3 +150,7 @@ a {
 	margin: 0;
 	text-align: left;
 }
+
+#control-panel {
+	font-size: 14px;
+}

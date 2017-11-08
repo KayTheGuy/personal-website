@@ -13,9 +13,9 @@ function showPreview(form) {
 				var width = this.width;
 
 				// resize large images
-				if (height > 600 || width > 600) {
+				if (height > 800 || width > 800) {
 					var max = Math.max(height, width);
-					var downSizeRatio = Math.round(max / 600);
+					var downSizeRatio = Math.round(max / 800);
 					imageElement.attr('height', height / downSizeRatio);
 					imageElement.attr('width', width / downSizeRatio);
 				} else {
@@ -54,7 +54,6 @@ $(document).ready(function() {
 	$('#image-picker').change(function() {
 		// TODO: create multiple buttons for different edits instead
 		showPreview(this);
-		$('#upload-button').removeAttr('hidden');
 	});
 
 	// trigger file upload
@@ -78,7 +77,7 @@ $(document).ready(function() {
 		}).always(function() {
 			$('#img-spinner').empty();
 		}).fail(function(message) {
-			showError(message);
+			showError("Code "+ message.responseJSON.status + ": " +message.responseJSON.message);
 		});
 	}));
 });

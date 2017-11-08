@@ -54,7 +54,7 @@ public class FilesController {
 			response.setContentLengthLong(file.getSize());
 			response.flushBuffer();
 		} else { // report type error
-			response.setStatus(HttpServletResponse.SC_NOT_ACCEPTABLE);
+			response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE, "Invalid image format!");
 		}
 	}
 		
