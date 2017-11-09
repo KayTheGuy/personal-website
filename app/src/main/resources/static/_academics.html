@@ -25,7 +25,7 @@
 		<!--  Header -->
 		<header
 			class="mdl-layout__header mdl-layout__header--transparent mdl-layout--large-screen-only">
-			<div class="mdl-layout__header-row mdl-shadow--4dp">
+			<div class="mdl-layout__header-row mdl-shadow--2dp">
 				<!-- Title -->
 				<span class="mdl-layout-title">Projects</span>
 				<!-- Add spacer, to align navigation to the right -->
@@ -46,53 +46,56 @@
 					class="mdl-navigation__link" href="">Link</a> <a
 					class="mdl-navigation__link" href="">Link</a>
 			</nav>
+			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Pages</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link " href="/">Home</a> <a
+					class="mdl-navigation__link " href="/academics">Academics</a> <a
+					class="mdl-navigation__link " href="/resume">Resume</a> <a
+					class="mdl-navigation__link " href="/contact">Contact</a>
+			</nav>
 		</div>
 
 		<!--  Main content -->
 		<main class="mdl-layout__content">
 
-		<div id="awards_wall" class="image"></div>
-		<div id="awards_content" class="content">
+		<div id="awards-wall" class="image"></div>
+		<div id="awards-content" class="content">
 			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--12col">
+				<div class="mdl-cell mdl-cell--12-col">
 					<h1>
 						<span class="first-letter">A</span>wards
 					</h1>
 				</div>
 			</div>
+			<div id="whole-awards" class="mdl-grid">
+				<div class="mdl-cell mdl-cell--2-col"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<h4 id="presidents-text">
+						President's <br> Honor Roll<br>
+					</h4>
+					<p id="presidents-time">
+						Summer 2017<br>&nbsp;&nbsp;&nbsp;and<br> Fall 2014
+					</p>
+				</div>
+				<div class="mdl-cell mdl-cell--4-col">Test</div>
+			</div>
 			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--6-col">
-					<div class="image-below">
-						<img src="/img/paper.png" alt="president's honor roll">
-						<div class="centered">
-							<h4>
-								President's <br> Honor Roll<br>
-							</h4>
-							<p>
-								Summer 2017<br>And<br> Fall 2014
-							</p>
-						</div>
-					</div>
+				<div class="mdl-cell mdl-cell--4-col"></div>
+				<div class="mdl-cell mdl-cell--4-col">
+					<h4 id="deans-text">
+						Dean's <br> Honor Roll<br>
+					</h4>
+					<p id="deans-time">
+						Fall 2014 <br>&nbsp;&nbsp;&nbsp;to<br> Summer 2016
+					</p>
 				</div>
-				<div class="mdl-cell mdl-cell--6-col">
-					<div class="image-below">
-						<img src="/img/paper.png" alt="president's honor roll">
-						<div class="centered">
-							<h4>
-								Dean's <br> Honor Roll <br>
-							</h4>
-							<p>
-								From <br>Fall 2014 <br>To<br> Summer 2016
-							</p>
-						</div>
-					</div>
-				</div>
+				<div class="mdl-cell mdl-cell--4-col">Test</div>
 			</div>
 		</div>
-		<div id="courses_wall" class="image"></div>
-		<div id="courses_content" class="content">
+		<div id="courses-wall" class="image"></div>
+		<div id="courses-content" class="content">
 			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--12col">
+				<div class="mdl-cell mdl-cell--12-col">
 					<h1>
 						<span class="first-letter">C</span>ourses
 					</h1>
@@ -101,7 +104,7 @@
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--6-col">
 					<table
-						class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--16dp">
+						class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
 						<thead>
 							<tr>
 								<th class="mdl-data-table__cell--non-numeric">Course</th>
@@ -214,7 +217,7 @@
 				</div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<table
-						class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--16dp">
+						class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
 						<thead>
 							<tr>
 								<th class="mdl-data-table__cell--non-numeric">Course</th>
@@ -324,13 +327,16 @@
 				</div>
 			</div>
 		</div>
-		<div id="university_wall" class="image"></div>
-		<div id="university_content" class="content">
+		<div id="university-wall" class="image"></div>
+		<div id="university-content" class="content">
 			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--12col">
+				<div class="mdl-cell mdl-cell--12-col">
 					<h1>
 						<span class="first-letter">U</span>niversity
 					</h1>
+				</div>
+				<div class="mdl-cell mdl-cell--12-col">
+					<div id="map" class="mdl-shadow--2dp"></div>
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,36 @@
+@keyframes animatedBackgroundBottomTop {
+	to { background-position: 0 100%; }
+}
+
+@keyframes slideInColor {
+	from {
+  		margin-left: 100%;
+  		width: 300%;
+  		color: #e45514; 
+	}
+
+	to {
+  		margin-left: 0%;
+  		width: 100%;
+  		color: #black;
+	}
+}
+@keyframes showUp {
+	from {
+  		color: #fff;
+	}
+
+	to {
+  		color: #black;
+	}
+}
+
+.container {
+    -webkit-transform: translateZ(0);
+}
+
 body {
-  	background: white;
+	background: white;
 }
 
 * {
@@ -7,24 +38,24 @@ body {
 	font-weight: 100;
 	font-style: normal;
 	margin: 0;
-    padding: 0;
+	padding: 0;
 }
 
 .mdl-layout__drawer-button {
- 	color: black;
+	color: #e45514;
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
- 	color: black;
+	color: black;
 	font-weight: 100;
 }
 
 .mdl-layout-title {
- 	color: black;
+	color: black;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
- 	color: black;
+	color: black;
 	font-weight: 100;
 }
 
@@ -43,7 +74,7 @@ a {
 }
 
 .mdl-mini-footer {
-    background: white;
+	background: white;
 	color: black;
 	height: 40px;
 }
@@ -53,93 +84,90 @@ a {
 }
 
 #spinner {
-  	width: 80px;
-  	height: 80px;
+	width: 80px;
+	height: 80px;
 }
 
 #pdf-viewer {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-  	width: 800px; 
-  	height: 800px;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	width: 800px;
+	height: 800px;
 }
 
 .image {
-    height: 350px;
-    width: 100%;
-    background: #55e6c5;
-    z-index: 1;
+	height: 200px;
+	width: 100%;
+	background: #55e6c5;
+	z-index: -1;
+	background-position: 0px 0px;
+	background-repeat: repeat-y;
+	animation: animatedBackgroundBottomTop 60s linear infinite;
+}
+
+#awards-wall, #courses-wall, #university-wall{
+	background: url('/img/2.jpg');
+}
+
+#wall_1, #wall_2, #wall_3{
+	background: url('/img/1.jpg');
 }
 
 .content {
-    height: 600px;
-    width:100%;
-    color:black;
-    background: white;
-    z-index: 2;
+	height: 600px;
+	width: 100%;
+	color: black;
+	background: white;
+	z-index: 1;
 }
 
 .content p {
-    font-size:16px;
-    color: black;
-    font-weight: 100;
-    margin: 30px 120px;
+	font-size: 16px;
+	color: black;
+	font-weight: 100;
+	margin: 30px 120px;
 }
 
 .content h1 {
-    font-size: 20px;
-    color: black;
-    font-weight: 500;
+	font-size: 20px;
+	color: black;
+	font-weight: 500;
+	margin: 4px;
 }
 
 .first-letter {
-    font-size: 30px;
-    font-weight: 500;
-    color: #e45514;
+	font-size: 26px;
+	font-weight: 500;
+	color: #e45514;
 }
 
-
-#awards_wall {
-    background: url(/img/g1.gif);
-    background-attachment: fixed;
-}
-#awards_content {
-    height: 600px;
+#awards-content {
+	height: 600px;
 }
 
-#courses_wall {
-    background: url(/img/g2.gif);
-    background-attachment: fixed;
+#courses-content {
+	height: 900px;
 }
 
-#courses_content {
-    height: 900px;
-}
-
-#university_wall {
-    background: url(/img/bike.gif);
-    background-attachment: fixed;
-}
-
-#emagee{
-    float: left;
+#emagee {
+	float: left;
 }
 
 .image-below {
-    position: relative;
-    text-align: center;
+	position: relative;
+	text-align: center;
 }
 
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 #image-label {
@@ -154,3 +182,14 @@ a {
 .mdl-snackbar {
 	bottom: 40px; /* same as footer height */
 }
+
+#presidents-text, #deans-text {
+	animation: slideInColor 4s;
+	animation-iteration-count: 1;
+}
+
+#presidents-time, #deans-time {
+	animation: showUp 8s ease;
+	animation-iteration-count: 1;
+}
+
