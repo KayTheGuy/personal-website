@@ -26,6 +26,7 @@ function showPreview(form) {
 			img.src = _URL.createObjectURL(file); // trigger the img.onload
 			imageElement.attr('src', e.target.result);
 			$('#image-label').text(file.name);
+			
 		};
 		reader.readAsDataURL(file);
 	}
@@ -46,6 +47,7 @@ function showError(message) {
 }
 
 $(document).ready(function() {
+	var filterID = 0;
 	// trigger file picker
 	$('#image-button').click(function() {
 		$('#image-picker').click();
@@ -56,8 +58,15 @@ $(document).ready(function() {
 		showPreview(this);
 	});
 
-	// trigger file upload
-	$('#upload-button').click(function() {
+	// trigger black and white effect
+	$('#bw').click(function() {
+		filterID = 0;
+		$('#image-upload').click();
+	});
+	
+	// trigger invert effect
+	$('#invert').click(function() {
+		filterID = 1;
 		$('#image-upload').click();
 	});
 
@@ -65,7 +74,7 @@ $(document).ready(function() {
 	$('#image-form').on('submit', (function(e) {
 		e.preventDefault();
 		$.ajax({
-			url : '/upload/image',
+			url : '/filter/' + filterID,
 			enctype : 'multipart/form-data',
 			type : 'POST',
 			processData : false, // important: it is raw image and shouldn't be converted to String
@@ -80,4 +89,9 @@ $(document).ready(function() {
 			showError("Code "+ message.responseJSON.status + ": " +message.responseJSON.message);
 		});
 	}));
+	
+	// undo applied filter
+	$('#undo').click(function() {
+		$('#image-picker').change();
+	});
 });

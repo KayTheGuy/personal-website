@@ -13,6 +13,7 @@ import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,14 +43,14 @@ public class FilesController {
 		response.flushBuffer();
 	}
 	
-	@PostMapping("/upload/image")
-	public void editImage(@RequestParam("uploadedImg") MultipartFile file, HttpServletResponse response) throws IOException {
+	@PostMapping("/filter/{filterID}")
+	public void editImage(@PathVariable(value="filterID") String id, @RequestParam("uploadedImg") MultipartFile file, HttpServletResponse response) throws IOException {
 		String contentType = file.getContentType();
 		String imgType = contentType.substring(contentType.indexOf("/") + 1).toUpperCase();
 		if(imgType.equals("PNG") || imgType.equals("JPG") || imgType.equals("JPEG") || imgType.equals("JPEG-2000")) {
 			BufferedImage orig = ImageIO.read(file.getInputStream());
-			BufferedImage gray = ImageUtility.makeGrayScale(orig);
-			ImageIO.write(gray, imgType, Base64.getEncoder().wrap(response.getOutputStream())); // encode to base64 string
+			BufferedImage filtered = ImageUtility.applyFilter(orig, Integer.parseInt(id));
+			ImageIO.write(filtered, imgType, Base64.getEncoder().wrap(response.getOutputStream())); // encode to base64 string
 			response.setContentType(file.getContentType());
 			response.setContentLengthLong(file.getSize());
 			response.flushBuffer();

@@ -92,15 +92,13 @@ a {
 }
 
 .content h1 {
-    font-size: 30px;
+    font-size: 20px;
     color: black;
     font-weight: 500;
-    margin-left: 60px;
-    margin-top: 0px;
 }
 
 .first-letter {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 500;
     color: #e45514;
 }
@@ -146,11 +144,13 @@ a {
 
 #image-label {
 	font-size: 9px;
-	padding: 0;
-	margin: 0;
-	text-align: left;
 }
 
 #control-panel {
-	font-size: 14px;
+	font-size: 18px;
+	font-weight: 300;
+}
+
+.mdl-snackbar {
+	bottom: 40px; /* same as footer height */
 }
