@@ -2,26 +2,43 @@
 	to { background-position: 0 100%; }
 }
 
-@keyframes slideInColor {
+@keyframes slideInColorLeft {
 	from {
   		margin-left: 100%;
   		width: 300%;
-  		color: #e45514; 
+  		color: #e45514;
+  		opacity: 0.5;
 	}
 
 	to {
   		margin-left: 0%;
   		width: 100%;
-  		color: #black;
+  		color: black;
+  		opacity: 1;
 	}
 }
+
 @keyframes showUp {
 	from {
   		color: #fff;
+  		visibility: hidden;
 	}
 
 	to {
-  		color: #black;
+  		color: black;
+  		visibility: visible;
+	}
+}
+
+@keyframes borderBox {
+	from {
+  		border-left: 1px solid white;
+  		margin-top: 100px;
+	}
+
+	to {
+  		border-left: 1px solid #e45514;
+  		margin-top: 30px;
 	}
 }
 
@@ -146,6 +163,20 @@ a {
 	color: #e45514;
 }
 
+#image-button, #effects-menu-lower-left{
+	font-weight: 100;
+	border: 1px solid #e45514;
+}
+
+#left-course-table-box {
+	border-right: 1px solid #e45514;
+}
+
+.mdl-snackbar {
+	font-weight: 100;
+	background: #e45514;
+}
+
 #awards-content {
 	height: 600px;
 }
@@ -154,8 +185,9 @@ a {
 	height: 900px;
 }
 
-#emagee {
+#myself {
 	float: left;
+	margin: 30px;
 }
 
 .image-below {
@@ -170,26 +202,90 @@ a {
 	transform: translate(-50%, -50%);
 }
 
+#img-edit-content {
+	margin-top: 60px;
+}
+
 #image-label {
-	font-size: 9px;
+	font-size: 11px;
 }
 
 #control-panel {
 	font-size: 18px;
-	font-weight: 300;
+	font-weight: 100;
+}
+
+.mdl-menu__item {
+	font-weight: 100;
 }
 
 .mdl-snackbar {
 	bottom: 40px; /* same as footer height */
 }
 
-#presidents-text, #deans-text {
-	animation: slideInColor 4s;
-	animation-iteration-count: 1;
+#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
+	animation: slideInColorLeft 2s;
 }
 
-#presidents-time, #deans-time {
-	animation: showUp 8s ease;
-	animation-iteration-count: 1;
+#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text, h5{
+	font-weight: 100;
 }
 
+#presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
+	animation: showUp 0.5s ease;
+	animation-delay: 2.2s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.academic-box {
+	border-bottom: 1px solid #e45514;
+	animation: showUp 2.5s ease;
+	animation-delay: 2.5s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+#intro-1 {
+	animation: showUp 2.5s ease;
+}
+#intro-2 {
+	animation: showUp 2.5s ease;
+	animation-delay: 2.5s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+#intro-3 {
+	animation: showUp 2.5s ease;
+	animation-delay: 5s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.contact-box {
+	animation: borderBox 3s ease;
+	animation-fill-mode: forwards;
+}
+
+#contact-1 {
+	animation: showUp 2.5s ease;
+}
+#contact-2 {
+	animation: showUp 2.5s ease;
+	animation-delay: 0.4s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+#contact-3 {
+	animation: showUp 2.5s ease;
+	animation-delay: 0.8s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+#contact-4 {
+	animation: showUp 2.5s ease;
+	animation-delay: 1.2s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}

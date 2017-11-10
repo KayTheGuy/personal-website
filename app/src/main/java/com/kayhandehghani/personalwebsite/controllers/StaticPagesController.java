@@ -18,8 +18,14 @@ public class StaticPagesController {
 		return "_resume.html";
 	}
 	
+	@RequestMapping(value = "/contact", method = RequestMethod.GET)
+	public String getContact() {
+		return "_contact.html";
+	}
+	
 	@RequestMapping(value = "/image-editor", method = RequestMethod.GET)
 	public String getImgEditor() {
 		return "_img.html";
 	}
+	
 }

@@ -57,14 +57,12 @@
 
 		<!--  Main content -->
 		<main class="mdl-layout__content">
-		<div id="content_1" class="content">
+		<div id="img-edit-content" class="content">
 			<div id="control-panel" class="mdl-grid">
-				<div class="mdl-cell mdl-cell--11-col">
+				<div class="mdl-cell mdl-cell--1-col"></div>
+				<div class="mdl-cell mdl-cell--9-col">
 					<button id="effects-menu-lower-left"
-						class="mdl-button mdl-js-button mdl-button--icon">
-						<i class="material-icons">more_vert</i>
-					</button>
-					<span>Filters</span>
+						class="mdl-button mdl-js-button mdl-js-button">Filters</button>
 					<ul
 						class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 						for="effects-menu-lower-left">
@@ -74,19 +72,17 @@
 					</ul>
 				</div>
 				<div class="mdl-cell mdl-cell--1-col">
-					<div id="upload-form">
-						<form id="image-form" enctype="multipart/form-data"
-							action="/upload/image" method="post">
-							<input id="image-picker" name="uploadedImg" type="file"
-								accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
-								id="image-upload" type="submit" value="Press"
-								style="display: none;">
-						</form>
-						<button id="image-button"
-							class="mdl-button mdl-js-button mdl-button--fab mdl-js">
-							<i class="material-icons">add</i>
-						</button>
-					</div>
+					<button id="image-button" class="mdl-button mdl-js-button">
+						Select</button>
+				</div>
+				<div id="upload-form" class="mdl-cell mdl-cell--1-col">
+					<form id="image-form" enctype="multipart/form-data"
+						action="/upload/image" method="post">
+						<input id="image-picker" name="uploadedImg" type="file"
+							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
+							id="image-upload" type="submit" value="Press"
+							style="display: none;">
+					</form>
 				</div>
 			</div>
 
