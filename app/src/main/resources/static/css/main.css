@@ -30,15 +30,33 @@
 	}
 }
 
-@keyframes borderBox {
+@keyframes contactAnim {
 	from {
-  		border-left: 1px solid white;
-  		margin-top: 100px;
+  		margin-top: 10%;
 	}
 
 	to {
-  		border-left: 1px solid #e45514;
-  		margin-top: 30px;
+  		margin-top: 100%x;
+	}
+}
+
+@keyframes headAnim {
+	0% {
+  		opacity: 0;
+	}
+
+	30% {
+  		opacity: 1;
+  		-ms-transform: rotate(-20deg); /* IE 9 */
+        -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+        transform: rotate(-20deg);
+	}
+	
+	50% {
+  		opacity: 0;
+	}
+	100% {
+  		opacity: 0;
 	}
 }
 
@@ -163,13 +181,9 @@ a {
 	color: #e45514;
 }
 
-#image-button, #effects-menu-lower-left{
+#image-button, #effects-menu-lower-left, #contatct-form-button{
 	font-weight: 100;
 	border: 1px solid #e45514;
-}
-
-#left-course-table-box {
-	border-right: 1px solid #e45514;
 }
 
 .mdl-snackbar {
@@ -262,30 +276,61 @@ a {
 	visibility: hidden;
 }
 
-.contact-box {
-	animation: borderBox 3s ease;
+#contact-whole {
+	animation: contactAnim 2s ease;
 	animation-fill-mode: forwards;
 }
 
-#contact-1 {
-	animation: showUp 2.5s ease;
-}
-#contact-2 {
-	animation: showUp 2.5s ease;
-	animation-delay: 0.4s;
+#contact-1, #contact-form-name, #right-of-contact-form, #left-of-awards, #right-of-awards {
+	animation: showUp 2s ease;
+	animation-delay: 2.4s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
-#contact-3 {
-	animation: showUp 2.5s ease;
-	animation-delay: 0.8s;
+#contact-2, #contact-form-email {
+	animation: showUp 2s ease;
+	animation-delay: 2.8s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+#contact-3, #contact-form-subject {
+	animation: showUp 3s linear;
+	animation-delay: 3.4s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 
-#contact-4 {
-	animation: showUp 2.5s ease;
-	animation-delay: 1.2s;
+#contact-4, #contact-form-message {
+	animation: showUp 4s linear;
+	animation-delay: 3.9s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
+
+#right-of-contact-form {
+	background: url('/img/tree1.png');
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+
+#center-top-of-awards, #center-bottom-of-awards {
+	background: url('/img/abs1.png');
+	background-size: 90%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	animation: headAnim 10s ease infinite;
+}
+
+#center-bottom-of-awards {
+	-ms-transform: rotate(20deg); /* IE 9 */
+        -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
+        transform: rotate(20deg);
+}
+
+#center-top-of-awards {
+	-ms-transform: rotate(-4deg); /* IE 9 */
+        -webkit-transform: rotate(-40deg); /* Chrome, Safari, Opera */
+        transform: rotate(-40deg);
+}
+

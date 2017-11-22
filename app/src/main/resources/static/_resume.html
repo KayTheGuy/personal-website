@@ -60,11 +60,17 @@
 		<div class="mdl-grid">
 			<div class="mdl-cell mdl-cell--12-col">
 				<div id="resume_content" class="content">
-					<embed id="pdf-viewer" class="mdl-shadow--2dp"
-						src="/files/KayhanDehghani.pdf" alt="pdf"
-						pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+					<iframe id="pdf-viewer" src="/files/KayhanDehghani.pdf"
+						class="mdl-shadow--2dp" frameborder="0" scrolling="yes">
+						<p>It appears your web browser doesn't support iframes.</p>
+					</iframe>
 				</div>
 			</div>
+		</div>
+		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
+			class="mdl-snackbar mdl-js-snackbar">
+			<div class="mdl-snackbar__text"></div>
+			<button type="button" class="mdl-snackbar__action"></button>
 		</div>
 		</main>
 

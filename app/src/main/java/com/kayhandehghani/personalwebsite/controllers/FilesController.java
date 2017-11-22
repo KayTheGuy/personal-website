@@ -13,14 +13,19 @@ import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.kayhandehghani.personalwebsite.models.ContactMessage;
+import com.kayhandehghani.personalwebsite.models.EmptyJsonResponse;
 import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
 
 @RestController
@@ -58,5 +63,13 @@ public class FilesController {
 			response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE, "Invalid image format!");
 		}
 	}
-		
+	
+	@PostMapping("/message")
+	public ResponseEntity getMessage(@RequestBody ContactMessage message) {
+		System.out.println(message.getName());
+		System.out.println(message.getEmail());
+		System.out.println(message.getSubject());
+		System.out.println(message.getMessage());
+		return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.OK);
+	}
 }

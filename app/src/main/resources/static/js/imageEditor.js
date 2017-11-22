@@ -38,14 +38,6 @@ function showSpinner() {
 	componentHandler.upgradeElement($('#spinner').get(0));
 }
 
-function showError(message) {
-	var snackbarContainer = document.querySelector('.mdl-js-snackbar');
-	var data = {
-		message : message,
-	};
-	snackbarContainer.MaterialSnackbar.showSnackbar(data);
-}
-
 $(document).ready(function() {
 	var filterID = 0;
 	// trigger file picker
@@ -86,7 +78,7 @@ $(document).ready(function() {
 		}).always(function() {
 			$('#img-spinner').empty();
 		}).fail(function(message) {
-			showError("Code "+ message.responseJSON.status + ": " +message.responseJSON.message);
+			showError("Code "+ message.responseJSON.status + ": " + message.responseJSON.message);
 		});
 	}));
 	
