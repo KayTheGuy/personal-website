@@ -8,7 +8,7 @@ function checkEmailInput(email) {
 		$('#contact-form-email').css({ borderBottom: '1px solid #e45514'});
 		return false;
 	}
-	$('#contact-form-email').css({ borderBottom: '1px solid #fff'});
+	$('#contact-form-email').css({ borderBottom: '1px solid rgba(0,0,0,.12)'});
 	return true;
 }
 
@@ -18,7 +18,7 @@ function checkEmptyInput(input, field) {
 		$('#contact-form-' + field).css({ borderBottom: '1px solid #e45514'});
 		return false;
 	}
-	$('#contact-form-' + field).css({ borderBottom: '1px solid #fff'});
+	$('#contact-form-' + field).css({ borderBottom: '1px solid rgba(0,0,0,.12)'});
 	return true;
 }
 
@@ -27,6 +27,10 @@ function checkAllInputs() {
 			checkEmptyInput($('#contact-form-name').val(), 'name') &&
 			checkEmptyInput($('#contact-form-subject').val(), 'subject') &&
 			checkEmptyInput($('#contact-form-message').val(), 'message');
+}
+
+function showSpinner() {
+	$('#modalSpinner').css({visibility: 'visible'});
 }
 
 $(document).ready(function() {
@@ -58,6 +62,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		
 		if(checkAllInputs()) {
+			// get form data
 			var formData = {
 				name: $('#contact-form-name').val(),	
 				email: $('#contact-form-email').val(),	
@@ -71,9 +76,25 @@ $(document).ready(function() {
 				contentType: "application/json",
 				dataType: 'json',
 				data: JSON.stringify(formData),
-//			beforeSend : showSpinner()
+			beforeSend : showSpinner()
 			}).done(function() {
-				alert('message sent');
+				// hide spinner
+				$('#modalSpinner').css({visibility: 'hidden'});
+				
+				// show message
+				var modal = document.getElementById('contactSentMsg');
+				modal.style.visibility = "visible";
+				
+				$('#modalClose').on('click', function() {
+				    modal.style.visibility = "hidden";
+				});
+				
+				$(document).on('click touchstart', function(event) {
+				    if (event.target == modal) {
+				        modal.style.visibility = "hidden";
+				    }
+				});
+				
 			}).always(function() {
 				// always
 			}).fail(function(message) {

@@ -10,6 +10,8 @@ import java.nio.file.Paths;
 import java.util.Base64;
 
 import javax.imageio.ImageIO;
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
@@ -26,6 +28,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.kayhandehghani.personalwebsite.models.ContactMessage;
 import com.kayhandehghani.personalwebsite.models.EmptyJsonResponse;
+import com.kayhandehghani.personalwebsite.utilities.EmailUtility;
 import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
 
 @RestController
@@ -66,10 +69,14 @@ public class FilesController {
 	
 	@PostMapping("/message")
 	public ResponseEntity getMessage(@RequestBody ContactMessage message) {
-		System.out.println(message.getName());
-		System.out.println(message.getEmail());
-		System.out.println(message.getSubject());
-		System.out.println(message.getMessage());
+		try {
+			EmailUtility.sendEmail(message.getName(), message.getSubject(), message.getEmail(), message.getMessage());
+		} catch (AddressException e) {
+			System.out.println(e.getMessage());
+		} catch (MessagingException e) {
+			System.out.println(e.getMessage());
+		}
+		
 		return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.OK);
 	}
 }

@@ -1,6 +1,9 @@
 .DS_Store
 .recommenders/
 
+# email class with private info
+*EmailUtility*
+
 target/
 pom.xml.tag
 pom.xml.releaseBackup
