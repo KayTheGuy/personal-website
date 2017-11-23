@@ -56,21 +56,18 @@
 		</div>
 
 		<!--  Main content -->
-		<main class="mdl-layout__content">
-		<div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--12-col">
-				<div id="resume_content" class="content">
-					<iframe id="pdf-viewer" src="/files/KayhanDehghani.pdf"
-						class="mdl-shadow--2dp" frameborder="0" scrolling="yes">
-						<p>It appears your web browser doesn't support iframes.</p>
-					</iframe>
+		<main id="main_content_resume" class="mdl-layout__content">
+		<div id="modalSpinner" class="modal">
+			<div class="modal-content-spinner">
+				<div id="spinner" class="mdl-spinner mdl-js-spinner is-active">
 				</div>
 			</div>
 		</div>
-		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
-			class="mdl-snackbar mdl-js-snackbar">
-			<div class="mdl-snackbar__text"></div>
-			<button type="button" class="mdl-snackbar__action"></button>
+		<div id="resume-content" class="pdf-content">
+			<iframe id="pdf-viewer"
+				src="https://drive.google.com/file/d/0B1aLbOjHX-mcb1E5NDROcXJNeUk/preview">
+				<p>It appears your web browser doesn't support iframes.</p>
+			</iframe>
 		</div>
 		</main>
 
