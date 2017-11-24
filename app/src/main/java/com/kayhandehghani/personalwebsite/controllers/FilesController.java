@@ -26,8 +26,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.kayhandehghani.personalwebsite.models.ContactMessage;
-import com.kayhandehghani.personalwebsite.models.EmptyJsonResponse;
+import com.kayhandehghani.personalwebsite.models.entity.ContactMessage;
+import com.kayhandehghani.personalwebsite.models.entity.EmptyJsonResponse;
 import com.kayhandehghani.personalwebsite.utilities.EmailUtility;
 import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
 

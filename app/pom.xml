@@ -88,6 +88,7 @@
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<version>6.1.0.jre8</version>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
