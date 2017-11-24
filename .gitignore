@@ -3,6 +3,7 @@
 
 # email class with private info
 *EmailUtility*
+*app/src/main/resources/application.properties*
 
 target/
 pom.xml.tag

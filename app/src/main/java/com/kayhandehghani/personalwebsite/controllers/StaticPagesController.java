@@ -28,4 +28,9 @@ public class StaticPagesController {
 		return "_img.html";
 	}
 	
+	@RequestMapping(value = "/image-album", method = RequestMethod.GET)
+	public String getImageAlbum() {
+		return "_album.html";
+	}
+	
 }
