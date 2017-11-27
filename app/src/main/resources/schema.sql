@@ -5,9 +5,9 @@ DROP TABLE IF EXISTS dbo.IMAGE;
 
 --Create a new database called personal_website.  
 CREATE TABLE IMAGE (
-	ImageID bigint PRIMARY KEY NOT NULL,  
-    ImageName varchar(200),  
-    ImageType varchar(20) NOT NULL,  
-    ImagePath varchar(200) NOT NULL,
-    ImageSize bigint NOT NULL
+	image_id bigint PRIMARY KEY NOT NULL IDENTITY (1,1),  
+    image_name varchar(200) NOT NULL,  
+    image_type varchar(20) NOT NULL,  
+    image_path varchar(200) NOT NULL,
+    image_size bigint  NOT NULL
 );

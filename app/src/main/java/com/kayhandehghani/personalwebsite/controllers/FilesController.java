@@ -7,7 +7,9 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 import javax.imageio.ImageIO;
 import javax.mail.MessagingException;
@@ -15,6 +17,7 @@ import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,8 +29,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.kayhandehghani.personalwebsite.models.entity.ContactMessage;
-import com.kayhandehghani.personalwebsite.models.entity.EmptyJsonResponse;
+import com.kayhandehghani.personalwebsite.data.entity.ContactMessage;
+import com.kayhandehghani.personalwebsite.data.entity.EmptyJsonResponse;
+import com.kayhandehghani.personalwebsite.data.entity.Image;
+import com.kayhandehghani.personalwebsite.data.repository.ImageRepository;
 import com.kayhandehghani.personalwebsite.utilities.EmailUtility;
 import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
 
@@ -78,5 +83,15 @@ public class FilesController {
 		}
 		
 		return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.OK);
+	}
+	
+	@Autowired
+	ImageRepository repo;
+	@RequestMapping(value = "/album", method = RequestMethod.GET)
+	public List<Image> findAllImages() {
+		List<Image> images = new ArrayList<>();
+		Iterable<Image> results = repo.findAll();
+		results.forEach(img -> images.add(img));
+		return images;
 	}
 }

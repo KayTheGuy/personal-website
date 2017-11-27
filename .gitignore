@@ -4,6 +4,7 @@
 # email class with private info
 *EmailUtility*
 *app/src/main/resources/application.properties*
+*app/src/main/resources/static/files/album*
 
 target/
 pom.xml.tag

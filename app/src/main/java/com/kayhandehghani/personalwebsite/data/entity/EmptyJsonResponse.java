@@ -1,4 +1,4 @@
-package com.kayhandehghani.personalwebsite.models.entity;
+package com.kayhandehghani.personalwebsite.data.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 

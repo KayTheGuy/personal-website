@@ -1,4 +1,4 @@
-package com.kayhandehghani.personalwebsite.models.entity;
+package com.kayhandehghani.personalwebsite.data.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,16 +11,16 @@ import javax.persistence.Table;
 @Table(name="IMAGE")
 public class Image {
 	@Id
-	@Column(name="ImageID")
+	@Column(name="image_id")
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
-	@Column(name="ImageName")
+	@Column(name="image_name")
 	private String name;
-	@Column(name="ImageType")
+	@Column(name="image_type")
 	private String type;
-	@Column(name="ImagePath")
+	@Column(name="image_path")
 	private String path;
-	@Column(name="ImageSize")
+	@Column(name="image_size")
 	private long size;
 	
 	public long getId() {

@@ -1,4 +1,4 @@
-package com.kayhandehghani.personalwebsite.models.entity;
+package com.kayhandehghani.personalwebsite.data.entity;
 
 public class ContactMessage {
 	private String name;
