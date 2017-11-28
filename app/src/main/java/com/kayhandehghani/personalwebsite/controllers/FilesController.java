@@ -87,7 +87,7 @@ public class FilesController {
 	
 	@Autowired
 	ImageRepository repo;
-	@RequestMapping(value = "/album", method = RequestMethod.GET)
+	@RequestMapping(value = "/api/album", method = RequestMethod.GET)
 	public List<Image> findAllImages() {
 		List<Image> images = new ArrayList<>();
 		Iterable<Image> results = repo.findAll();

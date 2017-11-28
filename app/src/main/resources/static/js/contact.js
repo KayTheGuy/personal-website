@@ -99,7 +99,6 @@ $(document).ready(function() {
 				// always
 			}).fail(function(message) {
 				showError("Failed to send message. Please Try again." + message.responseText);
-				console.log(message);
 			});
 		} else {
 			showError(formErrMsg);
