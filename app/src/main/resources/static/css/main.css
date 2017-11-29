@@ -6,7 +6,7 @@
 	from {
   		margin-left: 100%;
   		width: 300%;
-  		color: #e45514;
+  		color: #00b5ec;
   		opacity: 0.5;
 	}
 
@@ -77,7 +77,7 @@ body {
 }
 
 .mdl-layout__drawer-button {
-	color: #e45514;
+	color: #00b5ec;
 }
 
 .mdl-layout__header-row .mdl-navigation__link {
@@ -186,17 +186,17 @@ a {
 .first-letter {
 	font-size: 26px;
 	font-weight: 500;
-	color: #e45514;
+	color: #00b5ec;
 }
 
 #image-button, #effects-menu-lower-left, #contatct-form-button{
 	font-weight: 100;
-	border: 1px solid #e45514;
+	border: 1px solid #00b5ec;
 }
 
 .mdl-snackbar {
 	font-weight: 100;
-	background: #e45514;
+	background: #00b5ec;
 }
 
 #awards-content {
@@ -261,7 +261,7 @@ a {
 }
 
 .academic-box {
-	border-bottom: 1px solid #e45514;
+	border-bottom: 1px solid #00b5ec;
 	animation: showUp 2.5s ease;
 	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
@@ -352,7 +352,7 @@ a {
     height: 100%; 
     overflow: auto; 
     background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0,0,0,0.7); 
 }
 
 .modal-content {
@@ -372,7 +372,7 @@ a {
 }
 
 .close {
-    color: #e45514;
+    color: #00b5ec;
     float: right;
     font-size: 24px;
     font-weight: 100;
@@ -408,20 +408,24 @@ a {
 }
 
 .album-img-middle {
-  transition: .6s ease;
+  transition: .5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
 }
 
 .album-img-text {
-  background-color: #e45514;
+  background-color: #00b5ec;
   color: white;
   font-size: 12px;
   font-weight: 100;
   min-width: 80px;
   padding: 5px 10px;
+}
+
+#album-map {
+   height: 400px;
+   width: 100%;
 }

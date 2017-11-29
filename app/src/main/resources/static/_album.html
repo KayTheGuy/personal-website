@@ -58,27 +58,36 @@
 
 		<!--  Main content -->
 		<main class="mdl-layout__content">
-		<div id="img-album-content">
-			
-		</div>
+		<div id="img-album-content"></div>
 		<!--  Error Message -->
 		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
 			class="mdl-snackbar mdl-js-snackbar">
 			<div class="mdl-snackbar__text"></div>
 			<button type="button" class="mdl-snackbar__action"></button>
 		</div>
-		
-		<!--  Modal -->
-		<div id="contactSentMsg" class="modal">
+
+		<!--  Modal Preview -->
+		<div id="image-prev-div" class="modal">
 			<div class="modal-content">
-				<span id="modalClose" class="close">&times;</span>
-				<img id="image-preview" src="/img/placeholder.png"
-							alt="image preview" height="500" width="500" />
-				<p>Here</p>
-				<p>Date</p>
+				<span id="modalClose" class="close">&times;</span> <img
+					id="image-preview" src="/img/placeholder.png" alt="image preview"
+					height="500" width="500" />
+				<p id="image-preview-location">Here</p>
+				<p id="image-preview-date">Date</p>
 			</div>
 		</div>
-		</main>
+
+		<!--  Modal Map -->
+		<div id="map-prev-div" class="modal">
+			<div class="modal-content">
+				<span id="modalClose" class="close">&times;</span>
+				<div id="album-map"></div>
+			</div>
+		</div>
+		<script async defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1Yi0gS4cRKIqc4aklEsRumc0TTVJG8Q&callback=initMap">
+    	</script> 
+    	</main>
 
 		<!--  Footer -->
 		<footer class="mdl-mini-footer mdl-layout__header-row">

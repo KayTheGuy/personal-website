@@ -1,5 +1,7 @@
 package com.kayhandehghani.personalwebsite.data.entity;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +24,12 @@ public class Image {
 	private String path;
 	@Column(name="image_size")
 	private long size;
+	@Column(name="image_lat")
+	private float lat;
+	@Column(name="image_lng")
+	private float lng;
+	@Column(name="image_date")
+	private Date date;
 	
 	public long getId() {
 		return id;
@@ -52,5 +60,23 @@ public class Image {
 	}
 	public void setSize(long size) {
 		this.size = size;
+	}
+	public float getLat() {
+		return lat;
+	}
+	public void setLat(int lat) {
+		this.lat = lat;
+	}
+	public float getLng() {
+		return lng;
+	}
+	public void setLng(int lng) {
+		this.lng = lng;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
 	}
 }
