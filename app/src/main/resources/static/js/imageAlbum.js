@@ -64,10 +64,10 @@ $(document).ready(function() {
 	// event handler for dynamically added elements
 	var imgModal = document.getElementById('image-prev-div');
 	$(document).on ("click", ".album-image", function () {
-		var imageElement = $('#image-preview');
+		var imageElement = $('#image-modal');
 		imageElement.attr('src', this.src);
-		$('#image-preview-location').html(this.alt);
-		$('#image-preview-date').html($(this).data('date'));
+		$('#image-modal-location').html(this.alt);
+		$('#image-modal-date').html($(this).data('date'));
 		imgModal.style.visibility = "visible";
     });
 	

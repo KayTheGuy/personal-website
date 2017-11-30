@@ -40,26 +40,6 @@
 	}
 }
 
-@keyframes headAnim {
-	0% {
-  		opacity: 0;
-	}
-
-	30% {
-  		opacity: 1;
-  		-ms-transform: rotate(-20deg); /* IE 9 */
-        -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
-        transform: rotate(-20deg);
-	}
-	
-	50% {
-  		opacity: 0;
-	}
-	100% {
-  		opacity: 0;
-	}
-}
-
 .container {
     -webkit-transform: translateZ(0);
 }
@@ -321,15 +301,6 @@ a {
 	background-repeat: no-repeat;
 }
 
-
-#center-top-of-awards, #center-bottom-of-awards {
-	background: url('/img/abs1.png');
-	background-size: 90%;
-	background-repeat: no-repeat;
-	opacity: 0;
-	animation: headAnim 10s ease infinite;
-}
-
 #center-bottom-of-awards {
 	-ms-transform: rotate(20deg); /* IE 9 */
     -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
@@ -357,10 +328,8 @@ a {
 
 .modal-content {
     background-color: white;
-    margin: 20% auto; 
-    padding: 20px;
-    border: 1px solid white;
-    width: 50%; 
+    margin: 4.5% auto; 
+    padding: 0px 40px 40px 40px;
 }
 
 .modal-content-spinner {
@@ -374,7 +343,7 @@ a {
 .close {
     color: #00b5ec;
     float: right;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 100;
 }
 
@@ -397,35 +366,66 @@ a {
 }
 
 .album-image {
-  display: block;
-  transition: .6s ease;
-  backface-visibility: hidden;
-  cursor:pointer;
+ 	display: block;
+ 	transition: .6s ease;
+ 	backface-visibility: hidden;
+ 	cursor:pointer;
 }
 
 .image-map {
-  cursor:pointer;
+ 	cursor:pointer;
+}
+
+#image-modal-container, #album-map {
+	height: 420px;
+	width: 100%;
+}
+
+#image-modal {
+	width: 100%;
 }
 
 .album-img-middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
 
 .album-img-text {
-  background-color: #00b5ec;
-  color: white;
-  font-size: 12px;
-  font-weight: 100;
-  min-width: 80px;
-  padding: 5px 10px;
+	background-color: #00b5ec;
+	color: white;
+	font-size: 12px;
+	font-weight: 100;
+	min-width: 80px;
+	padding: 5px 10px;
 }
 
-#album-map {
-   height: 400px;
-   width: 100%;
+#image-modal-location, #image-modal-date {
+	font-size: 12px;
+	font-weight: 100;
+}
+
+#image-modal-date {
+	float: right;
+}
+
+#image-modal-before {
+	color: #00b5ec;
+	float: left;
+	cursor: pointer;
+}
+
+#image-modal-next {
+	color: #00b5ec;
+	float: right;
+	cursor: pointer;
+}
+
+.done-icone {
+	color: #00b5ec;
+	font-size: 10px;
+	font-weight: 100;
 }

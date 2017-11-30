@@ -66,28 +66,59 @@
 			<button type="button" class="mdl-snackbar__action"></button>
 		</div>
 
-		<!--  Modal Preview -->
+		<!--  Modal Image -->
 		<div id="image-prev-div" class="modal">
 			<div class="modal-content">
-				<span id="modalClose" class="close">&times;</span> <img
-					id="image-preview" src="/img/placeholder.png" alt="image preview"
-					height="500" width="500" />
-				<p id="image-preview-location">Here</p>
-				<p id="image-preview-date">Date</p>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col">
+						<span class="close">&times;</span>
+					</div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--2-col"></div>
+					<div class="mdl-cell mdl-cell--8-col">
+						<i id="image-modal-before" class="material-icons">navigate_before</i>
+						<i id="image-modal-next" class="material-icons">navigate_next</i>
+					</div>
+					<div class="mdl-cell mdl-cell--2-col"></div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--2-col"></div>
+					<div class="mdl-cell mdl-cell--8-col">
+						<div id="image-modal-container">
+							<img id="image-modal" src="/img/placeholder.png"
+								alt="image preview" height="400" width="600" />
+						</div>
+						<p>
+							<span id="image-modal-location">&times;</span> 
+							<span id="image-modal-date">&times;</span>
+						</p>
+					</div>
+					<div class="mdl-cell mdl-cell--2-col"></div>
+				</div>
+
 			</div>
 		</div>
 
 		<!--  Modal Map -->
 		<div id="map-prev-div" class="modal">
 			<div class="modal-content">
-				<span id="modalClose" class="close">&times;</span>
-				<div id="album-map"></div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col">
+						<span class="close">&times;</span>
+					</div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--12-col">
+						<div id="album-map"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1Yi0gS4cRKIqc4aklEsRumc0TTVJG8Q&callback=initMap">
-    	</script> 
-    	</main>
+			
+		</script> </main>
 
 		<!--  Footer -->
 		<footer class="mdl-mini-footer mdl-layout__header-row">
