@@ -6,7 +6,7 @@ function initMap() {
 
 function adjustMap(lat, lng) {
 	var uluru = {lat: lat, lng: lng};
-	mapHelper(14, uluru);
+	mapHelper(12, uluru);
 }
 
 function mapHelper(zoom, uluru) {
@@ -20,7 +20,31 @@ function mapHelper(zoom, uluru) {
 	});
 }
 
+function setModalImage(imgId) {
+	var nextID = imgId + 1, prevID = imgId - 1;
+	// only show next and previous buttons if there is an image next or previous
+	if($('#' + prevID).length) {
+		$('#image-modal-before').prop('disabled', false);
+	} else {
+		$('#image-modal-before').prop('disabled', true);
+	}
+	
+	if($('#' + nextID).length) {
+		$('#image-modal-next').prop('disabled', false);
+	} else {
+		$('#image-modal-next').prop('disabled', true);
+	}
+	
+	var selectedImg = $('#' + imgId);
+	var imageElement = $('#image-modal');
+	imageElement.attr('src', selectedImg.attr('src'));
+	$('#image-modal-location').html(selectedImg.attr('alt'));
+	$('#image-modal-date').html(selectedImg.data('date'));
+}
+
 $(document).ready(function() {
+	var firstImgId, lastImgId, currentImgID;
+	
 	// get album images
 	$.ajax({
 		url : '/api/album',
@@ -28,11 +52,10 @@ $(document).ready(function() {
 		contentType: "application/json",
 		dataType: 'json',
 	}).done(function(imgList) {
-		var currentPic;
-		var currentPicDiv;
-		var currentSpaceDiv;
-		var currentMiddleDiv;
-		var currentRow;
+		firstImgId = 1; // in database id is identity(1,1)
+		lastImgId = imgList.length;
+		
+		var currentPic, currentPicDiv, currentSpaceDiv, currentMiddleDiv, currentRow;
 		var currentRowIndx = 0;
 		for(var i = 0; i < imgList.length; i++) {
 			var album = $('#img-album-content');
@@ -42,8 +65,8 @@ $(document).ready(function() {
 				currentRow.append(currentSpaceDiv);
 				album.append(currentRow);
 			} 
-			currentPicDiv = $("<div>", {id: "img" + i, "class": "album-image-div mdl-cell mdl-cell--3-col"});
-			currentPic = $("<img>", {src: imgList[i].path, "class": "album-image", alt: imgList[i].name, "data-date": imgList[i].date, height: "150", width: "225"});
+			currentPicDiv = $("<div>", {"class": "album-image-div mdl-cell mdl-cell--3-col"});
+			currentPic = $("<img>", {id: imgList[i].id, src: imgList[i].path, "class": "album-image", alt: imgList[i].name, "data-date": imgList[i].date, height: "150", width: "225"});
 			currentMiddleDiv = "<div class=\"album-img-middle\"><div class=\"album-img-text\"><i data-lat=\"" + imgList[i].lat + "\" data-lng=\"" + imgList[i].lng + "\" class=\"image-map material-icons\">place</i>" 
 								+  imgList[i].name
 								+ "</div></div>";
@@ -64,12 +87,19 @@ $(document).ready(function() {
 	// event handler for dynamically added elements
 	var imgModal = document.getElementById('image-prev-div');
 	$(document).on ("click", ".album-image", function () {
-		var imageElement = $('#image-modal');
-		imageElement.attr('src', this.src);
-		$('#image-modal-location').html(this.alt);
-		$('#image-modal-date').html($(this).data('date'));
+		currentImgID = parseInt(this.id);
+		setModalImage(currentImgID);
 		imgModal.style.visibility = "visible";
     });
+	
+	// navigate through album
+	$('#image-modal-before').on('click', function() {
+		setModalImage(currentImgID--);
+	});
+	
+	$('#image-modal-next').on('click', function() {
+		setModalImage(currentImgID++);
+	});
 	
 	var mapModal = document.getElementById('map-prev-div');
 	$(document).on ("click", ".image-map", function () {

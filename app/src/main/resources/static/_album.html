@@ -44,7 +44,8 @@
 			<span class="mdl-layout-title">Projects</span>
 			<nav class="mdl-navigation">
 				<a class="mdl-navigation__link" href="/image-editor">Image
-					Editor</a> <a class="mdl-navigation__link" href="">Link</a> <a
+					Filters</a> <a class="mdl-navigation__link" href="#">Image Album</a> <a
+					class="mdl-navigation__link" href="">Link</a> <a
 					class="mdl-navigation__link" href="">Link</a>
 			</nav>
 			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Pages</span>
@@ -77,21 +78,23 @@
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--2-col"></div>
 					<div class="mdl-cell mdl-cell--8-col">
-						<i id="image-modal-before" class="material-icons">navigate_before</i>
-						<i id="image-modal-next" class="material-icons">navigate_next</i>
+						<button id="image-modal-before"
+							class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+							Previous</button>
+						<button id="image-modal-next"
+							class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+							Next</button>
 					</div>
 					<div class="mdl-cell mdl-cell--2-col"></div>
 				</div>
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--2-col"></div>
 					<div class="mdl-cell mdl-cell--8-col">
-						<div id="image-modal-container">
-							<img id="image-modal" src="/img/placeholder.png"
-								alt="image preview" height="400" width="600" />
-						</div>
+						<img id="image-modal" src="/img/placeholder.png"
+							alt="image preview" />
 						<p>
-							<span id="image-modal-location">&times;</span> 
-							<span id="image-modal-date">&times;</span>
+							<span id="image-modal-location">&times;</span> <span
+								id="image-modal-date">&times;</span>
 						</p>
 					</div>
 					<div class="mdl-cell mdl-cell--2-col"></div>

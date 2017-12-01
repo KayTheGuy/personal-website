@@ -170,8 +170,10 @@ a {
 }
 
 #image-button, #effects-menu-lower-left, #contatct-form-button{
+	color: #00b5ec;
+	font-size: 12px;
 	font-weight: 100;
-	border: 1px solid #00b5ec;
+	background: white;
 }
 
 .mdl-snackbar {
@@ -376,13 +378,14 @@ a {
  	cursor:pointer;
 }
 
-#image-modal-container, #album-map {
-	height: 420px;
+#album-map {
+	height: 500px;
 	width: 100%;
 }
 
 #image-modal {
 	width: 100%;
+	height: auto;
 }
 
 .album-img-middle {
@@ -413,15 +416,19 @@ a {
 }
 
 #image-modal-before {
-	color: #00b5ec;
 	float: left;
-	cursor: pointer;
+	color: #00b5ec;
+	font-size: 12px;
+	font-weight: 100;
+	background: white;
 }
 
 #image-modal-next {
-	color: #00b5ec;
 	float: right;
-	cursor: pointer;
+	color: #00b5ec;
+	font-size: 12px;
+	font-weight: 100;
+	background: white;
 }
 
 .done-icone {
