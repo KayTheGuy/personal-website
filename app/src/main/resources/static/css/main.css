@@ -63,15 +63,19 @@ body {
 .mdl-layout__header-row .mdl-navigation__link {
 	color: black;
 	font-weight: 100;
+	font-size: 14px;
 }
 
 .mdl-layout-title {
-	color: black;
+	font-weight: 100;
+	font-size: 16px;
+	color: #00b5ec;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 	color: black;
 	font-weight: 100;
+	font-size: 14px;
 }
 
 .mdl-data-table {
@@ -122,7 +126,7 @@ a {
 	z-index: -1;
 	background-position: 0px 0px;
 	background-repeat: repeat-y;
-	animation: animatedBackgroundBottomTop 60s linear infinite;
+	animation: animatedBackgroundBottomTop 40s linear infinite;
 }
 
 #awards-wall, #courses-wall, #university-wall{
@@ -150,26 +154,26 @@ a {
 }
 
 .content p {
-	font-size: 16px;
+	font-size: 14px;
 	color: black;
 	font-weight: 100;
 	margin: 30px 120px;
 }
 
 .content h1 {
-	font-size: 20px;
+	font-size: 16px;
 	color: black;
-	font-weight: 500;
+	font-weight: 100;
 	margin: 4px;
 }
 
 .first-letter {
-	font-size: 26px;
-	font-weight: 500;
+	font-size: 20px;
+	font-weight: 100;
 	color: #00b5ec;
 }
 
-#image-button, #effects-menu-lower-left, #contatct-form-button{
+#image-button, #effects-menu-lower-left, #contatct-form-button {
 	color: #00b5ec;
 	font-size: 12px;
 	font-weight: 100;
@@ -211,11 +215,11 @@ a {
 }
 
 #image-label {
-	font-size: 11px;
+	font-size: 10px;
 }
 
-#control-panel {
-	font-size: 18px;
+#control-panel, .mdl-textfield__input {
+	font-size: 14px;
 	font-weight: 100;
 }
 
@@ -231,8 +235,9 @@ a {
 	animation: slideInColorLeft 2s;
 }
 
-#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text, h5{
+#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text, h5, h6{
 	font-weight: 100;
+	font-size: 16px;
 }
 
 #presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
@@ -329,9 +334,10 @@ a {
 }
 
 .modal-content {
-    background-color: white;
+    background-color: rgba(0,0,0,0);
     margin: 4.5% auto; 
     padding: 0px 40px 40px 40px;
+    color: white;
 }
 
 .modal-content-spinner {
@@ -345,7 +351,7 @@ a {
 .close {
     color: #00b5ec;
     float: right;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 100;
 }
 
@@ -400,14 +406,14 @@ a {
 .album-img-text {
 	background-color: #00b5ec;
 	color: white;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: 100;
 	min-width: 80px;
 	padding: 5px 10px;
 }
 
 #image-modal-location, #image-modal-date {
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: 100;
 }
 
