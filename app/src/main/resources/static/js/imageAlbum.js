@@ -1,3 +1,5 @@
+var imgList; // global object to hold image information
+
 // google map functions
 function initMap() {
 	var uluru = {lat: 49.2827, lng: -123.1207};
@@ -39,15 +41,82 @@ function setModalImage(imgId) {
 		$('#image-modal-next').prop('disabled', true);
 	}
 	
-	var selectedImg = $('#' + imgId);
+	var selectedImg = imgList[imgId - 1];
 	var imageElement = $('#image-modal');
-	imageElement.attr('src', selectedImg.attr('src'));
-	$('#image-modal-location').html(selectedImg.attr('alt'));
-	$('#image-modal-date').html(selectedImg.data('date'));
+	var locationIcon = "<i data-lat=\"" + selectedImg.lat + "\" data-lng=\"" + selectedImg.lng + "\" class=\"image-map material-icons\">place</i>"
+	imageElement.attr('src', selectedImg.path); 
+	$('#image-modal-location').html(locationIcon + selectedImg.name);
+	$('#image-modal-date').html(selectedImg.date);
+}
+
+var numOfLoad = 0;
+var loading = true;
+function renderImages() {
+	var currentPic, currentPicDiv, currentSpaceDiv, currentMiddleDiv, currentRow;
+	var numOfImagePerLoad = 21; // must be multiple of 3 to work properly
+	startID = numOfLoad * numOfImagePerLoad;
+	endID = Math.min(startID + numOfImagePerLoad, imgList.length);
+	numOfLoad++;
+	console.log(numOfLoad);
+	for(var i = startID; i < endID; i++) {
+		var album = $('#img-album-content');
+		if(i % 3 === 0) {
+			currentRow = $("<div>", {"class": "mdl-grid"});
+			currentSpaceDiv = $("<div>", {"class": "mdl-cell mdl-cell--2-col"});
+			currentRow.append(currentSpaceDiv);
+			album.append(currentRow);
+		} 
+		currentPicDiv = $("<div>", {"class": "album-image-div mdl-cell mdl-cell--3-col"});
+		currentPic = $("<img>", {id: imgList[i].id, src: imgList[i].path, "class": "album-image", alt: imgList[i].name, "data-date": imgList[i].date, height: "150", width: "225"});
+		currentMiddleDiv = "<div class=\"album-img-middle\"><div class=\"album-img-text\"><i data-lat=\"" + imgList[i].lat + "\" data-lng=\"" + imgList[i].lng + "\" class=\"image-map material-icons\">place</i>" 
+		+  imgList[i].name
+		+ "</div></div>";
+		currentPicDiv.append(currentPic);
+		currentPicDiv.append(currentMiddleDiv);
+		currentRow.append(currentPicDiv);
+		if(i % 3 === 2) {
+			currentSpaceDiv = $("<div>", {"class": "mdl-cell mdl-cell--1-col"});
+			currentRow.append(currentSpaceDiv);
+		}
+	}
+	// current loading is complete
+	loading = false;
+	// hide spinner
+	$('#spinner').css({visibility: 'hidden'});
+	
+	// all images loaded
+	if(endID === imgList.length) {
+		// remove scroll listener
+		$('#mainContent').scroll(function() {
+			// nothing
+		}); 
+		// remove spinner
+		$('#spinner').remove();
+	}
+}
+
+function dynamicImageLoad() {
+	var currentScroll = $(this)[0].scrollTop;
+	var maxScroll = $(this)[0].scrollHeight - $(this).height();
+    if(!loading && (currentScroll >= maxScroll - 200)) {
+    	// show spinner
+    	$('#spinner').css({visibility: 'visible'});
+    	// is loading: stop scroll listener from doing anything
+    	loading = true;
+    	renderImages();
+    }
 }
 
 $(document).ready(function() {
-	var firstImgId, lastImgId, currentImgID;
+	// dynamically load more images on scroll
+	$('#mainContent').on(
+		{
+			'touchmove': dynamicImageLoad,
+			'scroll': dynamicImageLoad
+		}
+	);
+	
+	var currentImgID;
 	
 	// get album images
 	$.ajax({
@@ -55,33 +124,11 @@ $(document).ready(function() {
 		type : 'GET',
 		contentType: "application/json",
 		dataType: 'json',
-	}).done(function(imgList) {
-		firstImgId = 1; // in database id is identity(1,1)
-		lastImgId = imgList.length;
-		
-		var currentPic, currentPicDiv, currentSpaceDiv, currentMiddleDiv, currentRow;
-		var currentRowIndx = 0;
-		for(var i = 0; i < imgList.length; i++) {
-			var album = $('#img-album-content');
-			if(i % 3 === 0) {
-				currentRow = $("<div>", {id: "row" + currentRowIndx++, "class": "mdl-grid"});
-				currentSpaceDiv = $("<div>", {"class": "mdl-cell mdl-cell--2-col"});
-				currentRow.append(currentSpaceDiv);
-				album.append(currentRow);
-			} 
-			currentPicDiv = $("<div>", {"class": "album-image-div mdl-cell mdl-cell--3-col"});
-			currentPic = $("<img>", {id: imgList[i].id, src: imgList[i].path, "class": "album-image", alt: imgList[i].name, "data-date": imgList[i].date, height: "150", width: "225"});
-			currentMiddleDiv = "<div class=\"album-img-middle\"><div class=\"album-img-text\"><i data-lat=\"" + imgList[i].lat + "\" data-lng=\"" + imgList[i].lng + "\" class=\"image-map material-icons\">place</i>" 
-								+  imgList[i].name
-								+ "</div></div>";
-			currentPicDiv.append(currentPic);
-			currentPicDiv.append(currentMiddleDiv);
-			currentRow.append(currentPicDiv);
-			if(i % 3 === 2) {
-				currentSpaceDiv = $("<div>", {"class": "mdl-cell mdl-cell--1-col"});
-				currentRow.append(currentSpaceDiv);
-			}
-		}
+	}).done(function(data) {
+		// set global object holding image information
+		imgList = data;
+		// render few first images
+		renderImages();
 	}).always(function() {
 		// always
 	}).fail(function(message) {
@@ -108,7 +155,7 @@ $(document).ready(function() {
 	});
 	
 	var mapModal = document.getElementById('map-prev-div');
-	$(document).on ("click", ".image-map", function () {
+	$(document).on("click", ".image-map", function () {
 		adjustMap(parseFloat($(this).data('lat')), parseFloat($(this).data('lng')));
 		mapModal.style.visibility = "visible";
 	});

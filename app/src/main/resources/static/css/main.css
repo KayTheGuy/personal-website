@@ -103,6 +103,8 @@ a {
 }
 
 #spinner {
+	display: block;
+    margin: auto;
 	width: 80px;
 	height: 80px;
 }
@@ -303,7 +305,7 @@ a {
 }
 
 #right-of-contact-form {
-	background: url('/img/tree1.png');
+	background: url('/img/tree2.jpg');
 	background-size: 80%;
 	background-repeat: no-repeat;
 }
