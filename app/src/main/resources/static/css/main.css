@@ -246,10 +246,6 @@ a {
 	font-weight: 100;
 }
 
-.mdl-snackbar {
-	bottom: 40px; /* same as footer height */
-}
-
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
 	animation: slideInColorLeft 2s;
 }
