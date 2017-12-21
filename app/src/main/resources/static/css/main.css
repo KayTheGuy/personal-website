@@ -1,6 +1,23 @@
 @keyframes animatedBackgroundBottomTop {
-	to { background-position: 0 100%; }
+	0% { 	
+		background: url('/img/1.jpg'); 
+	}
+	20% { 	
+		background: url('/img/1.jpg'); 
+	}
+	50% { 	
+		background: url('/img/2.jpg'); 
+	}
+	80% { 	
+		background: url('/img/2.jpg'); 
+	}
+	100% { 	
+		background: url('/img/1.jpg'); 
+	}
 }
+/* @keyframes animatedBackgroundBottomTop {
+	to { background-position: 0 100%; }
+} */
 
 @keyframes slideInColorLeft {
 	from {
@@ -128,7 +145,7 @@ a {
 	z-index: -1;
 	background-position: 0px 0px;
 	background-repeat: repeat-y;
-	animation: animatedBackgroundBottomTop 40s linear infinite;
+	animation: animatedBackgroundBottomTop 30s ease-in-out infinite;
 }
 
 #awards-wall, #courses-wall, #university-wall{
@@ -278,7 +295,7 @@ a {
 	animation-fill-mode: forwards;
 }
 
-#contact-1, #contact-form-name, #right-of-contact-form, #left-of-awards, #right-of-awards {
+#contact-1, #contact-form-name, #left-of-awards, #right-of-awards {
 	animation: showUp 2s ease;
 	animation-delay: 2.4s;
 	animation-fill-mode: forwards;
@@ -302,12 +319,6 @@ a {
 	animation-delay: 3.9s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
-}
-
-#right-of-contact-form {
-	background: url('/img/tree2.jpg');
-	background-size: 80%;
-	background-repeat: no-repeat;
 }
 
 #center-bottom-of-awards {
@@ -443,4 +454,9 @@ a {
 	color: #00b5ec;
 	font-size: 10px;
 	font-weight: 100;
+}
+
+#contact-header {
+	height: 100px;
+	background: url('/img/contact.jpg');
 }

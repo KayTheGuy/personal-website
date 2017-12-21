@@ -28,7 +28,7 @@
 			class="mdl-layout__header mdl-layout__header--transparent mdl-layout--large-screen-only">
 			<div class="mdl-layout__header-row mdl-shadow--4dp">
 				<!-- Title -->
-				<span class="mdl-layout-title">Projects</span>
+				<span class="mdl-layout-title"></span>
 				<!-- Add spacer, to align navigation to the right -->
 				<div class="mdl-layout-spacer"></div>
 				<!-- Navigation -->
@@ -43,8 +43,8 @@
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Projects</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="#">Image
-					Filters</a> <a class="mdl-navigation__link" href="/image-album">Image Album</a> <a
+				<a class="mdl-navigation__link" href="#">Image Filters</a> <a
+					class="mdl-navigation__link" href="/image-album">Image Album</a> <a
 					class="mdl-navigation__link" href="">Link</a> <a
 					class="mdl-navigation__link" href="">Link</a>
 			</nav>
@@ -74,15 +74,16 @@
 					</ul>
 				</div>
 				<div class="mdl-cell mdl-cell--1-col">
-					<button id="image-button" class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+					<button id="image-button"
+						class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 						Select</button>
 				</div>
 				<div id="upload-form" class="mdl-cell mdl-cell--1-col">
 					<form id="image-form" enctype="multipart/form-data"
 						action="/upload/image" method="post">
 						<input id="image-picker" name="uploadedImg" type="file"
-							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> 
-						<input id="image-upload" type="submit" value="Press"
+							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
+							id="image-upload" type="submit" value="Press"
 							style="display: none;">
 					</form>
 				</div>
@@ -105,25 +106,21 @@
 				<button type="button" class="mdl-snackbar__action"></button>
 			</div>
 		</div>
-		</main>
-
-		<!--  Footer -->
-		<footer class="mdl-mini-footer mdl-layout__header-row">
-			<div class="mdl-mini-footer__middle-section">
-				<div class="mdl-logo mdl-footer-github-logo">
-					<a href="https://github.com/kayhandehghani/PersonalWebSite"
-						role="button" title="GitHub"> <img
-						src="../img/github-logo-black.svg" alt="Smiley face" height="32"
-						width="32">
-					</a>
-				</div>
+		<div class="mdl-grid image"></div>
+		<div class="mdl-grid">
+			<div class="mdl-cell mdl-cell--5-col"></div>
+			<div class="mdl-cell mdl-cell--7-col">
+				<a href="https://github.com/kayhandehghani/PersonalWebSite"
+					role="button" title="GitHub"> <img
+					src="../img/github-logo-black.svg" alt="Smiley face" height="32"
+					width="32">
+				</a>
 				<ul class="mdl-mini-footer__link-list">
-					<li><a id="spinnerTest" href="#">Help</a></li>
-					<li><a href="#">Privacy and Terms</a></li>
-					<li><a href="#">User Agreement</a></li>
+					<li>&#9400; 2018 Kayhan Dehghani</li>
 				</ul>
 			</div>
-		</footer>
+		</div>
+		</main>
 	</div>
 </body>
 

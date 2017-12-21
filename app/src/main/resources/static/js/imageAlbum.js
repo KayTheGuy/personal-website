@@ -98,7 +98,7 @@ function renderImages() {
 function dynamicImageLoad() {
 	var currentScroll = $(this)[0].scrollTop;
 	var maxScroll = $(this)[0].scrollHeight - $(this).height();
-    if(!loading && (currentScroll >= maxScroll - 200)) {
+    if(!loading && (currentScroll >= maxScroll - 50)) {
     	// show spinner
     	$('#spinner').css({visibility: 'visible'});
     	// is loading: stop scroll listener from doing anything
