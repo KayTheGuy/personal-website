@@ -165,11 +165,16 @@ a {
 }
 
 .content {
-	height: 800px;
 	width: 100%;
 	color: black;
 	background: white;
 	z-index: 1;
+	padding-bottom: 20px;
+}
+
+.content a {
+	text-decoration:  none;
+	font-weight:      100;
 }
 
 .content p {
@@ -291,28 +296,28 @@ a {
 	animation-fill-mode: forwards;
 }
 
-#contact-1, #contact-form-name, #left-of-awards, #right-of-awards {
+.contact-1 {
 	animation: showUp 2s ease;
 	animation-delay: 2.4s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
-#contact-2, #contact-form-email {
+.contact-2 {
 	animation: showUp 2s ease;
 	animation-delay: 2.8s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
-#contact-3, #contact-form-subject {
+.contact-3 {
 	animation: showUp 3s linear;
-	animation-delay: 3.4s;
+	animation-delay: 3.2s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 
-#contact-4, #contact-form-message {
+.contact-4 {
 	animation: showUp 4s linear;
-	animation-delay: 3.9s;
+	animation-delay: 3.6s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
@@ -452,7 +457,12 @@ a {
 	font-weight: 100;
 }
 
-#contact-header {
-	height: 100px;
-	background: url('/img/contact.jpg');
+.black-trim {
+	height: 30px;
+	background-color: black;
+}
+
+.blue-trim {
+	height: 30px;
+	background-color: #00b5ec;
 }
