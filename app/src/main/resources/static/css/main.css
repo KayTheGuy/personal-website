@@ -296,6 +296,18 @@ a {
 	animation-fill-mode: forwards;
 }
 
+#contact-first-row-right {
+	background: url('/img/contact-right.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#contact-second-row-left {
+	background: url('/img/contact-left.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .contact-1 {
 	animation: showUp 2s ease;
 	animation-delay: 2.4s;
@@ -455,14 +467,4 @@ a {
 	color: #00b5ec;
 	font-size: 10px;
 	font-weight: 100;
-}
-
-.black-trim {
-	height: 30px;
-	background-color: black;
-}
-
-.blue-trim {
-	height: 30px;
-	background-color: #00b5ec;
 }

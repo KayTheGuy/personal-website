@@ -6,7 +6,7 @@
 <meta name="description" content="My personal website">
 <meta name="keywords" content="Kayhan Dehghani">
 <meta name="author" content="Kayhan Dehghani">
-<title>Kayhan Dehghani</title>
+<title>Contact | Kayhan Dehghani</title>
 <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -21,7 +21,7 @@
 <script src="/js/contact.js" defer></script>
 </head>
 
-<body>
+<body id="contact-body">
 	<div class="body-container mdl-layout mdl-js-layout">
 		<!--  Header -->
 		<header
@@ -59,108 +59,133 @@
 
 		<!--  Main content -->
 		<main class="mdl-layout__content">
-		<div id="contact-whole" class="content">
-			<div class="black-trim mdl-grid"></div>
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--1-col"></div>
+		<div id="contact-whole">
+			<div id="contact-first-row" class="mdl-grid">
 				<div class="mdl-cell mdl-cell--6-col">
-					<h6>Contact Me:</h6>
+					<div class="content">
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--1-col"></div>
+							<div class="mdl-cell mdl-cell--11-col">
+								<h6>Contact Me:</h6>
+							</div>
+						</div>
+						<form id="contatct-form" action="#">
+							<div class="mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col"></div>
+								<div class="contact-1 mdl-cell mdl-cell--11-col">
+									<div
+										class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text"
+											id="contact-form-name" name="name"> <label
+											class="mdl-textfield__label" for="contact-form-name">Name...</label>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col"></div>
+								<div class="contact-2 mdl-cell mdl-cell--11-col">
+									<div
+										class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text"
+											id="contact-form-email" name="email"> <label
+											class="mdl-textfield__label" for="contact-form-email">Email...</label>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col"></div>
+								<div class="contact-3 mdl-cell mdl-cell--11-col">
+									<div
+										class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+										<input class="mdl-textfield__input" type="text"
+											id="contact-form-subject" name="subject"> <label
+											class="mdl-textfield__label" for="contact-form-subject">Subject...</label>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col"></div>
+								<div class="contact-4 mdl-cell mdl-cell--11-col">
+									<div class="mdl-textfield mdl-js-textfield">
+										<textarea class="mdl-textfield__input" type="text" rows="3"
+											id="contact-form-message" name="message"></textarea>
+										<label class="mdl-textfield__label" for="contact-form-message">Message...</label>
+									</div>
+								</div>
+							</div>
+							<div class="mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col"></div>
+								<div class="mdl-cell mdl-cell--5-col">
+									<input id="contatct-form-upload" type="submit" value="Press"
+										style="display: none;">
+								</div>
+								<div class="mdl-cell mdl-cell--6-col"></div>
+							</div>
+						</form>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--1-col"></div>
+							<div class="contact-4 mdl-cell mdl-cell--10-col">
+								<button id="contatct-form-button"
+									class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+									Send</button>
+							</div>
+							<div class="mdl-cell mdl-cell--1-col"></div>
+						</div>
+					</div>
+
 				</div>
-				<div class="mdl-cell mdl-cell--4-col">
-					<h6>Info:</h6>
-				</div>
-				<div class="mdl-cell mdl-cell--1-col"></div>
+				<div id="contact-first-row-right" class="mdl-cell mdl-cell--6-col"></div>
 			</div>
-			<form id="contatct-form" action="#">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="contact-1 mdl-cell mdl-cell--6-col">
-						<div
-							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text"
-								id="contact-form-name" name="name"> <label
-								class="mdl-textfield__label" for="contact-form-name">Name...</label>
+			<div id="contact-second-row" class="mdl-grid">
+				<div id="contact-second-row-left" class="mdl-cell mdl-cell--6-col"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<div class="content">
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--1-col"></div>
+							<div class="mdl-cell mdl-cell--11-col">
+								<h6>Info:</h6>
+							</div>
+						</div>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--1-col"></div>
+							<div class="contact-1 mdl-cell mdl-cell--11-col">
+								<div>
+									<a href="mailto:kayhandehghani@gmail.com">kayhandehghani@gmail.com</a>
+								</div>
+							</div>
+						</div>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--1-col"></div>
+							<div class="contact-2 mdl-cell mdl-cell--11-col">
+								<div>+1 778-858-3785</div>
+							</div>
+						</div>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--1-col"></div>
+							<div class="contact-3 mdl-cell mdl-cell--11-col">
+								<div>
+									<a href="https://www.linkedin.com/in/kayhan-dehghani-65889273/"><img
+										src="../img/linkedin.svg" alt="Smiley face" height="25"
+										width="25"></a>
+								</div>
+							</div>
+						</div>
+						<div class="mdl-grid">
+							<div class="mdl-cell mdl-cell--1-col"></div>
+							<div class="contact-4 mdl-cell mdl-cell--11-col">
+								<div>
+									<a href="https://github.com/kayhandehghani"><img
+										src="../img/github-logo-black.svg" alt="Smiley face"
+										height="25" width="25"></a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="contact-1 mdl-cell mdl-cell--4-col">
-						<div>
-							<a href="mailto:kayhandehghani@gmail.com">kayhandehghani@gmail.com</a>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--1-col"></div>
 				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="contact-2 mdl-cell mdl-cell--6-col">
-						<div
-							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text"
-								id="contact-form-email" name="email"> <label
-								class="mdl-textfield__label" for="contact-form-email">Email...</label>
-						</div>
-					</div>
-					<div class="contact-2 mdl-cell mdl-cell--4-col">
-						<div>+1 778-858-3785</div>
-					</div>
-					<div class="mdl-cell mdl-cell--1-col"></div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="contact-3 mdl-cell mdl-cell--6-col">
-						<div
-							class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-							<input class="mdl-textfield__input" type="text"
-								id="contact-form-subject" name="subject"> <label
-								class="mdl-textfield__label" for="contact-form-subject">Subject...</label>
-						</div>
-					</div>
-					<div class="contact-3 mdl-cell mdl-cell--4-col">
-						<div>
-							<a
-								href="https://www.linkedin.com/in/kayhan-dehghani-65889273/"><img
-								src="../img/linkedin.svg" alt="Smiley face" height="25"
-								width="25"></a>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--1-col"></div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="contact-4 mdl-cell mdl-cell--6-col">
-						<div class="mdl-textfield mdl-js-textfield">
-							<textarea class="mdl-textfield__input" type="text" rows="3"
-								id="contact-form-message" name="message"></textarea>
-							<label class="mdl-textfield__label" for="contact-form-message">Message...</label>
-						</div>
-					</div>
-					<div class="contact-4 mdl-cell mdl-cell--4-col">
-						<div>
-							<a  href="https://github.com/kayhandehghani"><img
-								src="../img/github-logo-black.svg" alt="Smiley face" height="25"
-								width="25"></a>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--1-col"></div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="mdl-cell mdl-cell--5-col">
-						<input id="contatct-form-upload" type="submit" value="Press"
-							style="display: none;">
-					</div>
-					<div class="mdl-cell mdl-cell--6-col"></div>
-				</div>
-			</form>
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--1-col"></div>
-				<div class="contact-4 mdl-cell mdl-cell--10-col">
-						<button id="contatct-form-button"
-							class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-							Send</button>
-				</div>
-				<div class="mdl-cell mdl-cell--1-col"></div>
 			</div>
+
 		</div>
+
 		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
 			class="mdl-snackbar mdl-js-snackbar">
 			<div class="mdl-snackbar__text"></div>
@@ -190,7 +215,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="blue-trim mdl-grid"></div>
 		</main>
 	</div>
 </body>
