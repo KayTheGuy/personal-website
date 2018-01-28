@@ -6,7 +6,7 @@
 <meta name="description" content="My personal website">
 <meta name="keywords" content="Kayhan Dehghani">
 <meta name="author" content="Kayhan Dehghani">
-<title>Image Filters | Kayhan Dehghani</title>
+<title>Sound Cloud APIs | Kayhan Dehghani</title>
 <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -18,7 +18,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/main.js" defer></script>
-<script src="/js/imageEditor.js" defer></script>
+<script src="/js/soundCloud.js" defer></script>
 </head>
 
 <body>
@@ -43,9 +43,9 @@
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Projects</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="#">Image Filters</a> <a
+				<a class="mdl-navigation__link" href="/image-editor">Image Filters</a> <a
 					class="mdl-navigation__link" href="/image-album">Image Album</a> <a
-					class="mdl-navigation__link" href="/sd-apis">Sound Cloud APIs</a> <a
+					class="mdl-navigation__link" href="#">Sound Cloud APIs</a> <a
 					class="mdl-navigation__link" href="">Link</a>
 			</nav>
 			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Pages</span>
@@ -61,43 +61,13 @@
 		<main class="mdl-layout__content">
 		<div id="img-edit-content" class="content">
 			<div id="control-panel" class="mdl-grid">
-				<div class="mdl-cell mdl-cell--1-col"></div>
-				<div class="mdl-cell mdl-cell--9-col">
-					<button id="effects-menu-lower-left"
-						class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Filters</button>
-					<ul
-						class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-						for="effects-menu-lower-left">
-						<li id="bw" class="mdl-menu__item ">Grayscale</li>
-						<li id="invert" class="mdl-menu__item ">Invert</li>
-						<li id="undo" class="mdl-menu__item ">Undo</li>
-					</ul>
-				</div>
+				<div class="mdl-cell mdl-cell--6-col"></div>
 				<div class="mdl-cell mdl-cell--1-col">
 					<button id="image-button"
 						class="album-preview-nav-but mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-						Select</button>
+						Sign In</button>
 				</div>
-				<div id="upload-form" class="mdl-cell mdl-cell--1-col">
-					<form id="image-form" enctype="multipart/form-data"
-						action="/upload/image" method="post">
-						<input id="image-picker" name="uploadedImg" type="file"
-							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
-							id="image-upload" type="submit" value="Press"
-							style="display: none;">
-					</form>
-				</div>
-			</div>
-
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--12-col">
-					<div class="image-below">
-						<img id="image-preview" src="/img/placeholder.png"
-							alt="image preview" height="500" width="500" />
-						<div id="img-spinner" class="centered"></div>
-						<p id="image-label"></p>
-					</div>
-				</div>
+				<div class="mdl-cell mdl-cell--5-col"></div>
 			</div>
 
 			<div aria-live="assertive" aria-atomic="true" aria-relevant="text"

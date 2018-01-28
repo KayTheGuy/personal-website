@@ -33,4 +33,9 @@ public class StaticPagesController {
 		return "_album.html";
 	}
 	
+	@RequestMapping(value = "/sd-apis", method = RequestMethod.GET)
+	public String getSdAPIs() {
+		return "_soundcloud.html";
+	}
+	
 }
