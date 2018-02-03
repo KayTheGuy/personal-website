@@ -73,10 +73,6 @@ body {
 	padding: 0;
 }
 
-.mdl-layout__drawer-button {
-	color: #00b5ec;
-}
-
 .mdl-layout__header-row .mdl-navigation__link {
 	color: black;
 	font-weight: 100;
@@ -145,7 +141,7 @@ a {
 	z-index: -1;
 	background-position: 0px 0px;
 	background-repeat: repeat-y;
-	animation: animatedBackgroundBottomTop 30s ease-in-out infinite;
+/* 	animation: animatedBackgroundBottomTop 30s ease-in-out infinite; */
 }
 
 #awards-wall, #courses-wall, #university-wall{
@@ -153,7 +149,7 @@ a {
 }
 
 #wall_1, #wall_2, #wall_3{
-	background: url('/img/1.jpg');
+	background: url('/img/2.jpg');
 }
 
 .pdf-content {
@@ -170,6 +166,13 @@ a {
 	background: white;
 	z-index: 1;
 	padding-bottom: 20px;
+}
+
+.svg-texture {
+	background: url('/img/content-texture.svg');
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
 
 .content a {
@@ -198,10 +201,14 @@ a {
 }
 
 #image-button, #effects-menu-lower-left, #contatct-form-button {
-	color: #00b5ec;
-	font-size: 12px;
+	background: #00b5ec;
+	color: white;
 	font-weight: 100;
-	background: white;
+	font-size: 18px;
+}
+
+.mdl-layout__drawer-button {
+	color: #00b5ec;
 }
 
 .mdl-snackbar {
@@ -232,10 +239,6 @@ a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-#img-edit-content {
-	margin-top: 60px;
 }
 
 #image-label {
