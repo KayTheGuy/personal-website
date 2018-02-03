@@ -23,7 +23,7 @@
 	from {
   		margin-left: 100%;
   		width: 300%;
-  		color: #00b5ec;
+  		color: #e61344;
   		opacity: 0.5;
 	}
 
@@ -82,7 +82,7 @@ body {
 .mdl-layout-title {
 	font-weight: 100;
 	font-size: 16px;
-	color: #00b5ec;
+	color: #e61344;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
@@ -192,28 +192,29 @@ a {
 	color: black;
 	font-weight: 100;
 	margin: 4px;
+	margin-left: 10px;
 }
 
 .first-letter {
 	font-size: 20px;
 	font-weight: 100;
-	color: #00b5ec;
+	color: #e61344;
 }
 
 #image-button, #effects-menu-lower-left, #contatct-form-button {
-	background: #00b5ec;
+	background: #e61344;
 	color: white;
 	font-weight: 100;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 .mdl-layout__drawer-button {
-	color: #00b5ec;
+	color: #e61344;
 }
 
 .mdl-snackbar {
 	font-weight: 100;
-	background: #00b5ec;
+	background: #e61344;
 }
 
 #awards-content {
@@ -250,9 +251,24 @@ a {
 	font-weight: 100;
 }
 
-.mdl-menu__item {
-	font-weight: 100;
+.mdl-menu__container.is-visible .mdl-menu {
+	background: #e61344;
 }
+
+.mdl-menu__item {
+	color: white;
+	font-weight: 100;
+	font-size: 16px;
+}
+
+.mdl-menu__item:hover {
+	color:#e61344;background:white;text-shadow:none;
+} 
+
+element.style {
+    clip: rect(0px 124px 160px 0px);
+}
+
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
 	animation: slideInColorLeft 2s;
@@ -271,7 +287,7 @@ a {
 }
 
 .academic-box {
-	border-bottom: 1px solid #00b5ec;
+	border-bottom: 1px solid #e61344;
 	animation: showUp 2.5s ease;
 	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
@@ -378,7 +394,7 @@ a {
 }
 
 .close {
-    color: #00b5ec;
+    color: #e61344;
     float: right;
     font-size: 28px;
     font-weight: 100;
@@ -433,7 +449,7 @@ a {
 }
 
 .album-img-text {
-	background-color: #00b5ec;
+	background-color: #e61344;
 	color: white;
 	font-size: 10px;
 	font-weight: 100;
@@ -452,7 +468,7 @@ a {
 
 #image-modal-before {
 	float: left;
-	color: #00b5ec;
+	color: #e61344;
 	font-size: 12px;
 	font-weight: 100;
 	background: white;
@@ -460,14 +476,14 @@ a {
 
 #image-modal-next {
 	float: right;
-	color: #00b5ec;
+	color: #e61344;
 	font-size: 12px;
 	font-weight: 100;
 	background: white;
 }
 
 .done-icone {
-	color: #00b5ec;
+	color: #e61344;
 	font-size: 10px;
 	font-weight: 100;
 }
