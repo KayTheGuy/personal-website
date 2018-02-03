@@ -73,23 +73,35 @@ body {
 	padding: 0;
 }
 
-.mdl-layout__header-row .mdl-navigation__link {
+.mdl-layout__header-row {
 	color: black;
 	font-weight: 100;
 	font-size: 14px;
+}
+
+.mdl-layout__drawer {
+	border: #e61344 1px;
+	background: #e61344;
 }
 
 .mdl-layout-title {
-	font-weight: 100;
-	font-size: 16px;
-	color: #e61344;
+	font-weight: 200;
+	font-size: 18px;
+	color: black;
+	background: url('/img/content-texture.svg'); 
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-	color: black;
+	color: white;
 	font-weight: 100;
 	font-size: 14px;
 }
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+	background: white;
+	color: #e61344;
+}
+
 
 .mdl-data-table {
 	background-color: white;
@@ -396,7 +408,7 @@ element.style {
 .close {
     color: #e61344;
     float: right;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 100;
 }
 
