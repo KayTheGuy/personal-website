@@ -5,9 +5,24 @@
 		background-repeat: no-repeat;
 	}
 }
-/* @keyframes animatedBackgroundBottomTop {
-	to { background-position: 0 100%; }
-} */
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 
 @keyframes slideInColorLeft {
 	from {
@@ -83,19 +98,19 @@ body {
 
 .mdl-layout__drawer {
 	border: #e61344 1px;
-	background: #e61344;
+	background: rgba(0,0,0,0.9);
 }
 
 .mdl-layout-title {
-	font-weight: 200;
-	font-size: 18px;
-	color: black;
+	font-weight: 300;
+	font-size: 20px;
+	color: #e61344;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 	color: white;
 	font-weight: 100;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
@@ -112,6 +127,11 @@ body {
 
 .td-row:hover {
 	color: black;
+	background-color: #e61344;
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;	
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
 }
 
 a {
@@ -146,17 +166,7 @@ a {
 	overflow:auto;
 }
 
-
-.image {
-	height: 200px;
-	width: 100%;
-	background: #55e6c5;
-	z-index: -1;
-	background-position: 0px 0px;
-	background-repeat: repeat-y;
-}
-
-#content_1 {
+#intro_content {
 	background: url('/img/2.jpg');
 	width: 100%;
 	color: white;
@@ -176,6 +186,17 @@ a {
     background-position: center center;
 }
 
+#awards-content {
+	height: 600px;
+}
+
+#courses-content {
+	height: 900px;
+}
+
+#courses-content:hover {
+}
+
 .pdf-content {
 	height: 1600px;
 	width: 100%;
@@ -189,6 +210,17 @@ a {
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
+}
+
+.svg-texture2 {
+	background: url('/img/content-texture2.svg');
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.svg-texture-page  {
+	background-color: #5d6c73; 
 }
 
 .content a {
@@ -228,13 +260,6 @@ a {
 	background: #e61344;
 }
 
-#awards-content {
-	height: 600px;
-}
-
-#courses-content {
-	height: 900px;
-}
 
 #myself {
 	float: left;
@@ -254,7 +279,9 @@ a {
 }
 
 #image-label {
-	font-size: 10px;
+	color: white;
+	font-weight: 100;
+	font-size: 18px;
 }
 
 #control-panel, .mdl-textfield__input {
@@ -390,8 +417,7 @@ element.style {
 
 .modal-content {
     background-color: rgba(0,0,0,0);
-    margin: 4.5% auto; 
-    padding: 40px;
+    margin: 0; 
     color: white;
 }
 
@@ -406,12 +432,12 @@ element.style {
 .close {
     color: #e61344;
     float: right;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 100;
 }
 
 .close:hover, .close:focus {
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -498,7 +524,7 @@ element.style {
 }
 
 #contact-body {
-	background: url('/img/contact-bckgrnd.jpg');
+	background-image: url('/img/contact-bckgrnd.jpg');
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
