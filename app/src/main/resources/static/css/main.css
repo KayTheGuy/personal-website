@@ -1,18 +1,8 @@
 @keyframes animatedBackgroundBottomTop {
 	0% { 	
-		background: url('/img/1.jpg'); 
-	}
-	20% { 	
-		background: url('/img/1.jpg'); 
-	}
-	50% { 	
-		background: url('/img/2.jpg'); 
-	}
-	80% { 	
-		background: url('/img/2.jpg'); 
-	}
-	100% { 	
-		background: url('/img/1.jpg'); 
+		background: url('/img/contact-right.jpg'); 
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 }
 /* @keyframes animatedBackgroundBottomTop {
@@ -37,7 +27,19 @@
 
 @keyframes showUp {
 	from {
-  		color: #fff;
+  		color: #e61344;
+  		visibility: hidden;
+	}
+
+	to {
+  		color: white;
+  		visibility: visible;
+	}
+}
+
+@keyframes showUpAcheivements {
+	from {
+  		color: #e61344;
   		visibility: hidden;
 	}
 
@@ -88,7 +90,6 @@ body {
 	font-weight: 200;
 	font-size: 18px;
 	color: black;
-	background: url('/img/content-texture.svg'); 
 }
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
@@ -153,15 +154,26 @@ a {
 	z-index: -1;
 	background-position: 0px 0px;
 	background-repeat: repeat-y;
-/* 	animation: animatedBackgroundBottomTop 30s ease-in-out infinite; */
 }
 
-#awards-wall, #courses-wall, #university-wall{
+#content_1 {
 	background: url('/img/2.jpg');
+	width: 100%;
+	color: white;
+	padding-bottom: 20px;
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
 
-#wall_1, #wall_2, #wall_3{
-	background: url('/img/2.jpg');
+#awards-content {
+	background: url('/img/1.jpg');
+	width: 100%;
+	color: white;
+	padding-bottom: 20px;
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
 }
 
 .pdf-content {
@@ -170,14 +182,6 @@ a {
 	color: black;
 	background: white;
 	z-index: 1;
-}
-
-.content {
-	width: 100%;
-	color: black;
-	background: white;
-	z-index: 1;
-	padding-bottom: 20px;
 }
 
 .svg-texture {
@@ -194,21 +198,16 @@ a {
 
 .content p {
 	font-size: 14px;
-	color: black;
 	font-weight: 100;
 	margin: 30px 120px;
 }
 
 .content h1 {
-	font-size: 16px;
-	color: black;
-	font-weight: 100;
 	margin: 4px;
-	margin-left: 10px;
+	margin-left: 40px;
 }
 
 .first-letter {
-	font-size: 20px;
 	font-weight: 100;
 	color: #e61344;
 }
@@ -323,44 +322,43 @@ element.style {
 }
 
 #contact-whole {
-	animation: contactAnim 2s ease;
+	animation: contactAnim 1.2s ease;
 	animation-fill-mode: forwards;
 }
 
 #contact-first-row-right {
-	background: url('/img/contact-right.jpg');
+	/* background: url('/img/contact-right.jpg'); */
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 #contact-second-row-left {
-	background: url('/img/contact-left.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .contact-1 {
-	animation: showUp 2s ease;
-	animation-delay: 2.4s;
+	animation: showUpAcheivements 1.3s ease;
+	animation-delay: 1.6s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 .contact-2 {
-	animation: showUp 2s ease;
-	animation-delay: 2.8s;
+	animation: showUpAcheivements 1s ease;
+	animation-delay: 2s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 .contact-3 {
-	animation: showUp 3s linear;
-	animation-delay: 3.2s;
+	animation: showUpAcheivements 3s linear;
+	animation-delay: 2.4s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 
 .contact-4 {
-	animation: showUp 4s linear;
-	animation-delay: 3.6s;
+	animation: showUpAcheivements 4s linear;
+	animation-delay: 2.9s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
@@ -393,7 +391,7 @@ element.style {
 .modal-content {
     background-color: rgba(0,0,0,0);
     margin: 4.5% auto; 
-    padding: 0px 40px 40px 40px;
+    padding: 40px;
     color: white;
 }
 
@@ -463,39 +461,45 @@ element.style {
 .album-img-text {
 	background-color: #e61344;
 	color: white;
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: 100;
 	min-width: 80px;
 	padding: 5px 10px;
 }
 
 #image-modal-location, #image-modal-date {
-	font-size: 10px;
+	font-size: 14px;
 	font-weight: 100;
-}
-
-#image-modal-date {
-	float: right;
+	color: #e61344;
 }
 
 #image-modal-before {
 	float: left;
 	color: #e61344;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: 100;
-	background: white;
+	padding-bottom: 42px;
+	background-color: rgba(0,0,0,0);
 }
 
 #image-modal-next {
 	float: right;
 	color: #e61344;
-	font-size: 12px;
+	font-size: 10px;
 	font-weight: 100;
-	background: white;
+	padding-bottom: 42px;
+	background-color: rgba(0,0,0,0);
 }
 
 .done-icone {
 	color: #e61344;
 	font-size: 10px;
 	font-weight: 100;
+}
+
+#contact-body {
+	background: url('/img/contact-bckgrnd.jpg');
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
 }

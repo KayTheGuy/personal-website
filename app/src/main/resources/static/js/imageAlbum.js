@@ -26,7 +26,7 @@ function setModalImage(imgId) {
 	var nextID = imgId + 1, prevID = imgId - 1;
 	// only show next and previous buttons if there is an image next or previous
 	if($('#' + prevID).length) {
-		$('#image-modal-before').css({backgroundColor: 'white', color: '#e61344'});
+		$('#image-modal-before').css({color: '#e61344'});
 		$('#image-modal-before').prop('disabled', false);
 	} else {
 		$('#image-modal-before').css({backgroundColor: 'rgba(0,0,0,0)', color: 'rgba(0,0,0,0)'});
@@ -34,7 +34,7 @@ function setModalImage(imgId) {
 	}
 	
 	if($('#' + nextID).length) {
-		$('#image-modal-next').css({backgroundColor: 'white', color: '#e61344'});
+		$('#image-modal-next').css({color: '#e61344'});
 		$('#image-modal-next').prop('disabled', false);
 	} else {
 		$('#image-modal-next').css({backgroundColor: 'rgba(0,0,0,0)', color: 'rgba(0,0,0,0)'});
@@ -45,7 +45,7 @@ function setModalImage(imgId) {
 	var imageElement = $('#image-modal');
 	var locationIcon = "<i data-lat=\"" + selectedImg.lat + "\" data-lng=\"" + selectedImg.lng + "\" class=\"image-map material-icons\">place</i>"
 	imageElement.attr('src', selectedImg.path); 
-	$('#image-modal-location').html(locationIcon + selectedImg.name);
+	$('#image-modal-location').html(locationIcon + selectedImg.name + ', ');
 	$('#image-modal-date').html(selectedImg.date);
 }
 
