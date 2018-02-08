@@ -205,22 +205,12 @@ a {
 	z-index: 1;
 }
 
-.svg-texture {
-	background: url('/img/content-texture.svg');
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
-}
-
-.svg-texture2 {
-	background: url('/img/content-texture2.svg');
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
-}
-
 .svg-texture-page  {
-	background-color: #5d6c73; 
+	background: url('/img/break.jpg');
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+	background-color:rgba(0, 0, 0, 0.5);
 }
 
 .content a {
@@ -335,12 +325,14 @@ element.style {
 #intro-1 {
 	animation: showUp 2.5s ease;
 }
+
 #intro-2 {
 	animation: showUp 2.5s ease;
 	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
+
 #intro-3 {
 	animation: showUp 2.5s ease;
 	animation-delay: 5s;
@@ -351,17 +343,6 @@ element.style {
 #contact-whole {
 	animation: contactAnim 1.2s ease;
 	animation-fill-mode: forwards;
-}
-
-#contact-first-row-right {
-	/* background: url('/img/contact-right.jpg'); */
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
-#contact-second-row-left {
-	background-size: contain;
-	background-repeat: no-repeat;
 }
 
 .contact-1 {
@@ -388,18 +369,6 @@ element.style {
 	animation-delay: 2.9s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
-}
-
-#center-bottom-of-awards {
-	-ms-transform: rotate(20deg); /* IE 9 */
-    -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
-    transform: rotate(20deg);
-}
-
-#center-top-of-awards {
-	-ms-transform: rotate(-4deg); /* IE 9 */
-    -webkit-transform: rotate(-40deg); /* Chrome, Safari, Opera */
-    transform: rotate(-40deg);
 }
 
 .modal {
