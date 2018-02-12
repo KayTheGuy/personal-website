@@ -1,8 +1,8 @@
 .DS_Store
 .recommenders/
 
-# email class with private info
-*EmailUtility*
+
+*app/config.json*
 *app/src/main/resources/application.properties*
 *app/src/main/resources/static/files/album*
 

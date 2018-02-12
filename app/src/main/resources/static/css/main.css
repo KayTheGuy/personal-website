@@ -206,7 +206,6 @@ a {
 }
 
 .svg-texture-page  {
-	background: url('/img/break.jpg');
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
@@ -234,7 +233,8 @@ a {
 	color: #e61344;
 }
 
-#image-button, #effects-menu-lower-left, #contatct-form-button {
+.mybutton, .mdl-button--accent.mdl-button--accent.mdl-button--raised, 
+.mdl-button--accent.mdl-button--accent.mdl-button--fa {
 	background: #e61344;
 	color: white;
 	font-weight: 100;
@@ -475,7 +475,7 @@ element.style {
 	font-weight: 100;
 	padding-bottom: 42px;
 	background-color: rgba(0,0,0,0);
-}
+}   
 
 #image-modal-next {
 	float: right;

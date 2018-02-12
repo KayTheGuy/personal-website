@@ -35,6 +35,7 @@ import com.kayhandehghani.personalwebsite.data.entity.Image;
 import com.kayhandehghani.personalwebsite.data.repository.ImageRepository;
 import com.kayhandehghani.personalwebsite.utilities.EmailUtility;
 import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
+import com.kayhandehghani.personalwebsite.utilities.TwitterUtility;
 
 @RestController
 public class FilesController {
@@ -93,5 +94,12 @@ public class FilesController {
 		Iterable<Image> results = repo.findAll();
 		results.forEach(img -> images.add(img));
 		return images;
+	}
+	
+	@RequestMapping(value = "/api/twitter", method = RequestMethod.GET)
+	public ResponseEntity twitterMain() {
+		System.out.println("TWITTER ===================== > ");
+		TwitterUtility.setup();
+		return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.OK);
 	}
 }
