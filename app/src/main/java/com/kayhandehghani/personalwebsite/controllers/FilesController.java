@@ -77,11 +77,10 @@ public class FilesController {
 	public ResponseEntity getMessage(@RequestBody ContactMessage message) {
 		try {
 			EmailUtility.sendEmail(message.getName(), message.getSubject(), message.getEmail(), message.getMessage());
-		} catch (AddressException e) {
-			System.out.println(e.getMessage());
-		} catch (MessagingException e) {
-			System.out.println(e.getMessage());
-		}
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.INTERNAL_SERVER_ERROR);
+		} 
 		
 		return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.OK);
 	}
@@ -98,7 +97,6 @@ public class FilesController {
 	
 	@RequestMapping(value = "/api/twitter", method = RequestMethod.GET)
 	public ResponseEntity twitterMain() {
-		System.out.println("TWITTER ===================== > ");
 		TwitterUtility.setup();
 		return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.OK);
 	}

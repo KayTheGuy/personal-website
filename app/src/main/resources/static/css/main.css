@@ -167,7 +167,7 @@ a {
 }
 
 #intro_content {
-	background: url('/img/2.jpg');
+	background: url('/img/1.jpg');
 	width: 100%;
 	color: white;
 	padding-bottom: 20px;
@@ -177,7 +177,7 @@ a {
 }
 
 #awards-content {
-	background: url('/img/1.jpg');
+	background: url('/img/2.jpg');
 	width: 100%;
 	color: white;
 	padding-bottom: 20px;
@@ -454,12 +454,10 @@ element.style {
 }
 
 .album-img-text {
-	background-color: #e61344;
-	color: white;
+	background-color: rgba(0,0,0,0); 
+	color: #e61344;
 	font-size: 14px;
 	font-weight: 100;
-	min-width: 80px;
-	padding: 5px 10px;
 }
 
 #image-modal-location, #image-modal-date {

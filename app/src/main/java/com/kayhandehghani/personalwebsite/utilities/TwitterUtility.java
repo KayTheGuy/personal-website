@@ -1,9 +1,11 @@
 package com.kayhandehghani.personalwebsite.utilities;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+import com.google.common.collect.Lists;
 import com.twitter.hbc.ClientBuilder;
 import com.twitter.hbc.core.Client;
 import com.twitter.hbc.core.Constants;
@@ -26,17 +28,23 @@ public class TwitterUtility {
 
 		Hosts hosebirdHosts = new HttpHosts(Constants.STREAM_HOST);
 		StatusesFilterEndpoint hosebirdEndpoint = new StatusesFilterEndpoint();
+		List<Long> followings = Lists.newArrayList(1234L, 566788L);
+		List<String> terms = Lists.newArrayList("twitter", "api");
+		hosebirdEndpoint.followings(followings);
+		hosebirdEndpoint.trackTerms(terms);
 
 		Authentication hosebirdAuth = new OAuth1(twitterConfig.get("consumerKey"), twitterConfig.get("consumerSecret"), 
 				twitterConfig.get("token"), twitterConfig.get("tokenSecret"));
 		ClientBuilder builder = new ClientBuilder()
+				  .name("Hosebird-Client-01")                              // mainly for the logs
 				  .hosts(hosebirdHosts)
 				  .authentication(hosebirdAuth)
 				  .endpoint(hosebirdEndpoint)
 				  .processor(new StringDelimitedProcessor(msgQueue))
-				  .eventMessageQueue(eventQueue);                          // if you want to process client events
+				  .eventMessageQueue(eventQueue);                          // to process client events
 
 		Client hosebirdClient = builder.build();
 		hosebirdClient.connect();
+		System.out.println(hosebirdClient.getStatsTracker().toString());
 	}
 }

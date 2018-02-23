@@ -40,20 +40,24 @@ public class CongifUtility {
 	
 	public Map<String, String> getTwitterConfigs() {
 		Map<String, String> map = new HashMap<>();
-		JSONObject twitterJson = (JSONObject) mainJson.get("Twitter");
-		map.put("consumerKey", (String) twitterJson.get("consumerKey"));
-		map.put("consumerSecret", (String) twitterJson.get("consumerSecret"));
-		map.put("token", (String) twitterJson.get("token"));
-		map.put("tokenSecret", (String) twitterJson.get("tokenSecret"));
+		if(mainJson != null) {
+			JSONObject twitterJson = (JSONObject) mainJson.get("Twitter");
+			map.put("consumerKey", (String) twitterJson.get("consumerKey"));
+			map.put("consumerSecret", (String) twitterJson.get("consumerSecret"));
+			map.put("token", (String) twitterJson.get("token"));
+			map.put("tokenSecret", (String) twitterJson.get("tokenSecret"));
+		}
 		return map;
 	}
 	
 	public Map<String, String> getGmailConfigs() {
 		Map<String, String> map = new HashMap<>();
-		JSONObject twitterJson = (JSONObject) mainJson.get("Gmail");
-		map.put("user", (String) twitterJson.get("user"));
-		map.put("password", (String) twitterJson.get("password"));
-		map.put("receiver", (String) twitterJson.get("receiver"));
+		if(mainJson != null) {
+			JSONObject twitterJson = (JSONObject) mainJson.get("Gmail");
+			map.put("user", (String) twitterJson.get("user"));
+			map.put("password", (String) twitterJson.get("password"));
+			map.put("receiver", (String) twitterJson.get("receiver"));
+		}
 		return map;
 	}
 	

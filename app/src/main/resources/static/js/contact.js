@@ -98,7 +98,9 @@ $(document).ready(function() {
 			}).always(function() {
 				// always
 			}).fail(function(message) {
-				showError("Failed to send message. Please Try again." + message.responseText);
+				showError("Failed to send message. Please Try again.");
+				// hide spinner
+				$('#modalSpinner').css({visibility: 'hidden'});
 			});
 		} else {
 			showError(formErrMsg);
