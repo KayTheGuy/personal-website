@@ -1,19 +1,20 @@
 @keyframes shake {
   10%, 90% {
-    transform: translate3d(-1px, 0, 0);
+    transform: translate3d(-3px, 0, 0);
   }
   
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
+    transform: translate3d(3px, 0, 0);
   }
 
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
   }
 
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
 }
 
 @keyframes slideInColorLeft {
@@ -141,14 +142,10 @@ h5, h6 {
 .td-row:hover {
 	color: black;
 	background-color: #e61344;
-	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;	
+	animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;	
 	transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;
 	perspective: 1000px;
-}
-
-a {
-	color: black;
 }
 
 .mdl-mini-footer {
@@ -159,6 +156,13 @@ a {
 
 .mdl-mini-footer a {
 	font-weight: 100;
+}
+
+#myself:hover {
+	animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;	
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
 }
 
 #spinner {
@@ -180,7 +184,7 @@ a {
 }
 
 #intro_content {
-	background: url('/img/1.jpg');
+	background: url('/img/shake.gif');
 	width: 100%;
 	color: white;
 	padding-bottom: 20px;
@@ -496,15 +500,21 @@ element.style {
 }
 
 #contact-body {
-	background-image: url('/img/2.jpg');
+	background-image: url('/img/1.jpg');
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
     color: white;
 }   
 
-#contact-body a, #contact-body p {
+#my-email {
+	letter-spacing: 0.2em;
     color: white;
+    font-size: 18px;
+}
+
+.my-contacts {
+	float: right;
 }
 
 .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded {
