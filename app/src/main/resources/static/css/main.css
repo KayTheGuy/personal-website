@@ -1,11 +1,3 @@
-@keyframes animatedBackgroundBottomTop {
-	0% { 	
-		background: url('/img/contact-right.jpg'); 
-		background-size: contain;
-		background-repeat: no-repeat;
-	}
-}
-
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -64,6 +56,18 @@
 	}
 }
 
+@keyframes showUpContacts {
+	from {
+  		color: #e61344;
+  		visibility: hidden;
+	}
+
+	to {
+  		color: white;
+  		visibility: visible;
+	}
+}
+
 @keyframes contactAnim {
 	from {
   		margin-top: 10%;
@@ -72,6 +76,11 @@
 	to {
   		margin-top: 0%;
 	}
+}
+
+@font-face {
+  font-family: Prime;
+  src: url('/fonts/prime.otf');
 }
 
 .container {
@@ -83,11 +92,15 @@ body {
 }
 
 * {
-	font-family: 'Open Sans', sans-serif;
+	font-family: Prime, 'Open Sans', sans-serif;
 	font-weight: 100;
 	font-style: normal;
-	margin: 0;
-	padding: 0;
+}
+
+h5, h6 {
+	font-family: Prime, 'Open Sans', sans-serif;
+	font-weight: 100;
+	font-style: normal;
 }
 
 .mdl-layout__header-row {
@@ -186,23 +199,13 @@ a {
     background-position: center center;
 }
 
-#awards-content {
-	height: 600px;
-}
-
-#courses-content {
-	height: 900px;
-}
-
-#courses-content:hover {
+.body-container {
+	background: url('/img/3.jpg');
 }
 
 .pdf-content {
 	height: 1600px;
 	width: 100%;
-	color: black;
-	background: white;
-	z-index: 1;
 }
 
 .svg-texture-page  {
@@ -218,7 +221,7 @@ a {
 }
 
 .content p {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 100;
 	margin: 30px 120px;
 }
@@ -226,15 +229,18 @@ a {
 .content h1 {
 	margin: 4px;
 	margin-left: 40px;
+    font-weight: 100;
 }
 
 .first-letter {
 	font-weight: 100;
+	font-size: 110%;
 	color: #e61344;
 }
 
 .mybutton, .mdl-button--accent.mdl-button--accent.mdl-button--raised, 
 .mdl-button--accent.mdl-button--accent.mdl-button--fa {
+	font-family: Prime, 'Open Sans', sans-serif;
 	background: #e61344;
 	color: white;
 	font-weight: 100;
@@ -252,8 +258,8 @@ a {
 
 
 #myself {
-	float: left;
-	margin: 30px;
+	text-align: center;
+	margin-top: 30px;
 }
 
 .image-below {
@@ -274,9 +280,8 @@ a {
 	font-size: 18px;
 }
 
-#control-panel, .mdl-textfield__input {
-	font-size: 14px;
-	font-weight: 100;
+.mdl-textfield__label {
+	color: white;
 }
 
 .mdl-menu__container.is-visible .mdl-menu {
@@ -346,19 +351,19 @@ element.style {
 }
 
 .contact-1 {
-	animation: showUpAcheivements 1.3s ease;
+	animation: showUpContacts 1.3s ease;
 	animation-delay: 1.6s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 .contact-2 {
-	animation: showUpAcheivements 1s ease;
+	animation: showUpContacts 1s ease;
 	animation-delay: 2s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 .contact-3 {
-	animation: showUpAcheivements 3s linear;
+	animation: showUpContacts 3s linear;
 	animation-delay: 2.4s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
@@ -491,8 +496,30 @@ element.style {
 }
 
 #contact-body {
-	background-image: url('/img/contact-bckgrnd.jpg');
+	background-image: url('/img/2.jpg');
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
+    color: white;
+}   
+
+#contact-body a, #contact-body p {
+    color: white;
+}
+
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded {
+	color: white;
+}
+.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded.is-focused{
+	color: #e61344;
+}
+
+.mdl-textfield.mdl-js-textfield.is-upgraded.is-dirty {
+	color: white;
+}
+
+.mdl-textfield__input {
+	border-bottom: 1px solid white;
+	font-size: 14px;
+	font-weight: 100;
 }
