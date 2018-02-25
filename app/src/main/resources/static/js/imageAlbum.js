@@ -26,19 +26,15 @@ function setModalImage(imgId) {
 	var nextID = imgId + 1, prevID = imgId - 1;
 	// only show next and previous buttons if there is an image next or previous
 	if($('#' + prevID).length) {
-		$('#image-modal-before').css({color: '#e61344'});
-		$('#image-modal-before').prop('disabled', false);
+		$('#image-modal-before').show();
 	} else {
-		$('#image-modal-before').css({backgroundColor: 'rgba(0,0,0,0)', color: 'rgba(0,0,0,0)'});
-		$('#image-modal-before').prop('disabled', true);
+		$('#image-modal-before').hide();
 	}
 	
 	if($('#' + nextID).length) {
-		$('#image-modal-next').css({color: '#e61344'});
-		$('#image-modal-next').prop('disabled', false);
+		$('#image-modal-next').show();
 	} else {
-		$('#image-modal-next').css({backgroundColor: 'rgba(0,0,0,0)', color: 'rgba(0,0,0,0)'});
-		$('#image-modal-next').prop('disabled', true);
+		$('#image-modal-next').hide();
 	}
 	
 	var selectedImg = imgList[imgId - 1];
@@ -57,7 +53,6 @@ function renderImages() {
 	startID = numOfLoad * numOfImagePerLoad;
 	endID = Math.min(startID + numOfImagePerLoad, imgList.length);
 	numOfLoad++;
-	console.log(numOfLoad);
 	for(var i = startID; i < endID; i++) {
 		var album = $('#img-album-content');
 		if(i % 3 === 0) {
@@ -137,31 +132,31 @@ $(document).ready(function() {
 	
 	// event handler for dynamically added elements
 	var imgModal = document.getElementById('image-prev-div');
-	$(document).on ("click", ".album-image", function () {
+	$(document).on ("click touchstart", ".album-image", function () {
 		currentImgID = parseInt(this.id);
 		setModalImage(currentImgID);
 		imgModal.style.visibility = "visible";
     });
 	
 	// navigate through album
-	$('#image-modal-before').on('click', function() {
+	$('#image-modal-before').on('click touchstart', function() {
 		currentImgID--;
 		setModalImage(currentImgID);
 	});
 	
-	$('#image-modal-next').on('click', function() {
+	$('#image-modal-next').on('click touchstart', function() {
 		currentImgID++
 		setModalImage(currentImgID);
 	});
 	
 	var mapModal = document.getElementById('map-prev-div');
-	$(document).on("click", ".image-map", function () {
+	$(document).on("click touchstart", ".image-map", function () {
 		adjustMap(parseFloat($(this).data('lat')), parseFloat($(this).data('lng')));
 		mapModal.style.visibility = "visible";
 	});
 	
 	// close modal handlers
-	$('.close').on('click', function() {
+	$('.close').on('click touchstart', function() {
 		imgModal.style.visibility = "hidden";
 		mapModal.style.visibility = "hidden";
 	});

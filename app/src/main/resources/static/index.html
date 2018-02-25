@@ -17,6 +17,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/main.js" defer></script>
+<script src="/js/index.js"></script>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--12-col">
 					<h1>
-						<span class="first-letter">H</span>ola
+						<span class="first-letter">H</span>ola<span class="first-letter">!</span>
 					</h1>
 				</div>
 			</div>
@@ -60,7 +61,11 @@
 				</div>
 				<div class="mdl-cell mdl-cell--1-col"></div>
 				<div class="mdl-cell mdl-cell--6-col">
-					<p id="intro-1">My name is Kayhan.<br/> I am a Software Developer currently working at <a href="https://www.sap.com/index.html" target="_blank">SAP</a> (Vancouver).</p>
+					<p id="intro-1">
+						My name is Kayhan.<br /> I am a Software Developer, currently
+						working at <a href="https://www.sap.com/index.html"
+							target="_blank">SAP</a> (Vancouver).
+					</p>
 					<p id="intro-2">Lorem ipsum dolor sit amet, consectetur
 						adipiscing elit. Vestibulum vestibulum libero ut lorem rutrum
 						ultrices. Quisque vehicula, ligula eu aliquet imperdiet, nisi
@@ -69,7 +74,16 @@
 						adipiscing elit. Vestibulum vestibulum libero ut lorem rutrum
 						ultrices. Quisque vehicula, ligula eu aliquet imperdiet, nisi
 						libero tristique arcu, arcu ultrices.</p>
+					<p id="intro-4">Lorem ipsum dolor sit amet, consectetur
+						adipiscing elit. Vestibulum vestibulum libero ut lorem rutrum
+						ultrices. Quisque vehicula, ligula eu aliquet imperdiet, nisi
+						libero tristique arcu, arcu ultrices.</p>
 				</div>
+			</div>
+			<div class="index-buttons-container">
+				<br /> <br /> <a id="contact-me-direct" href="/contact"
+					class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+					Contact Me</a> <br /> <br />
 			</div>
 		</div>
 		<div id="awards-content" class="content">
@@ -80,7 +94,7 @@
 					</h1>
 				</div>
 			</div>
-			<div id="whole-awards" class="mdl-grid">
+			<div class="mdl-grid">
 				<div id="left-top-of-awards" class="mdl-cell mdl-cell--2-col"></div>
 				<div class="mdl-cell mdl-cell--4-col academic-box">
 					<h5 id="presidents-text">
@@ -122,8 +136,16 @@
 				</div>
 				<div class="mdl-cell mdl-cell--3-col"></div>
 			</div>
-			<div class="mdl-grid">
-				<div id="left-course-table-box" class="mdl-cell mdl-cell--6-col">
+			<div class="index-buttons-container">
+				<br /> <br /> <br /> <br />
+				<button id="show-courses-button"
+					class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+					Show Courses</button>
+				<br /> <br /> <br /> <br />
+			</div>
+			<div id="course-table-div" class="mdl-grid">
+				<div class="mdl-cell mdl-cell--1-col"></div>
+				<div class="mdl-cell mdl-cell--10-col">
 					<table
 						class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
 						<thead>
@@ -135,24 +157,10 @@
 						</thead>
 						<tbody>
 							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/fall/cmpt/459/d100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 459</td>
-								<td class="mdl-data-table__cell--non-numeric">Special
-									Topics in Database Systems</td>
-								<td class="mdl-data-table__cell--non-numeric">A</td>
-							</tr>
-							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/fall/cmpt/470/e100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 470</td>
-								<td class="mdl-data-table__cell--non-numeric">Web-based
-									Information Systems</td>
-								<td class="mdl-data-table__cell--non-numeric">B+</td>
-							</tr>
-							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/fall/cmpt/454/d100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 454</td>
-								<td class="mdl-data-table__cell--non-numeric">Database
-									Systems II</td>
+								onclick="window.document.location='https://www.sfu.ca/outlines.html?2016/spring/cmpt/475/e100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 475</td>
+								<td class="mdl-data-table__cell--non-numeric">Requirements
+									Engineering</td>
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
@@ -163,10 +171,24 @@
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='https://www.sfu.ca/outlines.html?2016/spring/cmpt/475/e100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 475</td>
-								<td class="mdl-data-table__cell--non-numeric">Requirements
-									Engineering</td>
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/fall/cmpt/470/e100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 470</td>
+								<td class="mdl-data-table__cell--non-numeric">Web-based
+									Information Systems</td>
+								<td class="mdl-data-table__cell--non-numeric">B+</td>
+							</tr>
+							<tr class="td-row"
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/fall/cmpt/459/d100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 459</td>
+								<td class="mdl-data-table__cell--non-numeric">Special
+									Topics in Database Systems</td>
+								<td class="mdl-data-table__cell--non-numeric">A</td>
+							</tr>
+							<tr class="td-row"
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/fall/cmpt/454/d100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 454</td>
+								<td class="mdl-data-table__cell--non-numeric">Database
+									Systems II</td>
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
@@ -184,27 +206,6 @@
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='https://www.sfu.ca/outlines.html?2016/spring/cmpt/307/d100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 307</td>
-								<td class="mdl-data-table__cell--non-numeric">Data
-									Structures and Algorithms</td>
-								<td class="mdl-data-table__cell--non-numeric">A</td>
-							</tr>
-							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2017/summer/cmpt/318/d100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 318</td>
-								<td class="mdl-data-table__cell--non-numeric">Computational
-									Data Science</td>
-								<td class="mdl-data-table__cell--non-numeric">A+</td>
-							</tr>
-							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2017/spring/cmpt/365/d100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 365</td>
-								<td class="mdl-data-table__cell--non-numeric">Multimedia
-									Systems</td>
-								<td class="mdl-data-table__cell--non-numeric">A+</td>
-							</tr>
-							<tr class="td-row"
 								onclick="window.document.location='http://www.sfu.ca/outlines.html?2017/spring/cmpt/371/e100';">
 								<td class="mdl-data-table__cell--non-numeric">CMPT 371</td>
 								<td class="mdl-data-table__cell--non-numeric">Data
@@ -212,10 +213,10 @@
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2017/spring/macm/316/d100';">
-								<td class="mdl-data-table__cell--non-numeric">MACM 316</td>
-								<td class="mdl-data-table__cell--non-numeric">Numerical
-									Analysis I</td>
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2017/spring/cmpt/365/d100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 365</td>
+								<td class="mdl-data-table__cell--non-numeric">Multimedia
+									Systems</td>
 								<td class="mdl-data-table__cell--non-numeric">A+</td>
 							</tr>
 							<tr class="td-row"
@@ -226,27 +227,26 @@
 								<td class="mdl-data-table__cell--non-numeric">A-</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='https://www.sfu.ca/students/calendar/2016/spring/courses/cmpt/213.html';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 213</td>
-								<td class="mdl-data-table__cell--non-numeric">Object
-									Oriented Design in Java</td>
-								<td class="mdl-data-table__cell--non-numeric">A-</td>
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/summer/cmpt/354/e100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 354</td>
+								<td class="mdl-data-table__cell--non-numeric">Database
+									Systems I</td>
+								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
-						</tbody>
-					</table>
-
-				</div>
-				<div class="mdl-cell mdl-cell--6-col">
-					<table
-						class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
-						<thead>
-							<tr>
-								<th class="mdl-data-table__cell--non-numeric">Course</th>
-								<th class="mdl-data-table__cell--non-numeric">Description</th>
-								<th class="mdl-data-table__cell--non-numeric">Grade</th>
+							<tr class="td-row"
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2017/summer/cmpt/318/d100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 318</td>
+								<td class="mdl-data-table__cell--non-numeric">Computational
+									Data Science</td>
+								<td class="mdl-data-table__cell--non-numeric">A+</td>
 							</tr>
-						</thead>
-						<tbody>
+							<tr class="td-row"
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2017/spring/macm/316/d100';">
+								<td class="mdl-data-table__cell--non-numeric">MACM 316</td>
+								<td class="mdl-data-table__cell--non-numeric">Numerical
+									Analysis I</td>
+								<td class="mdl-data-table__cell--non-numeric">A+</td>
+							</tr>
 							<tr class="td-row"
 								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/fall/cmpt/310/d100';">
 								<td class="mdl-data-table__cell--non-numeric">CMPT 310</td>
@@ -255,10 +255,10 @@
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/summer/cmpt/354/e100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 354</td>
-								<td class="mdl-data-table__cell--non-numeric">Database
-									Systems I</td>
+								onclick="window.document.location='https://www.sfu.ca/outlines.html?2016/spring/cmpt/307/d100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 307</td>
+								<td class="mdl-data-table__cell--non-numeric">Data
+									Structures and Algorithms</td>
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
@@ -276,11 +276,11 @@
 								<td class="mdl-data-table__cell--non-numeric">A-</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/spring/macm/201/d100';">
-								<td class="mdl-data-table__cell--non-numeric">MACM 201</td>
-								<td class="mdl-data-table__cell--non-numeric">Discrete Math
-									II</td>
-								<td class="mdl-data-table__cell--non-numeric">A+</td>
+								onclick="window.document.location='http://mial.sfu.ca/students/calendar/2014/summer/courses/math/240.html';">
+								<td class="mdl-data-table__cell--non-numeric">MATH 240</td>
+								<td class="mdl-data-table__cell--non-numeric">Linear
+									Algebra</td>
+								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
 								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/spring/cmpt/225/d100';">
@@ -290,18 +290,18 @@
 								<td class="mdl-data-table__cell--non-numeric">A</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2014/fall/cmpt/125/d100';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 125</td>
-								<td class="mdl-data-table__cell--non-numeric">Introduction
-									to Programming II</td>
-								<td class="mdl-data-table__cell--non-numeric">A</td>
+								onclick="window.document.location='https://www.sfu.ca/students/calendar/2016/spring/courses/cmpt/213.html';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 213</td>
+								<td class="mdl-data-table__cell--non-numeric">Object
+									Oriented Design in Java</td>
+								<td class="mdl-data-table__cell--non-numeric">A-</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='http://www.sfu.ca/outlines.html?2014/fall/cmpt/127/lab1';">
-								<td class="mdl-data-table__cell--non-numeric">CMPT 127</td>
-								<td class="mdl-data-table__cell--non-numeric">Computing
-									Laboratory</td>
-								<td class="mdl-data-table__cell--non-numeric">P</td>
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2015/spring/macm/201/d100';">
+								<td class="mdl-data-table__cell--non-numeric">MACM 201</td>
+								<td class="mdl-data-table__cell--non-numeric">Discrete Math
+									II</td>
+								<td class="mdl-data-table__cell--non-numeric">A+</td>
 							</tr>
 							<tr class="td-row"
 								onclick="window.document.location='http://www.sfu.ca/outlines.html?2014/fall/cmpt/165/d100';">
@@ -311,23 +311,9 @@
 								<td class="mdl-data-table__cell--non-numeric">A+</td>
 							</tr>
 							<tr class="td-row"
-								onclick="window.document.location='http://mial.sfu.ca/students/calendar/2014/summer/courses/math/240.html';">
-								<td class="mdl-data-table__cell--non-numeric">MATH 240</td>
-								<td class="mdl-data-table__cell--non-numeric">Linear
-									Algebra</td>
-								<td class="mdl-data-table__cell--non-numeric">A</td>
-							</tr>
-							<tr class="td-row"
 								onclick="window.document.location='http://mial.sfu.ca/students/calendar/2014/summer/courses/math/152.html';">
 								<td class="mdl-data-table__cell--non-numeric">MATH 152</td>
 								<td class="mdl-data-table__cell--non-numeric">Calculus II</td>
-								<td class="mdl-data-table__cell--non-numeric">A+</td>
-							</tr>
-							<tr class="td-row"
-								onclick="window.document.location='https://www.sfu.ca/students/calendar/2017/spring/courses/macm/101.html';">
-								<td class="mdl-data-table__cell--non-numeric">MACM 101</td>
-								<td class="mdl-data-table__cell--non-numeric">Discrete Math
-									I</td>
 								<td class="mdl-data-table__cell--non-numeric">A+</td>
 							</tr>
 							<tr class="td-row"
@@ -343,28 +329,48 @@
 									to Computer Design</td>
 								<td class="mdl-data-table__cell--non-numeric">A+</td>
 							</tr>
+							<tr class="td-row"
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2014/fall/cmpt/127/lab1';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 127</td>
+								<td class="mdl-data-table__cell--non-numeric">Computing
+									Laboratory</td>
+								<td class="mdl-data-table__cell--non-numeric">P</td>
+							</tr>
+							<tr class="td-row"
+								onclick="window.document.location='http://www.sfu.ca/outlines.html?2014/fall/cmpt/125/d100';">
+								<td class="mdl-data-table__cell--non-numeric">CMPT 125</td>
+								<td class="mdl-data-table__cell--non-numeric">Introduction
+									to Programming II</td>
+								<td class="mdl-data-table__cell--non-numeric">A</td>
+							</tr>
+							<tr class="td-row"
+								onclick="window.document.location='https://www.sfu.ca/students/calendar/2017/spring/courses/macm/101.html';">
+								<td class="mdl-data-table__cell--non-numeric">MACM 101</td>
+								<td class="mdl-data-table__cell--non-numeric">Discrete Math
+									I</td>
+								<td class="mdl-data-table__cell--non-numeric">A+</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
+				<div class="mdl-cell mdl-cell--1-col"></div>
+			</div>
+			<div class="mdl-grid"></div>
+			<div class="mdl-grid"></div>
+			<div id="copyright-info">
+				<p>
+					<a id="project-github-link"
+						href="https://github.com/kayhandehghani/PersonalWebSite"
+						role="button" title="GitHub"><img
+						src="../img/github-logo-black.svg" alt="Smiley face" height="32"
+						width="32"> </a> <br /> <br /> &#9400; 2018 Kayhan Dehghani
+				</p>
 			</div>
 		</div>
 		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
 			class="mdl-snackbar mdl-js-snackbar">
 			<div class="mdl-snackbar__text"></div>
 			<button type="button" class="mdl-snackbar__action"></button>
-		</div>
-		<div class="mdl-grid">
-			<div class="mdl-cell mdl-cell--5-col"></div>
-			<div class="mdl-cell mdl-cell--7-col">
-				<a href="https://github.com/kayhandehghani/PersonalWebSite"
-					role="button" title="GitHub"> <img
-					src="../img/github-logo-black.svg" alt="Smiley face" height="32"
-					width="32">
-				</a>
-				<ul class="mdl-mini-footer__link-list">
-					<li>&#9400; 2018 Kayhan Dehghani</li>
-				</ul>
-			</div>
 		</div>
 		</main>
 	</div>
