@@ -82,6 +82,16 @@
 	}
 }
 
+@keyframes justShowUp {
+	from {
+  		visibility: hidden;
+	}
+
+	to {
+  		visibility: visible;
+	}
+}
+
 @keyframes contactAnim {
 	from {
   		margin-top: 10%;
@@ -273,6 +283,7 @@ h5, h6, .like-h6 {
 	color: black;
 	border: solid 1px white;
 	letter-spacing: 0.2em;
+    font-weight: 400;
 }
 
 .mybutton:hover, .mdl-button--accent.mdl-button--accent.mdl-button--raised:hover, 
@@ -281,6 +292,7 @@ h5, h6, .like-h6 {
 	border: solid 1px #e61344;
 	letter-spacing: 0.2em;
 	color: white;
+    font-weight: 400;
 }
 
 #course-table-div {
@@ -322,6 +334,7 @@ h5, h6, .like-h6 {
 	color: white;
 	font-weight: 100;
 	font-size: 18px;
+	letter-spacing: 0.2em;
 }
 
 .mdl-textfield__label {
@@ -414,14 +427,14 @@ element.style {
 	visibility: hidden;
 }
 .contact-3 {
-	animation: showUpContacts 3s linear;
+	animation: justShowUp 3s linear;
 	animation-delay: 2.4s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 
 .contact-4 {
-	animation: showUpAcheivements 4s linear;
+	animation: justShowUp 4s linear;
 	animation-delay: 2.9s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
@@ -514,12 +527,14 @@ element.style {
 	color: #e61344;
 	font-size: 14px;
 	font-weight: 100;
+	letter-spacing: 0.2em;
 }
 
 #image-modal-location, #image-modal-date {
 	font-size: 14px;
 	font-weight: 100;
 	color: #e61344;
+	letter-spacing: 0.2em;
 }
 
 #image-modal-before {
