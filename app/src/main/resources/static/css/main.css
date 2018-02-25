@@ -33,7 +33,7 @@
 @keyframes slideInColorLeft {
 	from {
   		margin-left: 100%;
-  		width: 300%;
+  		width: 1100%;
   		color: #e61344;
   		opacity: 0.5;
 	}
@@ -46,13 +46,29 @@
 	}
 }
 
+@keyframes slideInColorRight {
+	from {
+  		margin-right: 100%;
+  		color: #e61344;
+  		opacity: 0;
+	}
+
+	to {
+  		margin-right: 0%;
+  		color: black;
+  		opacity: 1;
+	}
+}
+
 @keyframes showUp {
 	from {
   		color: #e61344;
   		visibility: hidden;
+  		opacity: 0;
 	}
 
 	to {
+		opacity: 1;
   		color: white;
   		visibility: visible;
 	}
@@ -194,13 +210,6 @@ h5, h6, .like-h6 {
 	font-weight: 100;
 }
 
-#myself:hover {
-	animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;	
-	transform: translate3d(0, 0, 0);
-	backface-visibility: hidden;
-	perspective: 1000px;
-}
-
 #spinner {
 	display: block;
     margin: auto;
@@ -316,6 +325,8 @@ h5, h6, .like-h6 {
 
 
 #myself {
+	animation: slideInColorLeft 0.6s linear;
+	animation-fill-mode: forwards;
 	text-align: center;
 	margin-top: 30px;
 }
@@ -388,29 +399,16 @@ element.style {
 }
 
 #intro-1 {
-	animation: showUp 2.5s ease;
+	animation: slideInColorRight 2s ease-in;
 }
 
 #intro-2 {
-	animation: showUp 2.5s ease;
-	animation-delay: 2.5s;
+	animation: showUp 0.5s ease;
+	animation-delay: 1.5s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 
-#intro-3 {
-	animation: showUp 2.5s ease;
-	animation-delay: 5s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
-
-#intro-4 {
-	animation: showUp 2.5s ease;
-	animation-delay: 7s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
 
 #contact-whole {
 	animation: contactAnim 1.2s ease;
