@@ -119,11 +119,12 @@ body {
 	font-family: Prime, 'Open Sans', sans-serif;
 	font-weight: 100;
 	font-style: normal;
+	font-size: 18px;
 }
 
 h5, h6, .like-h6 {
 	font-family: Prime, 'Open Sans', sans-serif;
-	font-size: 18px;
+	font-size: 22px;
 	letter-spacing: 0.2em;
 	font-style: normal;
 	
@@ -132,7 +133,7 @@ h5, h6, .like-h6 {
 .mdl-layout__header-row {
 	color: black;
 	font-weight: 100;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .mdl-layout__drawer {
@@ -148,6 +149,7 @@ h5, h6, .like-h6 {
 
 .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
 	color: white;
+	letter-spacing: 0.2em;
 	font-weight: 100;
 	font-size: 16px;
 }
@@ -159,16 +161,17 @@ h5, h6, .like-h6 {
 
 
 .mdl-data-table {
+	font-size: 16px;
 	background-color: rgba(0,0,0,0.3);
 	color: white;
-	margin: auto;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
 }
 
 .mdl-data-table th {
+	font-size: 16px;
 	color: #e61344;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
 }
 
@@ -259,9 +262,10 @@ h5, h6, .like-h6 {
 }
 
 .content p {
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 100;
 	margin: 30px 120px;
+	letter-spacing: 0.1em;
 }
 
 .content h1 {
@@ -277,8 +281,7 @@ h5, h6, .like-h6 {
 	color: #e61344;
 }
 
-.mybutton, .mdl-button--accent.mdl-button--accent.mdl-button--raised, 
-.mdl-button--accent.mdl-button--accent.mdl-button--fa {
+.mdl-button, .mdl-button.buttonReversed:hover {
 	background-color: #e61344;
 	color: black;
 	border: solid 1px white;
@@ -286,9 +289,8 @@ h5, h6, .like-h6 {
     font-weight: 400;
 }
 
-.mybutton:hover, .mdl-button--accent.mdl-button--accent.mdl-button--raised:hover, 
-.mdl-button--accent.mdl-button--accent.mdl-button--fa:hover {
-	background-color: rgba(0,0,0,1);
+.mdl-button:hover, .mdl-button.buttonReversed {
+	background-color: rgba(0,0,0,0.8);
 	border: solid 1px #e61344;
 	letter-spacing: 0.2em;
 	color: white;
@@ -343,12 +345,13 @@ h5, h6, .like-h6 {
 
 .mdl-menu__container.is-visible .mdl-menu {
 	background: #e61344;
+	border-left: solid 1px white;
 }
 
 .mdl-menu__item {
-	color: white;
-	font-weight: 100;
-	font-size: 16px;
+	font-weight: 400;
+	color: black;
+	font-size: 18px;
 }
 
 .mdl-menu__item:hover {
@@ -366,7 +369,7 @@ element.style {
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text{
 	font-weight: 100;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 #presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
@@ -525,13 +528,13 @@ element.style {
 .album-img-text {
 	background-color: rgba(0,0,0,0); 
 	color: #e61344;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 100;
 	letter-spacing: 0.2em;
 }
 
 #image-modal-location, #image-modal-date {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 100;
 	color: #e61344;
 	letter-spacing: 0.2em;
@@ -582,7 +585,7 @@ element.style {
 
 .mdl-textfield__input {
 	border-bottom: 1px solid white;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 100;
 }
 
