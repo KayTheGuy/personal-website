@@ -210,7 +210,7 @@ h5, h6, .like-h6 {
 	font-weight: 100;
 }
 
-#spinner {
+#img-spinner {
 	display: block;
     margin: auto;
 	width: 80px;
@@ -250,19 +250,13 @@ h5, h6, .like-h6 {
 }
 
 .body-container {
-	background: url('/img/3.jpg');
+/* 	background: url('/img/4.png'); */
+	background-color: white;
 }
 
 .pdf-content {
 	height: 1600px;
 	width: 100%;
-}
-
-.svg-texture-page  {
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
-	background-color:rgba(0, 0, 0, 0.5);
 }
 
 .content a {
@@ -336,6 +330,15 @@ h5, h6, .like-h6 {
 	text-align: center;
 }
 
+#image-editor-preview {
+	max-height: 100%;
+	max-width: 100%;
+}
+
+#image-editor-select-button {
+	float: right;
+}
+
 .centered {
 	position: absolute;
 	top: 50%;
@@ -399,7 +402,7 @@ element.style {
 }
 
 #intro-1 {
-	animation: slideInColorRight 2s ease-in;
+	animation: slideInColorRight 2s ease;
 }
 
 #intro-2 {
@@ -451,7 +454,7 @@ element.style {
     height: 100%; 
     overflow: auto; 
     background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.7); 
+    background-color: rgba(0,0,0,0.9); 
 }
 
 .modal-content {
@@ -485,6 +488,19 @@ element.style {
     position: relative;
 }
 
+.album-image {
+    max-width:100%;
+	max-height:100%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.album-image-row {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
 .album-image-div:hover .album-image {
 	opacity: 0.2;
 }
@@ -498,6 +514,24 @@ element.style {
  	transition: .6s ease;
  	backface-visibility: hidden;
  	cursor:pointer;
+}
+
+.album-img-middle {
+	transition: .2s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.album-img-text {
+	text-align: center;
+	background-color: rgba(0,0,0,0); 
+	color: #e61344;
+	font-size: 16px;
+	font-weight: 100;
+	letter-spacing: 0.2em;
 }
 
 .image-map {
@@ -514,22 +548,6 @@ element.style {
 	height: auto;
 }
 
-.album-img-middle {
-	transition: .5s ease;
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-}
-
-.album-img-text {
-	background-color: rgba(0,0,0,0); 
-	color: #e61344;
-	font-size: 16px;
-	font-weight: 100;
-	letter-spacing: 0.2em;
-}
 
 #image-modal-location, #image-modal-date {
 	font-size: 16px;

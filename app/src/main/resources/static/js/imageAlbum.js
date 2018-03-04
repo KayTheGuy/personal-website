@@ -1,4 +1,7 @@
 var imgList; // global object to hold image information
+var numOfImagePerLoad = 6;
+var numOfLoad = 0;
+var loading = true;
 
 // google map functions
 function initMap() {
@@ -31,9 +34,13 @@ function setModalImage(imgId) {
 		$('#image-modal-before').hide();
 	}
 	
-	if($('#' + nextID).length) {
+	if(imgId < numOfLoad * numOfImagePerLoad) {
 		$('#image-modal-next').show();
-	} else {
+	} else if(imgId  == numOfLoad * numOfImagePerLoad && imgId < imgList.length) {
+		renderMoreImages();	
+		$('#image-modal-next').show();
+	} 
+	else {
 		$('#image-modal-next').hide();
 	}
 	
@@ -45,35 +52,42 @@ function setModalImage(imgId) {
 	$('#image-modal-date').html(selectedImg.date);
 }
 
-var numOfLoad = 0;
-var loading = true;
-function renderImages() {
+function renderMoreImages() {
 	var currentPic, currentPicDiv, currentSpaceDiv, currentMiddleDiv, currentRow;
-	var numOfImagePerLoad = 21; // must be multiple of 3 to work properly
 	startID = numOfLoad * numOfImagePerLoad;
 	endID = Math.min(startID + numOfImagePerLoad, imgList.length);
 	numOfLoad++;
+	var album = $('#img-album-content');
+	var html = []
 	for(var i = startID; i < endID; i++) {
-		var album = $('#img-album-content');
-		if(i % 3 === 0) {
-			currentRow = $("<div>", {"class": "mdl-grid"});
-			currentSpaceDiv = $("<div>", {"class": "mdl-cell mdl-cell--2-col"});
-			currentRow.append(currentSpaceDiv);
-			album.append(currentRow);
-		} 
-		currentPicDiv = $("<div>", {"class": "album-image-div mdl-cell mdl-cell--3-col"});
-		currentPic = $("<img>", {id: imgList[i].id, src: imgList[i].path, "class": "album-image", alt: imgList[i].name, "data-date": imgList[i].date, height: "150", width: "225"});
-		currentMiddleDiv = "<div class=\"album-img-middle\"><div class=\"album-img-text\"><i data-lat=\"" + imgList[i].lat + "\" data-lng=\"" + imgList[i].lng + "\" class=\"image-map material-icons\">place</i>" 
-		+  imgList[i].name
-		+ "</div></div>";
-		currentPicDiv.append(currentPic);
-		currentPicDiv.append(currentMiddleDiv);
-		currentRow.append(currentPicDiv);
-		if(i % 3 === 2) {
-			currentSpaceDiv = $("<div>", {"class": "mdl-cell mdl-cell--1-col"});
-			currentRow.append(currentSpaceDiv);
-		}
+		currentRowOpen = '<div class="album-image-row mdl-grid">';
+		spaceDiv = '<div class="album-image-div mdl-cell mdl-cell--1-col"></div>';
+		currentPicDivOpen = '<div class="album-image-div mdl-cell mdl-cell--10-col">';
+		divClose = '</div>';
+		
+		currentPic = '<img id="' + imgList[i].id + '" src="' + imgList[i].path + 
+					 '" class="album-image" alt="' + imgList[i].name + 
+					 '" data-date="' + imgList[i].date + '">';
+		
+		currentMiddleDiv = '<div class="album-img-middle"><div class="album-img-text"><i data-lat="'
+							+ imgList[i].lat + '" data-lng="' + imgList[i].lng + 
+							'" class="image-map material-icons">place</i>' +  imgList[i].name
+							+ '</div></div>';
+		
+		html.push(currentRowOpen);
+		html.push(spaceDiv);
+		
+		html.push(currentPicDivOpen);
+		
+		html.push(currentPic);
+		html.push(currentMiddleDiv);
+		
+		html.push(divClose);
+		
+		html.push(spaceDiv);
+		html.push(divClose);
 	}
+	album.append(html.join(''));
 	// current loading is complete
 	loading = false;
 	// hide spinner
@@ -98,7 +112,7 @@ function dynamicImageLoad() {
     	$('#spinner').css({visibility: 'visible'});
     	// is loading: stop scroll listener from doing anything
     	loading = true;
-    	renderImages();
+    	renderMoreImages();
     }
 }
 
@@ -123,7 +137,7 @@ $(document).ready(function() {
 		// set global object holding image information
 		imgList = data;
 		// render few first images
-		renderImages();
+		renderMoreImages();
 	}).always(function() {
 		// always
 	}).fail(function(message) {
@@ -132,7 +146,7 @@ $(document).ready(function() {
 	
 	// event handler for dynamically added elements
 	var imgModal = document.getElementById('image-prev-div');
-	$(document).on ("click touchstart", ".album-image", function () {
+	$(document).on ("click swipe", ".album-image", function () {
 		currentImgID = parseInt(this.id);
 		setModalImage(currentImgID);
 		imgModal.style.visibility = "visible";
