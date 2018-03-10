@@ -1,0 +1,99 @@
+#myself {
+	animation: slideInColorLeft 0.6s linear;
+	animation-fill-mode: forwards;
+	text-align: center;
+	margin-top: 30px;
+}
+
+#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
+	animation: slideInColorLeft 2s;
+}
+
+#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text{
+	font-weight: 100;
+	font-size: 120%;
+}
+
+#presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
+	animation: showUp 0.5s ease;
+	animation-delay: 2.2s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+#intro_content {
+	background: url('/img/3.jpg');
+	width: 100%;
+	color: white;
+	padding-bottom: 20px;
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+    border-bottom: groove 1px #e61344;
+}
+
+#awards-content {
+	background: url('/img/2.jpg');
+	width: 100%;
+	color: white;
+	padding-bottom: 20px;
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#project-github-link {
+	text-decoration: none;
+	text-align: center;
+}
+
+#copyright-info {
+	text-align: center;
+}
+
+#intro-1 {
+	animation: slideInColorRight 2s ease;
+}
+
+#intro-2 {
+	animation: showUp 0.5s ease;
+	animation-delay: 1.5s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+#course-table-div {
+	display:none;
+}
+
+.academic-box {
+	border-bottom: 1px solid #e61344;
+	animation: showUp 2.5s ease;
+	animation-delay: 2.5s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.mdl-data-table {
+	font-size: 100%;
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+	letter-spacing: 0.3em;
+	font-family: Prime, 'Open Sans', sans-serif;
+}
+
+.mdl-data-table th {
+	font-size: 100%;
+	color: #e61344;
+	letter-spacing: 0.3em;
+	font-family: Prime, 'Open Sans', sans-serif;
+}
+
+.td-row:hover {
+	color: black;
+	background-color: #e61344;
+	animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;	
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}

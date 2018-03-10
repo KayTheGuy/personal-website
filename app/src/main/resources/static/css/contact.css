@@ -1,0 +1,68 @@
+@keyframes showUpContacts {
+	from {
+  		color: #e61344;
+  		visibility: hidden;
+	}
+
+	to {
+  		color: white;
+  		visibility: visible;
+	}
+}
+
+#contact-body {
+	background-image: url('/img/2.jpg');
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+    color: white;
+}
+
+#my-email {
+	letter-spacing: 0.2em;
+    color: white;
+    font-size: 110%;
+}
+
+#contact-whole {
+	animation: contactAnim 1.2s ease;
+	animation-fill-mode: forwards;
+}
+
+.done-icone {
+	color: #e61344;
+	font-size: 100%;
+	font-weight: 100;
+}
+
+.my-contacts {
+	float: right;
+}
+
+.contact-1 {
+	animation: showUpContacts 1.3s ease;
+	animation-delay: 1.6s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.contact-2 {
+	animation: showUpContacts 1s ease;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.contact-3 {
+	animation: justShowUp 3s linear;
+	animation-delay: 2.4s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.contact-4 {
+	animation: justShowUp 4s linear;
+	animation-delay: 2.9s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}

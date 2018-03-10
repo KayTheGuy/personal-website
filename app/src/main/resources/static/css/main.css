@@ -86,18 +86,6 @@
 	}
 }
 
-@keyframes showUpContacts {
-	from {
-  		color: #e61344;
-  		visibility: hidden;
-	}
-
-	to {
-  		color: white;
-  		visibility: visible;
-	}
-}
-
 @keyframes justShowUp {
 	from {
   		visibility: hidden;
@@ -172,31 +160,6 @@ h5, h6, .like-h6 {
 	color: #e61344;
 }
 
-
-.mdl-data-table {
-	font-size: 100%;
-	background-color: rgba(0,0,0,0.3);
-	color: white;
-	letter-spacing: 0.3em;
-	font-family: Prime, 'Open Sans', sans-serif;
-}
-
-.mdl-data-table th {
-	font-size: 100%;
-	color: #e61344;
-	letter-spacing: 0.3em;
-	font-family: Prime, 'Open Sans', sans-serif;
-}
-
-.td-row:hover {
-	color: black;
-	background-color: #e61344;
-	animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;	
-	transform: translate3d(0, 0, 0);
-	backface-visibility: hidden;
-	perspective: 1000px;
-}
-
 .mdl-mini-footer {
 	background: white;
 	color: black;
@@ -207,53 +170,9 @@ h5, h6, .like-h6 {
 	font-weight: 100;
 }
 
-#img-spinner {
-	display: block;
-    margin: auto;
-	width: 80px;
-	height: 80px;
-}
-
-#pdf-viewer {
-	width: 100%;
-	height: 100%;
-	border: 0;
-}
-
-#resume-content {
-	-webkit-overflow-scrolling:touch;
-	overflow:auto;
-}
-
-#intro_content {
-	background: url('/img/3.jpg');
-	width: 100%;
-	color: white;
-	padding-bottom: 20px;
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
-    border-bottom: groove 1px #e61344;
-}
-
-#awards-content {
-	background: url('/img/2.jpg');
-	width: 100%;
-	color: white;
-	padding-bottom: 20px;
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
-}
-
 .body-container {
 /* 	background: url('/img/4.png'); */
 	background-color: white;
-}
-
-.pdf-content {
-	height: 1600px;
-	width: 100%;
 }
 
 .content a {
@@ -297,10 +216,6 @@ h5, h6, .like-h6 {
     font-weight: 400;
 }
 
-#course-table-div {
-	display:none;
-}
-
 .index-buttons-container {
 	text-align: center;
 }
@@ -314,40 +229,11 @@ h5, h6, .like-h6 {
 	background: #e61344;
 }
 
-
-#myself {
-	animation: slideInColorLeft 0.6s linear;
-	animation-fill-mode: forwards;
-	text-align: center;
-	margin-top: 30px;
-}
-
-.image-below {
-	position: relative;
-	text-align: center;
-}
-
-#image-editor-preview {
-	max-height: 100%;
-	max-width: 70%;
-}
-
-#image-editor-select-button {
-	float: right;
-}
-
 .centered {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-#image-label {
-	color: #e61344;
-	font-weight: 100;
-	font-size: 110%;
-	letter-spacing: 0.2em;
 }
 
 .mdl-textfield__label {
@@ -368,78 +254,6 @@ h5, h6, .like-h6 {
 .mdl-menu__item:hover {
 	color:#e61344;background:white;text-shadow:none;
 } 
-
-element.style {
-    clip: rect(0px 124px 160px 0px);
-}
-
-
-#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
-	animation: slideInColorLeft 2s;
-}
-
-#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text{
-	font-weight: 100;
-	font-size: 120%;
-}
-
-#presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
-	animation: showUp 0.5s ease;
-	animation-delay: 2.2s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
-
-.academic-box {
-	border-bottom: 1px solid #e61344;
-	animation: showUp 2.5s ease;
-	animation-delay: 2.5s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
-
-#intro-1 {
-	animation: slideInColorRight 2s ease;
-}
-
-#intro-2 {
-	animation: showUp 0.5s ease;
-	animation-delay: 1.5s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
-
-
-#contact-whole {
-	animation: contactAnim 1.2s ease;
-	animation-fill-mode: forwards;
-}
-
-.contact-1 {
-	animation: showUpContacts 1.3s ease;
-	animation-delay: 1.6s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
-.contact-2 {
-	animation: showUpContacts 1s ease;
-	animation-delay: 2s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
-.contact-3 {
-	animation: justShowUp 3s linear;
-	animation-delay: 2.4s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
-
-.contact-4 {
-	animation: justShowUp 4s linear;
-	animation-delay: 2.9s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-}
 
 .modal {
     visibility: hidden; 
@@ -480,111 +294,7 @@ element.style {
     text-decoration: none;
     cursor: pointer;
 }
-
-.album-image-div {
-    position: relative;
-}
-
-.album-image {
-    max-width:100%;
-	max-height:100%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.album-image-row {
-	padding-top: 50px;
-	padding-bottom: 50px;
-}
-
-.album-image-div:hover .album-image {
-	opacity: 0.2;
-}
-
-.album-image-div:hover .album-img-middle {
-	opacity: 1;
-}
-
-.album-image {
- 	display: block;
- 	transition: .6s ease;
- 	backface-visibility: hidden;
- 	cursor:pointer;
-}
-
-.album-img-middle {
-	transition: .2s ease;
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-}
-
-.album-img-text {
-	text-align: center;
-	background-color: rgba(0,0,0,0); 
-	color: #e61344;
-	font-size: 100%;
-	font-weight: 100;
-	letter-spacing: 0.2em;
-}
-
-.image-map {
- 	cursor:pointer;
-}
-
-#album-map {
-	height: 500px;
-	width: 100%;
-}
-
-#image-modal {
-	width: 100%;
-	height: auto;
-}
-
-
-#image-modal-location, #image-modal-date {
-	font-size: 100%;
-	font-weight: 100;
-	color: #e61344;
-	letter-spacing: 0.2em;
-}
-
-#image-modal-before {
-	float: left;
-}   
-
-#image-modal-next {
-	float: right;
-}
-
-.done-icone {
-	color: #e61344;
-	font-size: 100%;
-	font-weight: 100;
-}
-
-#contact-body {
-	background-image: url('/img/2.jpg');
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
-    color: white;
-}   
-
-#my-email {
-	letter-spacing: 0.2em;
-    color: white;
-    font-size: 110%;
-}
-
-.my-contacts {
-	float: right;
-}
-
+   
 .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded {
 	color: white;
 }
@@ -600,13 +310,4 @@ element.style {
 	border-bottom: 1px solid white;
 	font-size: 100%;
 	font-weight: 100;
-}
-
-#project-github-link {
-	text-decoration: none;
-	text-align: center;
-}
-
-#copyright-info {
-	text-align: center;
 }

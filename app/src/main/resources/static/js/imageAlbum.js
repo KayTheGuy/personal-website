@@ -57,19 +57,19 @@ function renderMoreImages() {
 	startID = numOfLoad * numOfImagePerLoad;
 	endID = Math.min(startID + numOfImagePerLoad, imgList.length);
 	numOfLoad++;
-	var album = $('#img-album-content');
+	var album = $('#image-album-content');
 	var html = []
 	for(var i = startID; i < endID; i++) {
-		currentRowOpen = '<div class="album-image-row mdl-grid">';
-		spaceDiv = '<div class="album-image-div mdl-cell mdl-cell--1-col"></div>';
-		currentPicDivOpen = '<div class="album-image-div mdl-cell mdl-cell--10-col">';
+		currentRowOpen = '<div class="image-album-row mdl-grid">';
+		spaceDiv = '<div class="image-album-div mdl-cell mdl-cell--1-col"></div>';
+		currentPicDivOpen = '<div class="image-album-div mdl-cell mdl-cell--10-col">';
 		divClose = '</div>';
 		
 		currentPic = '<img id="' + imgList[i].id + '" src="' + imgList[i].path + 
-					 '" class="album-image" alt="' + imgList[i].name + 
+					 '" class="image-album" alt="' + imgList[i].name + 
 					 '" data-date="' + imgList[i].date + '">';
 		
-		currentMiddleDiv = '<div class="album-img-middle"><div class="album-img-text"><i data-lat="'
+		currentMiddleDiv = '<div class="image-album-middle"><div class="image-album-text"><i data-lat="'
 							+ imgList[i].lat + '" data-lng="' + imgList[i].lng + 
 							'" class="image-map material-icons">place</i>' +  imgList[i].name
 							+ '</div></div>';
@@ -146,7 +146,7 @@ $(document).ready(function() {
 	
 	// event handler for dynamically added elements
 	var imgModal = document.getElementById('image-prev-div');
-	$(document).on ("click swipe", ".album-image", function () {
+	$(document).on ("click swipe", ".image-album", function () {
 		currentImgID = parseInt(this.id);
 		setModalImage(currentImgID);
 		imgModal.style.visibility = "visible";

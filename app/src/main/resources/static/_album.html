@@ -11,8 +11,9 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <link rel="stylesheet" href="/mdl/material.min.css">
-<link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/mdl/material-icons.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/album.css">
 <script src="/mdl/material.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -31,9 +32,9 @@
 			</nav>
 			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Pages</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link " href="/">Home</a>  
-				<a class="mdl-navigation__link " href="/resume">Resume</a> 
-				<a class="mdl-navigation__link " href="/contact">Contact</a>
+				<a class="mdl-navigation__link " href="/">Home</a> <a
+					class="mdl-navigation__link " href="/resume">Resume</a> <a
+					class="mdl-navigation__link " href="/contact">Contact</a>
 			</nav>
 		</div>
 
@@ -43,7 +44,8 @@
 		<div class="mdl-grid"></div>
 		<div class="mdl-grid"></div>
 		<div class="mdl-grid"></div>
-		<div id="img-album-content"></div>
+		<div id="image-album-content"></div>
+		<div id="image-album-panel"></div>
 		<!--  Error Message -->
 		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
 			class="mdl-snackbar mdl-js-snackbar">
@@ -61,15 +63,21 @@
 				</div>
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="mdl-cell mdl-cell--10-col">
+					<div class="mdl-cell mdl-cell--2-col">
 						<button id="image-modal-before"
 							class="album-preview-nav-but mdl-button mdl-js-button">
-							❮
-						</button>
+							❮</button>
+					</div>
+					<div class="mdl-cell mdl-cell--6-col">
+						<p id="image-album-modal-metadata">
+							<span id="image-modal-location">&times;</span> <span
+								id="image-modal-date">&times;</span>
+						</p>
+					</div>
+					<div class="mdl-cell mdl-cell--2-col">
 						<button id="image-modal-next"
 							class="album-preview-nav-but mdl-button mdl-js-button">
-							❯
-						</button>
+							❯</button>
 					</div>
 					<div class="mdl-cell mdl-cell--1-col"></div>
 				</div>
@@ -78,11 +86,6 @@
 					<div class="mdl-cell mdl-cell--10-col">
 						<img id="image-modal" src="/img/placeholder.png"
 							alt="image preview" />
-						<p>
-							<span id="image-modal-location">&times;</span> 
-							<span
-								id="image-modal-date">&times;</span>
-						</p>
 					</div>
 					<div class="mdl-cell mdl-cell--1-col"></div>
 				</div>

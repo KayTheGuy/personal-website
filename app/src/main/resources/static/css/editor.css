@@ -1,0 +1,27 @@
+#img-spinner {
+	display: block;
+    margin: auto;
+	width: 80px;
+	height: 80px;
+}
+
+#image-label {
+	color: #e61344;
+	font-weight: 100;
+	font-size: 110%;
+	letter-spacing: 0.2em;
+}
+
+#image-editor-preview {
+	max-height: 100%;
+	max-width: 70%;
+}
+
+#image-editor-select-button {
+	float: right;
+}
+
+.image-below {
+	position: relative;
+	text-align: center;
+}
