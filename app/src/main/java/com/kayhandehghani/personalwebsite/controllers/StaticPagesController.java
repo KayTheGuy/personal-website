@@ -33,9 +33,4 @@ public class StaticPagesController {
 		return "_album.html";
 	}
 	
-	@RequestMapping(value = "/twitter-apis", method = RequestMethod.GET)
-	public String getTwitterAPIs() {
-		return "_twitter.html";
-	}
-	
 }

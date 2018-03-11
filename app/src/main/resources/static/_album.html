@@ -27,8 +27,7 @@
 			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Projects</span>
 			<nav class="mdl-navigation">
 				<a class="mdl-navigation__link" href="/image-editor">Image
-					Filters</a> <a class="mdl-navigation__link" href="#">Image Album</a> <a
-					class="mdl-navigation__link" href="/twitter-apis">Twitter APIs</a>
+					Filters</a> <a class="mdl-navigation__link" href="#">Image Album</a>
 			</nav>
 			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Pages</span>
 			<nav class="mdl-navigation">
@@ -45,7 +44,11 @@
 		<div class="mdl-grid"></div>
 		<div class="mdl-grid"></div>
 		<div id="image-album-content"></div>
-		<div id="image-album-panel"></div>
+		<div id="image-album-counter">
+			<span id="image-album-counter-ratio"></span>
+			<hr />
+			<span id="image-album-counter-total"></span>
+		</div>
 		<!--  Error Message -->
 		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
 			class="mdl-snackbar mdl-js-snackbar">
@@ -87,9 +90,15 @@
 						<img id="image-modal" src="/img/placeholder.png"
 							alt="image preview" />
 					</div>
-					<div class="mdl-cell mdl-cell--1-col"></div>
-				</div>
+					<div class="mdl-cell mdl-cell--1-col">
+						<div id="image-album-counter-modal">
+							<span id="image-album-counter-ratio-modal"></span>
+							<hr />
+							<span id="image-album-counter-total-modal"></span>
+						</div>
 
+					</div>
+				</div>
 			</div>
 		</div>
 

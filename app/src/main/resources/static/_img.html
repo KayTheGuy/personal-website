@@ -26,8 +26,7 @@
 			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Projects</span>
 			<nav class="mdl-navigation">
 				<a class="mdl-navigation__link" href="#">Image Filters</a> <a
-					class="mdl-navigation__link" href="/image-album">Image Album</a> <a
-					class="mdl-navigation__link" href="/twitter-apis">Twitter APIs</a>
+					class="mdl-navigation__link" href="/image-album">Image Album</a>
 			</nav>
 			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Pages</span>
 			<nav class="mdl-navigation">
@@ -55,21 +54,20 @@
 						<li id="undo" class="mdl-menu__item ">Undo</li>
 					</ul>
 				</div>
-				<div id="img-spinner" class="mdl-spinner mdl-js-spinner mdl-cell mdl-cell--3-col">
+				<div id="img-spinner"
+					class="mdl-spinner mdl-js-spinner mdl-cell mdl-cell--3-col">
 				</div>
 				<div class="mdl-cell mdl-cell--3-col">
 					<button id="image-editor-select-button"
-						class="mdl-button mdl-js-button">
-						Select</button>
+						class="mdl-button mdl-js-button">Select</button>
 				</div>
 				<div id="upload-form" class="mdl-cell mdl-cell--1-col">
 					<form id="image-form" enctype="multipart/form-data"
 						action="/upload/image" method="post">
 						<input id="image-picker" name="uploadedImg" type="file"
-							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;"/> 
-						<input
+							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
 							id="image-upload" type="submit" value="Press"
-							style="display: none;"/>
+							style="display: none;" />
 					</form>
 				</div>
 			</div>

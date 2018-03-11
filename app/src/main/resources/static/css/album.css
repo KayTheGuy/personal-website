@@ -3,15 +3,12 @@
 	height: auto;
 }
 
-#image-modal-location, #image-modal-date {
+#image-album-modal-metadata {
+	text-align: center;
 	font-size: 110%;
 	font-weight: 100;
 	color: #e61344;
 	letter-spacing: 0.2em;
-}
-
-#image-album-modal-metadata {
-	text-align: center;
 }
 
 #image-modal-before {
@@ -25,6 +22,42 @@
 #album-map {
 	height: 800px;
 	width: 100%;
+}
+
+#image-album-counter, #image-album-counter-modal {
+	padding: 20px;
+	height: 100px;
+	width: 100px;
+	position: fixed;
+	top: 50%;
+	right: 0;
+	color: #e61344;
+	font-weight: 100;
+	letter-spacing: 0.2em;
+	z-index: 1;
+}
+
+#image-album-counter-ratio, #image-album-counter-ratio-modal {
+	float: right;
+}
+
+#image-album-counter hr {
+	margin-top: 25px;
+	margin-left: 65px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #e61344;
+}
+
+#image-album-counter-modal hr {
+	margin-top: 25px;
+	margin-left: 65px;
+	border-top: 1px solid rgba(0,0,0,0);
+	border-bottom: 1px solid #e61344;
+}
+
+#image-album-counter-total, #image-album-counter-total-modal {
+	font-size: 130%;
+	float: right;
 }
 
 .image-album-div {
@@ -73,7 +106,7 @@
 	text-align: center;
 	background-color: rgba(0,0,0,0); 
 	color: #e61344;
-	font-size: 150%;
+	font-size: 180%;
 	font-weight: 100;
 	letter-spacing: 0.2em;
 }

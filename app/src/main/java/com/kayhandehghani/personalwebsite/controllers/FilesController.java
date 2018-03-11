@@ -12,8 +12,6 @@ import java.util.Base64;
 import java.util.List;
 
 import javax.imageio.ImageIO;
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.tomcat.util.http.fileupload.IOUtils;
@@ -35,7 +33,6 @@ import com.kayhandehghani.personalwebsite.data.entity.Image;
 import com.kayhandehghani.personalwebsite.data.repository.ImageRepository;
 import com.kayhandehghani.personalwebsite.utilities.EmailUtility;
 import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
-import com.kayhandehghani.personalwebsite.utilities.TwitterUtility;
 
 @RestController
 public class FilesController {
@@ -93,11 +90,5 @@ public class FilesController {
 		Iterable<Image> results = repo.findAll();
 		results.forEach(img -> images.add(img));
 		return images;
-	}
-	
-	@RequestMapping(value = "/api/twitter", method = RequestMethod.GET)
-	public ResponseEntity twitterMain() {
-		TwitterUtility.setup();
-		return new ResponseEntity(new EmptyJsonResponse(), HttpStatus.OK);
 	}
 }

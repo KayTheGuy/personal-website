@@ -2,6 +2,7 @@ var imgList; // global object to hold image information
 var numOfImagePerLoad = 6;
 var numOfLoad = 0;
 var loading = true;
+var counterRatio = 1;
 
 // google map functions
 function initMap() {
@@ -50,6 +51,7 @@ function setModalImage(imgId) {
 	imageElement.attr('src', selectedImg.path); 
 	$('#image-modal-location').html(locationIcon + selectedImg.name + ', ');
 	$('#image-modal-date').html(selectedImg.date);
+	setImageCounterModal(imgId);
 }
 
 function renderMoreImages() {
@@ -102,18 +104,39 @@ function renderMoreImages() {
 		// remove spinner
 		$('#spinner').remove();
 	}
+	setImageCounter();
 }
 
 function dynamicImageLoad() {
 	var currentScroll = $(this)[0].scrollTop;
-	var maxScroll = $(this)[0].scrollHeight - $(this).height();
-    if(!loading && (currentScroll >= maxScroll - 50)) {
+	var scrolHeight = $(this)[0].scrollHeight;
+	var maxScroll = scrolHeight - $(this).height();
+    if(!loading && (currentScroll >= maxScroll - 50) && (numOfLoad * numOfImagePerLoad) < imgList.length ) {
     	// show spinner
     	$('#spinner').css({visibility: 'visible'});
     	// is loading: stop scroll listener from doing anything
     	loading = true;
     	renderMoreImages();
     }
+    counterRatio = (scrolHeight - currentScroll) / scrolHeight;
+    setImageCounter();
+}
+
+function setImageCounter() {
+	var total =  numOfImagePerLoad * numOfLoad;
+	var ratio = Math.round((1-counterRatio) * total) + 1;
+	if(ratio <= total) {
+		$('#image-album-counter-ratio').text(ratio);
+		$('#image-album-counter-total').text(total);
+	}
+}
+
+function setImageCounterModal(id) {
+	var total =  numOfImagePerLoad * numOfLoad;
+	if(id <= total) {
+		$('#image-album-counter-ratio-modal').text(id);
+		$('#image-album-counter-total-modal').text(total);
+	}
 }
 
 $(document).ready(function() {
@@ -136,7 +159,7 @@ $(document).ready(function() {
 	}).done(function(data) {
 		// set global object holding image information
 		imgList = data;
-		// render few first images
+		// render first images
 		renderMoreImages();
 	}).always(function() {
 		// always
