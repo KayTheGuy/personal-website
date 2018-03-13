@@ -171,8 +171,7 @@ h5, h6, .like-h6 {
 }
 
 .body-container {
-/* 	background: url('/img/4.png'); */
-	background-color: white;
+	background-color: rgba(0,0,0,1);
 }
 
 .content a {
