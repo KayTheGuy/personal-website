@@ -87,13 +87,13 @@
 
 .image-album {
  	display: block;
- 	transition: .6s ease;
+ 	transition: .3s ease;
  	backface-visibility: hidden;
  	cursor:pointer;
 }
 
 .image-album-middle {
-	transition: .2s ease;
+	transition: .1s ease;
 	opacity: 0;
 	position: absolute;
 	top: 50%;

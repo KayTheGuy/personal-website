@@ -22,8 +22,6 @@ public class Image {
 	private String type;
 	@Column(name="image_path")
 	private String path;
-	@Column(name="image_size")
-	private long size;
 	@Column(name="image_lat")
 	private float lat;
 	@Column(name="image_lng")
@@ -54,12 +52,6 @@ public class Image {
 	}
 	public void setPath(String path) {
 		this.path = path;
-	}
-	public long getSize() {
-		return size;
-	}
-	public void setSize(long size) {
-		this.size = size;
 	}
 	public float getLat() {
 		return lat;
