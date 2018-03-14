@@ -29,6 +29,10 @@
 	animation-fill-mode: forwards;
 }
 
+#home-return {
+	float: right;
+}
+
 .done-icone {
 	color: #e61344;
 	font-size: 100%;
