@@ -48,13 +48,11 @@
 
 @keyframes slideInColorRight {
 	from {
-  		margin-right: 100%;
   		color: #e61344;
   		opacity: 0;
 	}
 
 	to {
-  		margin-right: 0%;
   		color: black;
   		opacity: 1;
 	}
@@ -182,14 +180,12 @@ h5, h6, .like-h6 {
 .content p {
 	font-size: 120%;
 	font-weight: 100;
-	margin: 30px 120px;
 	letter-spacing: 0.1em;
 }
 
 .content h1 {
 	text-align: center;
 	margin: 4px;
-	margin-left: 40px;
     font-weight: 100;
 }
 
