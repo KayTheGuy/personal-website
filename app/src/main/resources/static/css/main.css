@@ -34,33 +34,33 @@
 	from {
   		margin-left: 100%;
   		width: 1100%;
-  		color: #e61344;
+  		color: PaleGoldenRod;
   		opacity: 0.5;
 	}
 
 	to {
   		margin-left: 0%;
   		width: 100%;
-  		color: black;
+  		color: white;
   		opacity: 1;
 	}
 }
 
 @keyframes slideInColorRight {
 	from {
-  		color: #e61344;
+  		color: PaleGoldenRod;
   		opacity: 0;
 	}
 
 	to {
-  		color: black;
+  		color: white;
   		opacity: 1;
 	}
 }
 
 @keyframes showUp {
 	from {
-  		color: #e61344;
+  		color: PaleGoldenRod;
   		visibility: hidden;
   		opacity: 0;
 	}
@@ -74,7 +74,7 @@
 
 @keyframes showUpAcheivements {
 	from {
-  		color: #e61344;
+  		color: PaleGoldenRod;
   		visibility: hidden;
 	}
 
@@ -129,35 +129,6 @@ h5, h6, .like-h6 {
 	
 }
 
-.mdl-layout__header-row {
-	color: black;
-	font-weight: 100;
-	font-size: 100%;
-}
-
-.mdl-layout__drawer {
-	border: #e61344 1px;
-	background: rgba(0,0,0,0.9);
-}
-
-.mdl-layout-title {
-	font-weight: 300;
-	font-size: 120%;
-	color: #e61344;
-}
-
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
-	color: white;
-	letter-spacing: 0.2em;
-	font-weight: 100;
-	font-size: 100%;
-}
-
-.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
-	background: white;
-	color: #e61344;
-}
-
 .mdl-mini-footer {
 	background: white;
 	color: black;
@@ -169,7 +140,7 @@ h5, h6, .like-h6 {
 }
 
 .body-container {
-	background-color: rgba(0,0,0,1);
+	background-color: #232529;
 }
 
 .content a {
@@ -192,20 +163,20 @@ h5, h6, .like-h6 {
 .first-letter {
 	font-weight: 100;
 	font-size: 110%;
-	color: #e61344;
+	color: PaleGoldenRod;
 }
 
-.mdl-button, .mdl-button.buttonReversed:hover {
-	background-color: #e61344;
+.mdl-button, .mdl-button.normal-button, .mdl-button.reversed-button:hover {
+	background-color: PaleGoldenRod;
 	color: black;
 	border: solid 1px white;
 	letter-spacing: 0.2em;
     font-weight: 400;
 }
 
-.mdl-button:hover, .mdl-button.buttonReversed {
+.mdl-button:hover, .mdl-button.normal-button:hover, .mdl-button.reversed-button {
 	background-color: rgba(0,0,0,0.8);
-	border: solid 1px #e61344;
+	border: solid 1px PaleGoldenRod;
 	letter-spacing: 0.2em;
 	color: white;
     font-weight: 400;
@@ -216,12 +187,15 @@ h5, h6, .like-h6 {
 }
 
 .mdl-layout__drawer-button {
-	color: #e61344;
+	color: PaleGoldenRod;
 }
 
 .mdl-snackbar {
-	font-weight: 100;
-	background: #e61344;
+	background: PaleGoldenRod;
+}
+
+.mdl-snackbar__text {
+	color: black;
 }
 
 .centered {
@@ -236,18 +210,21 @@ h5, h6, .like-h6 {
 }
 
 .mdl-menu__container.is-visible .mdl-menu {
-	background: #e61344;
-	border-left: solid 1px white;
+	background-color: PaleGoldenRod;
 }
 
 .mdl-menu__item {
+	background-color: rgba(0,0,0,0);
 	font-weight: 400;
 	color: black;
 	font-size: 110%;
+	letter-spacing: 0.4em;
 }
 
 .mdl-menu__item:hover {
-	color:#e61344;background:white;text-shadow:none;
+	color: PaleGoldenRod;
+	background: white;
+	text-shadow: none;
 } 
 
 .modal {
@@ -278,7 +255,7 @@ h5, h6, .like-h6 {
 }
 
 .close {
-    color: #e61344;
+    color: PaleGoldenRod;
     float: right;
     font-size: 300%;
     font-weight: 100;
@@ -294,7 +271,7 @@ h5, h6, .like-h6 {
 	color: white;
 }
 .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded.is-focused{
-	color: #e61344;
+	color: PaleGoldenRod;
 }
 
 .mdl-textfield.mdl-js-textfield.is-upgraded.is-dirty {
@@ -305,4 +282,32 @@ h5, h6, .like-h6 {
 	border-bottom: 1px solid white;
 	font-size: 100%;
 	font-weight: 100;
+}
+
+.menu-button {
+	margin-right: 10px;
+}
+
+.menu-item {
+	background-color: rgba(0,0,0,0);
+	letter-spacing: 0.3em;
+	color: PaleGoldenRod;
+    font-size: 110%;
+}
+
+.menu-item:hover {
+    font-size: 130%;
+}
+
+.menu-column {
+	text-align: center;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	margin-bottom: 20px;
 }

@@ -8,7 +8,7 @@ $(document).ready(function () {
 			$('#course-table-div').css("display", "table");
 			$(this).text('Hide Courses');
 		}
-		$(this).toggleClass('buttonReversed');
+		$(this).toggleClass('reversed-button');
 		coursesVisible = !coursesVisible;
 	});
 });

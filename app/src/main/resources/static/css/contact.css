@@ -1,6 +1,6 @@
 @keyframes showUpContacts {
 	from {
-  		color: #e61344;
+  		color: PaleGoldenRod;
   		visibility: hidden;
 	}
 
@@ -11,10 +11,7 @@
 }
 
 #contact-body {
-	background-image: url('/img/2.jpg');
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
+	background: #38393d;
     color: white;
 }
 
@@ -34,7 +31,7 @@
 }
 
 .done-icone {
-	color: #e61344;
+	color: PaleGoldenRod;
 	font-size: 100%;
 	font-weight: 100;
 }

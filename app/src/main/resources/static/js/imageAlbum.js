@@ -63,8 +63,8 @@ function renderMoreImages() {
 	var html = []
 	for(var i = startID; i < endID; i++) {
 		currentRowOpen = '<div class="image-album-row mdl-grid">';
-		spaceDiv = '<div class="image-album-div mdl-cell mdl-cell--1-col"></div>';
-		currentPicDivOpen = '<div class="image-album-div mdl-cell mdl-cell--10-col">';
+		spaceDiv = '<div class="image-album-div mdl-cell mdl-cell--2-col"></div>';
+		currentPicDivOpen = '<div class="image-album-div mdl-cell mdl-cell--8-col">';
 		divClose = '</div>';
 		
 		currentPic = '<img id="' + imgList[i].id + '" src="' + imgList[i].path + 

@@ -7,7 +7,7 @@
 	text-align: center;
 	font-size: 110%;
 	font-weight: 100;
-	color: #e61344;
+	color: PaleGoldenRod;
 	letter-spacing: 0.2em;
 }
 
@@ -31,7 +31,7 @@
 	position: fixed;
 	top: 50%;
 	right: 0;
-	color: #e61344;
+	color: PaleGoldenRod;
 	font-weight: 100;
 	letter-spacing: 0.2em;
 	z-index: 1;
@@ -45,14 +45,14 @@
 	margin-top: 25px;
 	margin-left: 65px;
 	border-top: 1px solid rgba(0,0,0,0);
-	border-bottom: 1px solid #e61344;
+	border-bottom: 1px solid PaleGoldenRod;
 }
 
 #image-album-counter-modal hr {
 	margin-top: 25px;
 	margin-left: 65px;
 	border-top: 1px solid rgba(0,0,0,0);
-	border-bottom: 1px solid #e61344;
+	border-bottom: 1px solid PaleGoldenRod;
 }
 
 #image-album-counter-total, #image-album-counter-total-modal {
@@ -105,7 +105,7 @@
 .image-album-text {
 	text-align: center;
 	background-color: rgba(0,0,0,0); 
-	color: #e61344;
+	color: PaleGoldenRod;
 	font-size: 180%;
 	font-weight: 100;
 	letter-spacing: 0.2em;

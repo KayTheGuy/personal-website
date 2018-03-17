@@ -12,7 +12,7 @@
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text{
 	font-weight: 100;
-	font-size: 120%;
+	font-size: 130%;
 }
 
 #presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
@@ -20,10 +20,12 @@
 	animation-delay: 2.2s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
+	font-size: 100%;
+	text-align: center;
 }
 
 #awards-content {
-	background: url('/img/2.jpg');
+	background: #38393d;
 	width: 100%;
 	color: white;
 	padding-bottom: 20px;
@@ -42,15 +44,19 @@
 }
 
 #intro-content {
-	background: url('/img/3.jpg');
+	background: #232529;
 	padding-bottom: 20px;
 	width: 100%;
 	color: white;
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
-    border-bottom: groove 1px #e61344;
+    border-bottom: groove 1px PaleGoldenRod;
 	animation: slideInColorRight 1s linear;
+}
+
+#sap-link {
+	color: PaleGoldenRod;
 }
 
 #intro-1-left {
@@ -59,6 +65,7 @@
 
 #intro-1-right {
 	animation: slideInColorRight 1s ease;
+	text-align: center;
 }
 
 #intro-2 {
@@ -69,7 +76,7 @@
 }
 
 .academic-box {
-	border-bottom: 1px solid #e61344;
+	border-bottom: 1px solid PaleGoldenRod;
 	animation: showUp 2.5s ease;
 	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
@@ -86,14 +93,14 @@
 
 .mdl-data-table th {
 	font-size: 100%;
-	color: #e61344;
+	color: PaleGoldenRod;
 	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
 }
 
 .td-row:hover {
 	color: black;
-	background-color: #e61344;
+	background-color: PaleGoldenRod;
 	animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;	
 	transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;

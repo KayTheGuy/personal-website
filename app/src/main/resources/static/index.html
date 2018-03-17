@@ -22,29 +22,26 @@
 </head>
 
 <body>
-	<div class="mdl-layout mdl-js-layout">
-		<div class="mdl-layout__drawer">
-			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Pages</span>
-			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link " href="#">Home</a> <a
-					class="mdl-navigation__link " href="/resume">Resume</a> <a
-					class="mdl-navigation__link " href="/contact">Contact</a>
-			</nav>
-			<span class="mdl-layout-title mdl-menu__item--full-bleed-divider">Projects</span>
-			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="/image-editor">Image
-					Filters</a> <a class="mdl-navigation__link" href="/image-album">Image
-					Album</a>
-
-			</nav>
-		</div>
-
+	<div class="body-container mdl-layout mdl-js-layout">
 		<!--  Main content -->
 		<main class="mdl-layout__content">
 		<div id="intro-content" class="content">
-			<div class="mdl-grid"></div>
-			<div class="mdl-grid"></div>
-			<div class="mdl-grid"></div>
+			<div class="menu-row mdl-grid">
+				<div class="menu-column mdl-cell mdl-cell--6-col">
+					<ul>
+						<li><a href="/image-album" class="menu-item">Image Album
+								❯</a></li>
+						<li><a href="/image-editor" class="menu-item">Image
+								Editor ❯</a></li>
+					</ul>
+				</div>
+				<div class="menu-column mdl-cell mdl-cell--6-col">
+					<ul>
+						<li><a href="/resume" class="menu-item">Resume ❯</a></li>
+						<li><a href="/contact" class="menu-item">Contact ❯</a></li>
+					</ul>
+				</div>
+			</div>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--12-col">
 					<h1>
@@ -64,15 +61,15 @@
 					</div>
 				</div>
 				<div class="mdl-cell mdl-cell--6-col">
-					<div id="intro-1-right" class="mdl-grid">
-						<div class="mdl-cell mdl-cell--10-col">
+					<div class="mdl-grid">
+						<div id="intro-1-right" class="mdl-cell mdl-cell--10-col">
 							<p>
 								Ciao!<br /> <br /> My name is Kayhan and I am a Software
-								Developer. Currently, I am working at <a
+								Developer. Currently, I am working at <a id="sap-link"
 									href="https://www.sap.com/index.html" target="_blank">SAP</a>
-								(Vancouver), building and maintaining different tools to scan
-								SAP programs for Open-source softwares to make sure they are
-								legally compliant.
+								(Vancouver), building and maintaining different tools that scan
+								SAP programs to check if they contain open source components and
+								whether they are legally compliant.
 							</p>
 							<p>My favorite languages are Java, Python, and JavaScript,
 								respectively. So far, I have been mostly involved in back-end
@@ -88,13 +85,10 @@
 				</div>
 			</div>
 			<div id="intro-2" class="index-buttons-container">
-				<form>
-					<input formaction="/contact" style="display: inline;"
-						class="mdl-button mdl-js-button" type="submit" value="Contact Me" />
-					<input formaction="/resume" style="display: inline;"
-						class="mdl-button mdl-js-button" type="submit" value="My Resume" />
-				</form>
+				<a href="/contact" class="normal-button mdl-button mdl-js-button">
+					Contact Me</a>
 			</div>
+
 		</div>
 		<div id="awards-content" class="content">
 			<div class="mdl-grid">
@@ -136,7 +130,7 @@
 					</p>
 				</div>
 				<div class="mdl-cell mdl-cell--1-col"></div>
-				<div class="mdl-cell mdl-cell--5-col">
+				<div class="mdl-cell mdl-cell--4-col">
 					<h5 id="cgpa-text">
 						CGPA<br>
 					</h5>
@@ -144,11 +138,12 @@
 						<br>&nbsp;&nbsp;&nbsp;3.91
 					</p>
 				</div>
+				<div class="mdl-cell mdl-cell--1-col"></div>
 			</div>
 			<div class="index-buttons-container">
 				<br /> <br /> <br /> <br />
 				<button id="show-courses-button"
-					class="mdl-button mdl-js-button buttonReversed">Show
+					class="mdl-button mdl-js-button reversed-button">Show
 					Courses</button>
 				<br /> <br /> <br /> <br />
 			</div>
