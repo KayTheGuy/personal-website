@@ -123,18 +123,12 @@ function renderMoreImages() {
 }
 
 function dynamicImageLoad() {
-	// Safari
-    var top1 = document.body.scrollTop; 
-    var bottom1 = document.body.scrollHeight;
-    // Others
-    var top2 = document.documentElement.scrollTop; 
-    var bottom2 = document.documentElement.scrollHeight;
-    var currentScroll = Math.max(top1, top2);
-    var scrolHeight = Math.max(bottom1, bottom2);
-	var diffScroll = scrolHeight - currentScroll;
+    var docHeight = $(document).height();
+    var winHeight = $(window).height();
+    var winScrollTop = $(window).scrollTop();
+    counterRatio = (docHeight - winScrollTop) / docHeight;
 
-	counterRatio = (scrolHeight - currentScroll) / scrolHeight;
-	if (!loading && (diffScroll < 800)
+	if (!loading && (winScrollTop >= docHeight - winHeight - 50)
 			&& (numOfLoad * numOfImagePerLoad) < imgList.length) {
 		$('#spinner').css({
 			visibility : 'visible'
