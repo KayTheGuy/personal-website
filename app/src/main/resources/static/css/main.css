@@ -317,6 +317,7 @@ h5, h6, .like-h6 {
 	border: solid 1px PaleGoldenRod;
 	padding: 8px;
 	margin: 20px;
+	font-size: 90%;
 }
 
 ul {

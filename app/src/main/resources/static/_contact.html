@@ -21,150 +21,133 @@
 </head>
 
 <body id="contact-body">
-	<div class="mdl-layout mdl-js-layout">
+	<div class="mdl-layout">
 		<!--  Main content -->
-		<main class="mdl-layout__content">
-		<div id="contact-whole">
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--12-col">
-					<div class="">
-						<div class="mdl-grid">
-							<div class="mdl-cell mdl-cell--1-col"></div>
-							<div class="mdl-cell mdl-cell--8-col">
-								<h6>Fill your information here:</h6>
-							</div>
-							<div class="mdl-cell mdl-cell--2-col">
-								<a id="home-return" href="/"
-									class="contact-4 mdl-button mdl-js-button reversed-button">
-									Home</a>
-							</div>
-							<div class="mdl-cell mdl-cell--1-col"></div>
-						</div>
-						<form id="contatct-form" action="#">
-							<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--1-col"></div>
-								<div class="contact-1 mdl-cell mdl-cell--11-col">
-									<div
-										class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text"
-											id="contact-form-name" name="name"> <label
-											class="mdl-textfield__label" for="contact-form-name">Name...</label>
-									</div>
-								</div>
-							</div>
-							<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--1-col"></div>
-								<div class="contact-2 mdl-cell mdl-cell--11-col">
-									<div
-										class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text"
-											id="contact-form-email" name="email"> <label
-											class="mdl-textfield__label" for="contact-form-email">Email...</label>
-									</div>
-								</div>
-							</div>
-							<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--1-col"></div>
-								<div class="contact-3 mdl-cell mdl-cell--11-col">
-									<div
-										class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-										<input class="mdl-textfield__input" type="text"
-											id="contact-form-subject" name="subject"> <label
-											class="mdl-textfield__label" for="contact-form-subject">Subject...</label>
-									</div>
-								</div>
-							</div>
-							<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--1-col"></div>
-								<div class="contact-4 mdl-cell mdl-cell--11-col">
-									<div class="mdl-textfield mdl-js-textfield">
-										<textarea class="mdl-textfield__input" type="text" rows="3"
-											id="contact-form-message" name="message"></textarea>
-										<label class="mdl-textfield__label" for="contact-form-message">Message...</label>
-									</div>
-								</div>
-							</div>
-							<div class="mdl-grid">
-								<div class="mdl-cell mdl-cell--1-col"></div>
-								<div class="mdl-cell mdl-cell--5-col">
-									<input id="contatct-form-upload" type="submit" value="Press"
-										style="display: none;">
-								</div>
-								<div class="mdl-cell mdl-cell--6-col"></div>
-							</div>
-						</form>
-						<div class="mdl-grid">
-							<div class="mdl-cell mdl-cell--1-col"></div>
-							<div class="contact-4 mdl-cell mdl-cell--7-col">
-								<button id="contatct-form-button"
-									class=" mdl-button mdl-js-button">Send</button>
-							</div>
-							<div class="mdl-cell mdl-cell--4-col"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--5-col"></div>
-				<div class="mdl-cell mdl-cell--2-col"></div>
-				<div class="mdl-cell mdl-cell--4-col">
-					<div class="contact-1">
-						<a class="my-contacts" id="my-email"
-							href="mailto:kayhandehghani@gmail.com">kayhandehghani@gmail.com</a>
-					</div>
-					<br /> <br />
-					<div class="contact-2">
-						<span class="my-contacts">[ + 1 ] 7 7 8 - 8 5 8 3 7 8 5</span>
-					</div>
-					<br /> <br />
-					<div class="contact-3 ">
-						<a class="my-contacts" href="https://github.com/kayhandehghani"><img
-							src="../img/github-logo-black.svg" alt="Smiley face" height="25"
-							width="25"></a>
-					</div>
-					<br /> <br />
-					<div class="contact-4">
-						<a class="my-contacts"
-							href="https://www.linkedin.com/in/kayhan-dehghani-65889273/"><img
-							src="../img/linkedin.svg" alt="Smiley face" height="25"
-							width="25"></a>
-					</div>
-				</div>
-				<div class="mdl-cell mdl-cell--1-col"></div>
-			</div>
-
-		</div>
-
-		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
-			class="mdl-snackbar mdl-js-snackbar">
-			<div class="mdl-snackbar__text"></div>
-			<button type="button" class="mdl-snackbar__action"></button>
-		</div>
-
-		<div id="modalSpinner" class="modal">
-			<div class="modal-content-spinner">
-				<div id="spinner" class="mdl-spinner mdl-js-spinner is-active">
-				</div>
-			</div>
-		</div>
-
-		<div id="contactSentMsg" class="modal">
-			<div class="modal-content">
+		<div class="mdl-layout__content">
+			<div id="contact-whole">
 				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--4-col"></div>
-					<div class="mdl-cell mdl-cell--4-col">
-						<p>
-							<i class="done-icone material-icons">done</i> <br> I will
-							get back to you as soon as possible.
-						</p>
+					<div class="mdl-cell mdl-cell--12-col">
+						<div class="">
+							<div class="mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col"></div>
+								<div class="mdl-cell mdl-cell--8-col">
+									<h6>Fill your information here:</h6>
+								</div>
+								<div class="mdl-cell mdl-cell--2-col">
+									<a id="home-return" href="/"
+										class="contact-4 mdl-button reversed-button"> Home</a>
+								</div>
+								<div class="mdl-cell mdl-cell--1-col"></div>
+							</div>
+							<form id="contatct-form" action="#">
+								<div class="mdl-grid">
+									<div class="mdl-cell mdl-cell--1-col"></div>
+									<div class="contact-1 mdl-cell mdl-cell--11-col">
+										<div class="mdl-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="text"
+												id="contact-form-name" name="name"> <label
+												class="mdl-textfield__label" for="contact-form-name">Name...</label>
+										</div>
+									</div>
+								</div>
+								<div class="mdl-grid">
+									<div class="mdl-cell mdl-cell--1-col"></div>
+									<div class="contact-2 mdl-cell mdl-cell--11-col">
+										<div class="mdl-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="text"
+												id="contact-form-email" name="email"> <label
+												class="mdl-textfield__label" for="contact-form-email">Email...</label>
+										</div>
+									</div>
+								</div>
+								<div class="mdl-grid">
+									<div class="mdl-cell mdl-cell--1-col"></div>
+									<div class="contact-3 mdl-cell mdl-cell--11-col">
+										<div class="mdl-textfield mdl-textfield--floating-label">
+											<input class="mdl-textfield__input" type="text"
+												id="contact-form-subject" name="subject"> <label
+												class="mdl-textfield__label" for="contact-form-subject">Subject...</label>
+										</div>
+									</div>
+								</div>
+								<div class="mdl-grid">
+									<div class="mdl-cell mdl-cell--1-col"></div>
+									<div class="contact-4 mdl-cell mdl-cell--11-col">
+										<div class="mdl-textfield">
+											<textarea class="mdl-textfield__input" type="text" rows="3"
+												id="contact-form-message" name="message"></textarea>
+											<label class="mdl-textfield__label"
+												for="contact-form-message">Message...</label>
+										</div>
+									</div>
+								</div>
+								<div class="mdl-grid">
+									<div class="mdl-cell mdl-cell--1-col"></div>
+									<div class="mdl-cell mdl-cell--5-col">
+										<input id="contatct-form-upload" type="submit" value="Press"
+											style="display: none;">
+									</div>
+									<div class="mdl-cell mdl-cell--6-col"></div>
+								</div>
+							</form>
+							<div class="mdl-grid">
+								<div class="mdl-cell mdl-cell--1-col"></div>
+								<div class="contact-4 mdl-cell mdl-cell--7-col">
+									<button id="contatct-form-button" class=" mdl-button">Send</button>
+								</div>
+								<div class="mdl-cell mdl-cell--4-col"></div>
+							</div>
+						</div>
 					</div>
+				</div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--5-col"></div>
+					<div class="mdl-cell mdl-cell--2-col"></div>
 					<div class="mdl-cell mdl-cell--4-col">
-						<span class="close">&times;</span>
+						<div class="contact-1">
+							<a class="my-contacts" id="my-email"
+								href="mailto:kayhandehghani@gmail.com">kayhandehghani@gmail.com</a>
+						</div>
+						<br /> <br />
+						<div class="contact-2">
+							<span class="my-contacts">[ + 1 ] 7 7 8 - 8 5 8 3 7 8 5</span>
+						</div>
+						<br /> <br />
+						<div class="contact-3 ">
+							<a class="my-contacts" href="https://github.com/kayhandehghani"><img
+								src="../img/github-logo-black.svg" alt="Smiley face" height="25"
+								width="25"></a>
+						</div>
+						<br /> <br />
+						<div class="contact-4">
+							<a class="my-contacts"
+								href="https://www.linkedin.com/in/kayhan-dehghani-65889273/"><img
+								src="../img/linkedin.svg" alt="Smiley face" height="25"
+								width="25"></a>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--1-col"></div>
+				</div>
+
+			</div>
+
+			<div id="contactSentMsg" class="modal">
+				<div class="modal-content">
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--4-col"></div>
+						<div class="mdl-cell mdl-cell--4-col">
+							<p>
+								<i class="done-icone material-icons">done</i> <br> I will
+								get back to you as soon as possible.
+							</p>
+						</div>
+						<div class="mdl-cell mdl-cell--4-col">
+							<span class="close">&times;</span>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		</main>
 	</div>
 </body>
 </html>

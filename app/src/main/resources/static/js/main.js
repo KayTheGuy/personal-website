@@ -1,11 +1,3 @@
-function showError(message) {
-	var snackbarContainer = document.querySelector('.mdl-js-snackbar');
-	var data = {
-		message : message,
-	};
-	snackbarContainer.MaterialSnackbar.showSnackbar(data);
-}
-
 function triggerBackToTop() {
 	var top = $(this).scrollTop();
 	if(top > 100) {

@@ -20,61 +20,51 @@
 </head>
 
 <body>
-	<div class="body-container mdl-layout mdl-js-layout">
+	<div class="body-container mdl-layout">
 		<!--  Main content -->
-		<main id="img-edit-content" class="mdl-layout__content">
-		<div>
-			<div class="mdl-grid"></div>
-			<div class="mdl-grid"></div>
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--1-col"></div>
-				<div class="mdl-cell mdl-cell--3-col">
-					<button id="effects-menu-lower-left"
-						class=" mdl-button mdl-js-button">Filters</button>
-					<ul
-						class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
-						data-mdl-for="effects-menu-lower-left">
-						<li id="bw" class="mdl-menu__item ">Gray</li>
-						<li id="invert" class="mdl-menu__item ">Invert</li>
-						<li id="undo" class="mdl-menu__item ">Undo</li>
-					</ul>
-				</div>
-				<div id="img-spinner"
-					class="mdl-spinner mdl-js-spinner mdl-cell mdl-cell--3-col">
-				</div>
-				<div class="mdl-cell mdl-cell--3-col">
-					<button id="image-editor-select-button"
-						class="mdl-button mdl-js-button">Select</button>
-				</div>
-				<div id="upload-form" class="mdl-cell mdl-cell--1-col">
-					<form id="image-form" enctype="multipart/form-data"
-						action="/upload/image" method="post">
-						<input id="image-picker" name="uploadedImg" type="file"
-							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
-							id="image-upload" type="submit" value="Press"
-							style="display: none;" />
-					</form>
-				</div>
-			</div>
-			<div class="mdl-grid">
-				<div class="mdl-cell mdl-cell--1-col"></div>
-				<div class="mdl-cell mdl-cell--10-col">
-					<div class="image-below">
-						<img id="image-editor-preview" src="/img/placeholder.png"
-							alt="image preview" />
-						<p id="image-label"></p>
+		<div id="img-edit-content" class="mdl-layout__content">
+			<div>
+				<div class="mdl-grid"></div>
+				<div class="mdl-grid"></div>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--1-col"></div>
+					<div class="mdl-cell mdl-cell--3-col">
+						<button id="effects-menu-lower-left" class=" mdl-button">Filters</button>
+						<ul class="mdl-menu mdl-menu--bottom-left"
+							data-mdl-for="effects-menu-lower-left">
+							<li id="bw" class="mdl-menu__item ">Gray</li>
+							<li id="invert" class="mdl-menu__item ">Invert</li>
+							<li id="undo" class="mdl-menu__item ">Undo</li>
+						</ul>
+					</div>
+					<div id="img-spinner" class="mdl-spinner mdl-cell mdl-cell--3-col">
+					</div>
+					<div class="mdl-cell mdl-cell--3-col">
+						<button id="image-editor-select-button" class="mdl-button">Select</button>
+					</div>
+					<div id="upload-form" class="mdl-cell mdl-cell--1-col">
+						<form id="image-form" enctype="multipart/form-data"
+							action="/upload/image" method="post">
+							<input id="image-picker" name="uploadedImg" type="file"
+								accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
+								id="image-upload" type="submit" value="Press"
+								style="display: none;" />
+						</form>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--1-col"></div>
-			</div>
-
-			<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
-				class="mdl-snackbar mdl-js-snackbar">
-				<div class="mdl-snackbar__text"></div>
-				<button type="button" class="mdl-snackbar__action"></button>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--1-col"></div>
+					<div class="mdl-cell mdl-cell--10-col">
+						<div class="image-below">
+							<img id="image-editor-preview" src="/img/placeholder.png"
+								alt="image preview" />
+							<p id="image-label"></p>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--1-col"></div>
+				</div>
 			</div>
 		</div>
-		</main>
 	</div>
 </body>
 
