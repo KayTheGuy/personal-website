@@ -14,17 +14,14 @@
 <link rel="stylesheet" href="/mdl/material-icons.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/index.css">
-<script src="/mdl/material.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/main.js" defer></script>
+<script src="/js/main.js"></script>
 <script src="/js/index.js"></script>
 </head>
 
 <body>
-	<div class="body-container mdl-layout mdl-js-layout">
-		<!--  Main content -->
-		<main class="mdl-layout__content">
+	<div class="body-container mdl-layout">
 		<div id="intro-content" class="content">
 			<div class="menu-row mdl-grid">
 				<div class="menu-column mdl-cell mdl-cell--6-col">
@@ -68,8 +65,8 @@
 								Developer. Currently, I am working at <a id="sap-link"
 									href="https://www.sap.com/index.html" target="_blank">SAP</a>
 								(Vancouver), building and maintaining different tools that scan
-								SAP programs to check if they contain open source components and
-								whether they are legally compliant.
+								SAP programs to ensure that their open source components are
+								legally compliant.
 							</p>
 							<p>My favorite languages are Java, Python, and JavaScript,
 								respectively. So far, I have been mostly involved in back-end
@@ -360,6 +357,8 @@
 				<div class="mdl-cell mdl-cell--1-col"></div>
 			</div>
 			<div class="mdl-grid"></div>
+		</div>
+		<div class="rest-bottom">
 			<div class="mdl-grid"></div>
 			<div id="copyright-info">
 				<p>
@@ -370,13 +369,15 @@
 						width="32"> </a> <br /> <br /> &#9400; 2018 Kayhan Dehghani
 				</p>
 			</div>
+			<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
+				class="mdl-snackbar mdl-js-snackbar">
+				<div class="mdl-snackbar__text"></div>
+				<button type="button" class="mdl-snackbar__action"></button>
+			</div>
+			<div class="mdl-grid">
+				<a href="" class="back-to-top menu-item">back to top</a>
+			</div>
 		</div>
-		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
-			class="mdl-snackbar mdl-js-snackbar">
-			<div class="mdl-snackbar__text"></div>
-			<button type="button" class="mdl-snackbar__action"></button>
-		</div>
-		</main>
 	</div>
 </body>
 

@@ -296,11 +296,27 @@ h5, h6, .like-h6 {
 }
 
 .menu-item:hover {
-    font-size: 130%;
+	color: white;
+	animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
 }
 
 .menu-column {
 	text-align: center;
+}
+
+.back-to-top {
+	color: white;
+	position: fixed;
+	text-decoration: none;
+	bottom: 0%;
+	right: 0%;
+	float: right;
+	border: solid 1px PaleGoldenRod;
+	padding: 8px;
+	margin: 20px;
 }
 
 ul {

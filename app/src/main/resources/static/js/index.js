@@ -1,7 +1,7 @@
-$(document).ready(function () {
+$(document).ready(function() {
 	var coursesVisible = false;
 	$('#show-courses-button').click(function() {
-		if(coursesVisible) {
+		if (coursesVisible) {
 			$('#course-table-div').css("display", "none");
 			$(this).text('Show Courses');
 		} else {

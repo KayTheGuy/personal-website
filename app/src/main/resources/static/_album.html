@@ -14,101 +14,103 @@
 <link rel="stylesheet" href="/mdl/material-icons.css">
 <link rel="stylesheet" href="/css/main.css">
 <link rel="stylesheet" href="/css/album.css">
-<script src="/mdl/material.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/main.js" defer></script>
-<script src="/js/imageAlbum.js" defer></script>
+<script src="/js/main.js"></script>
+<script src="/js/imageAlbum.js"></script>
 </head>
 
 <body>
-	<div class="body-container mdl-layout mdl-js-layout">
-
+	<div class="body-container mdl-layout">
 		<!--  Main content -->
-		<main id="mainContent" class="mdl-layout__content">
-		<div class="mdl-grid"></div>
-		<div class="mdl-grid"></div>
-		<div class="mdl-grid"></div>
-		<div class="mdl-grid"></div>
-		<div id="image-album-content"></div>
-		<div id="image-album-counter">
-			<span id="image-album-counter-ratio"></span>
-			<hr />
-			<span id="image-album-counter-total"></span>
-		</div>
-		<!--  Error Message -->
-		<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
-			class="mdl-snackbar mdl-js-snackbar">
-			<div class="mdl-snackbar__text"></div>
-			<button type="button" class="mdl-snackbar__action"></button>
-		</div>
+		<div id="album-main-container" class="mdl-layout__content">
+			<div class="mdl-grid"></div>
+			<div class="mdl-grid"></div>
+			<div class="mdl-grid"></div>
+			<div class="mdl-grid"></div>
+			<div id="image-album-content"></div>
+			<div id="image-album-counter">
+				<span id="image-album-counter-ratio"></span>
+				<hr />
+				<span id="image-album-counter-total"></span>
+			</div>
+			<!--  Error Message -->
+			<div aria-live="assertive" aria-atomic="true" aria-relevant="text"
+				class="mdl-snackbar mdl-js-snackbar">
+				<div class="mdl-snackbar__text"></div>
+				<button type="button" class="mdl-snackbar__action"></button>
+			</div>
 
-		<!--  Modal Image -->
-		<div id="image-prev-div" class="modal">
-			<div class="modal-content">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--12-col">
-						<span class="close">&times;</span>
-					</div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="mdl-cell mdl-cell--2-col">
-						<button id="image-modal-before"
-							class=" mdl-button mdl-js-button reversed-button">❮</button>
-					</div>
-					<div class="mdl-cell mdl-cell--6-col">
-						<p id="image-album-modal-metadata">
-							<span id="image-modal-location">&times;</span> <span
-								id="image-modal-date">&times;</span>
-						</p>
-					</div>
-					<div class="mdl-cell mdl-cell--2-col">
-						<button id="image-modal-next"
-							class="mdl-button mdl-js-button reversed-button">❯</button>
-					</div>
-					<div class="mdl-cell mdl-cell--1-col"></div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="mdl-cell mdl-cell--10-col">
-						<img id="image-modal" src="/img/placeholder.png"
-							alt="image preview" />
-					</div>
-					<div class="mdl-cell mdl-cell--1-col">
-						<div id="image-album-counter-modal">
-							<span id="image-album-counter-ratio-modal"></span>
-							<hr />
-							<span id="image-album-counter-total-modal"></span>
+			<!--  Modal Image -->
+			<div id="image-prev-div" class="modal">
+				<div class="modal-content">
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col">
+							<span class="close">&times;</span>
 						</div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--1-col"></div>
+						<div class="mdl-cell mdl-cell--2-col">
+							<button id="image-modal-before"
+								class=" mdl-button mdl-js-button reversed-button">❮</button>
+						</div>
+						<div class="mdl-cell mdl-cell--6-col">
+							<p id="image-album-modal-metadata">
+								<span id="image-modal-location">&times;</span> <span
+									id="image-modal-date">&times;</span>
+							</p>
+						</div>
+						<div class="mdl-cell mdl-cell--2-col">
+							<button id="image-modal-next"
+								class="mdl-button mdl-js-button reversed-button">❯</button>
+						</div>
+						<div class="mdl-cell mdl-cell--1-col"></div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--1-col"></div>
+						<div class="mdl-cell mdl-cell--10-col">
+							<img id="image-modal" src="/img/placeholder.png"
+								alt="image preview" />
+						</div>
+						<div class="mdl-cell mdl-cell--1-col">
+							<div id="image-album-counter-modal">
+								<span id="image-album-counter-ratio-modal"></span>
+								<hr />
+								<span id="image-album-counter-total-modal"></span>
+							</div>
 
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<!--  Modal Map -->
-		<div id="map-prev-div" class="modal">
-			<div class="modal-content">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--12-col">
-						<span class="close">&times;</span>
+			<!--  Modal Map -->
+			<div id="map-prev-div" class="modal">
+				<div class="modal-content">
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col">
+							<span class="close">&times;</span>
+						</div>
 					</div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--12-col">
-						<div id="album-map"></div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--12-col">
+							<div id="album-map"></div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<div id="spinner" class="mdl-spinner mdl-js-spinner is-active">
+			<div id="spinner" class="mdl-spinner mdl-js-spinner is-active">
+			</div>
+			<div class="mdl-grid">
+				<a class="back-to-top menu-item">back to top</a>
+			</div>
+			<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1Yi0gS4cRKIqc4aklEsRumc0TTVJG8Q&callback=initMap">
+				
+			</script>
 		</div>
-		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1Yi0gS4cRKIqc4aklEsRumc0TTVJG8Q&callback=initMap">
-			
-		</script> </main>
 	</div>
 </body>
 
