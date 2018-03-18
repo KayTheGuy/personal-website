@@ -11,8 +11,7 @@
 }
 
 #image-album-modal-metadata {
-	text-align: center;
-	font-size: 110%;
+	font-size: 80%;
 	font-weight: 100;
 	color: PaleGoldenRod;
 	letter-spacing: 0.2em;
@@ -20,10 +19,12 @@
 
 #image-modal-before {
 	float: left;
+	top: 50%;
 }   
 
 #image-modal-next {
 	float: right;
+	top: 50%;
 }
 
 #album-map {
@@ -38,7 +39,7 @@
 	position: fixed;
 	top: 50%;
 	right: 0;
-	color: #38393d;
+	color: #f6f6f6;
 	font-weight: 100;
 	letter-spacing: 0.2em;
 	z-index: 1;
@@ -56,7 +57,7 @@
 	margin-top: 25px;
 	margin-left: 65px;
 	border-top: 1px solid rgba(0,0,0,0);
-	border-bottom: 1px solid #38393d;
+	border-bottom: 1px solid #f6f6f6;
 }
 
 #image-album-counter-modal hr {
@@ -116,7 +117,7 @@
 .image-album-text {
 	text-align: center;
 	background-color: rgba(0,0,0,0); 
-	color: #38393d;
+	color: #f6f6f6;
 	font-size: 180%;
 	font-weight: 100;
 	letter-spacing: 0.2em;

@@ -44,6 +44,7 @@
 }
 
 #intro-content {
+	margin-top: 10px;
 	background: linear-gradient(to top right, #232529, #38393d);
 	padding-bottom: 20px;
 	width: 100%;
@@ -108,5 +109,6 @@
 }
 
 .rest-bottom {
-	background: #38393d;
+	position: relative;
+	bottom: 0;
 }
