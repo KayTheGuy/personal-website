@@ -24,10 +24,24 @@
 	<div class="body-container mdl-layout">
 		<!--  Main content -->
 		<div id="album-main-container" class="mdl-layout__content">
-			<div class="mdl-grid"></div>
-			<div class="mdl-grid"></div>
-			<div class="mdl-grid"></div>
-			<div class="mdl-grid"></div>
+			<div class="menu-row mdl-grid mdl-shadow--2dp">
+				<div class="menu-column mdl-cell mdl-cell--6-col">
+					<ul>
+						<li><a href="/" class="menu-item dark-theme">
+								Home ❯</a></li>
+						<li><a href="/image-editor" class="menu-item dark-theme">Image
+								Editor ❯</a></li>
+					</ul>
+				</div>
+				<div class="menu-column mdl-cell mdl-cell--6-col">
+					<ul>
+						<li><a href="/resume" class="menu-item dark-theme">Resume
+								❯</a></li>
+						<li><a href="/contact" class="menu-item dark-theme">Contact
+								❯</a></li>
+					</ul>
+				</div>
+			</div>
 			<div id="image-album-content"></div>
 			<div id="image-album-counter">
 				<span id="image-album-counter-ratio"></span>
@@ -56,16 +70,14 @@
 							</p>
 						</div>
 						<div class="mdl-cell mdl-cell--2-col">
-							<button id="image-modal-next"
-								class="mdl-button reversed-button">❯</button>
+							<button id="image-modal-next" class="mdl-button reversed-button">❯</button>
 						</div>
 						<div class="mdl-cell mdl-cell--1-col"></div>
 					</div>
 					<div class="mdl-grid">
 						<div class="mdl-cell mdl-cell--1-col"></div>
 						<div class="mdl-cell mdl-cell--10-col">
-							<img id="image-modal" src="/img/placeholder.png"
-								alt="image preview" />
+							<img id="image-modal" src="" alt="image preview" />
 						</div>
 						<div class="mdl-cell mdl-cell--1-col">
 							<div id="image-album-counter-modal">
@@ -94,9 +106,9 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="mdl-grid">
-				<a class="back-to-top menu-item">back to top</a>
+				<a class="back-to-top dark-theme">back to top</a>
 			</div>
 			<script async defer
 				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1Yi0gS4cRKIqc4aklEsRumc0TTVJG8Q&callback=initMap">

@@ -1,6 +1,6 @@
 function triggerBackToTop() {
 	var top = $(this).scrollTop();
-	if(top > 100) {
+	if(top > 800) {
 		$('.back-to-top').show();
 	} else {
 		$('.back-to-top').hide();

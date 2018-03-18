@@ -74,7 +74,7 @@ function renderMoreImages() {
 		divClose = '</div>';
 
 		currentPic = '<img id="' + imgList[i].id + '" src="' + imgList[i].path
-				+ '" class="image-album" alt="' + imgList[i].name
+				+ '" class="image-album mdl-shadow--8dp" alt="' + imgList[i].name
 				+ '" data-date="' + imgList[i].date + '">';
 
 		currentMiddleDiv = '<div class="image-album-middle"><div class="image-album-text"><i data-lat="'
