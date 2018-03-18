@@ -1,3 +1,12 @@
+function showSpinner() {
+	$('.spinner').shoe();
+}
+
+function hideSpinner() {
+	$('.spinner').hide();
+}
+
+
 function triggerBackToTop() {
 	var top = $(this).scrollTop();
 	if(top > 800) {

@@ -10,7 +10,13 @@
   }
 }
 
-@keyframes borderColor {
+@keyframes spinnerTurn {
+	100% {
+		transform: rotateZ( 360deg );
+	}
+}
+
+@keyframes borderColorDark {
   20% {
     border-right: solid 1px PaleGoldenRod;
     border-top: solid 1px #38393d;
@@ -37,6 +43,38 @@
     border-top: solid 1px #38393d;
     border-left: solid 1px #38393d;
     border-bottom: solid 1px PaleGoldenRod;
+  }
+}
+
+@keyframes borderColorLight{
+  20% {
+    border-right: solid 1px #38393d;
+    border-top: solid 1px PaleGoldenRod;
+    border-left: solid 1px PaleGoldenRod;
+    border-bottom: solid 1px PaleGoldenRod;
+  }
+  
+  30% {
+    border-right: solid 1px PaleGoldenRod;
+    border-top: solid 1px #38393d;
+    border-left: solid 1px PaleGoldenRod;
+    border-bottom: solid 1px PaleGoldenRod;
+
+  }
+
+  80% {
+	border-right: solid 1px PaleGoldenRod;
+    border-top: solid 1px PaleGoldenRod;
+    border-left: solid 1px #38393d;
+    border-bottom: solid 1px PaleGoldenRod;
+	
+  }
+  
+  100% {
+	border-right: solid 1px PaleGoldenRod;
+    border-top: solid 1px PaleGoldenRod;
+    border-left: solid 1px PaleGoldenRod;
+    border-bottom: solid 1px #38393d;
   }
 }
 
@@ -176,7 +214,7 @@ h5, h6, .like-h6 {
 }
 
 .body-container {
-	background-color: #f6f6f6;
+	background: linear-gradient(to bottom left, #f6f6f6, #9fa0a2);
 }
 
 .content p {
@@ -304,10 +342,6 @@ h5, h6, .like-h6 {
 	font-weight: 100;
 }
 
-.menu-button {
-	margin-right: 10px;
-}
-
 .menu-item {
 	letter-spacing: 0.3em;
     font-size: 110%;
@@ -322,11 +356,11 @@ h5, h6, .like-h6 {
 }
 
 .menu-item.dark-theme {
-	color: #232529;
+	color: #38393d;
 }
 
 .menu-item.dark-theme:hover {
-	color: #38393d;
+	color: black;
 }
 
 .menu-column {
@@ -335,11 +369,12 @@ h5, h6, .like-h6 {
 
 ul {
 	padding: 0;
+	margin: 0;
 }
 
 li {
 	list-style-type: none;
-	margin-bottom: 20px;
+	margin-top: 10px;
 }
 
 a {
@@ -368,6 +403,23 @@ a {
 	border: solid 1px #38393d;
 }
 
-.back-to-top:hover {
-	animation: borderColor 0.1s linear;
+.back-to-top.light-theme:hover {
+	animation: borderColorLight 0.2s cubic-bezier(0.2,0,0.5,0);
+}
+
+.back-to-top.dark-theme:hover {
+	animation: borderColorDark 0.2s cubic-bezier(0.2,0,0.5,0);
+}
+
+.spinner {
+	width: 80px;
+	height: 80px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border: 1px solid #38393d;
+	border-top-color: PaleGoldenRod;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	animation: spinnerTurn 1s infinite cubic-bezier(1,0.3,0.3,0.7);
 }

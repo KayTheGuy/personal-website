@@ -106,18 +106,14 @@ function renderMoreImages() {
 	
 	// current loading is complete
 	loading = false;
-	// hide spinner
-	$('#spinner').css({
-		visibility : 'hidden'
-	});
+	hideSpinner();
 
 	// all images loaded
 	if (endID === imgList.length) {
 		$('#album-main-container').scroll(function() {
 			// stop loading more
 		});
-		// remove spinner
-		$('#spinner').remove();
+		hideSpinner();
 	}
 	setImageCounter();
 }
@@ -130,9 +126,6 @@ function dynamicImageLoad() {
 
 	if (!loading && (winScrollTop >= docHeight - winHeight - 50)
 			&& (numOfLoad * numOfImagePerLoad) < imgList.length) {
-		$('#spinner').css({
-			visibility : 'visible'
-		});
 		loading = true;
 		renderMoreImages();
 	}

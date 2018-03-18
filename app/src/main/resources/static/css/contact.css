@@ -11,7 +11,7 @@
 }
 
 #contact-body {
-	background: #38393d;
+	background: linear-gradient(to bottom left, #38393d, #232529);
     color: white;
 }
 

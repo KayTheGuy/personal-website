@@ -25,7 +25,7 @@
 }
 
 #awards-content {
-	background: #38393d;
+	background: linear-gradient(to bottom left, #38393d, #232529);
 	width: 100%;
 	color: white;
 	padding-bottom: 20px;
@@ -44,7 +44,7 @@
 }
 
 #intro-content {
-	background: #232529;
+	background: linear-gradient(to top right, #232529, #38393d);
 	padding-bottom: 20px;
 	width: 100%;
 	color: white;
@@ -65,7 +65,7 @@
 
 #intro-1-right {
 	animation: slideInColorRight 1s ease;
-	text-align: center;
+	text-align: justify;
 }
 
 #intro-2 {
