@@ -267,17 +267,6 @@ h5, h6, .like-h6 {
     cursor: pointer;
 }
    
-.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded {
-	color: white;
-}
-.mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.is-upgraded.is-focused{
-	color: PaleGoldenRod;
-}
-
-.mdl-textfield.mdl-js-textfield.is-upgraded.is-dirty {
-	color: white;
-}
-
 .mdl-textfield__input {
 	border-bottom: 1px solid white;
 	font-size: 100%;

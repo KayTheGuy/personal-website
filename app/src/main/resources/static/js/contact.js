@@ -1,4 +1,5 @@
 var formErrMsg = 'Please fill the form first.';
+var defaultInpuMap = new Map();
 
 function checkEmailInput(email) {
 	var re = /\S+@\S+\.\S+/;
@@ -17,14 +18,16 @@ function checkEmailInput(email) {
 }
 
 function checkEmptyInput(input, field) {
-	if (!input) { // empty field
+	var id = '#contact-form-' + field;
+	var defaultText = defaultInpuMap.get(id);
+	if (input == '' || input == defaultText) { // invalid input
 		formErrMsg = 'Please provide a valid ' + field;
-		$('#contact-form-' + field).css({
+		$(id).css({
 			borderBottom : '1px solid PaleGoldenRod'
 		});
 		return false;
 	}
-	$('#contact-form-' + field).css({
+	$(id).css({
 		borderBottom : '1px solid rgba(0,0,0,.12)'
 	});
 	return true;
@@ -37,40 +40,54 @@ function checkAllInputs() {
 			&& checkEmptyInput($('#contact-form-message').val(), 'message');
 }
 
-function showSpinner() {
-	$('#modalSpinner').css({
-		visibility : 'visible'
-	});
+function setDefaultBackIfNeeded(inputElement) {
+	var id = inputElement.id;
+	var defaultText = defaultInpuMap.get(id);
+	var itsLabel = $("label[for='" + id + "']");
+	var newText = $('#' + id).val();
+	
+	if(newText == '') {
+		itsLabel.text(defaultText);
+	} 
+}
+
+function removeDefaultLabel(inputElement) {
+	var id = inputElement.id;
+	var itsLabel = $("label[for='" + id + "']");
+	var oldText = itsLabel.html();
+	
+	if(oldText != '') {
+		defaultInpuMap.set(id, oldText)
+	}
+	
+	itsLabel.text('');
 }
 
 $(document).ready(function() {
-
-	// check form inputs
-	$('#contact-form-email').blur(function() {
-		checkEmailInput($(this).val());
+	// remove labels when typing
+	$('input').click(function() {
+		removeDefaultLabel(this);
 	});
-
-	$('#contact-form-name').blur(function() {
-		checkEmptyInput($(this).val(), 'name');
+	$('textarea').click(function() {
+		removeDefaultLabel(this);
 	});
-
-	$('#contact-form-subject').blur(function() {
-		checkEmptyInput($(this).val(), 'subject');
+	
+	$('input').blur(function() {
+		setDefaultBackIfNeeded(this);
 	});
-
-	$('#contact-form-message').blur(function() {
-		checkEmptyInput($(this).val(), 'message');
+	
+	$('textarea').blur(function() {
+		setDefaultBackIfNeeded(this);
 	});
-
+	
 	// click hidden form submit
-	$('#contatct-form-button').click(function() {
+	$('#contatct-form-button').on('click touch', function() {
 		$('#contatct-form-upload').click();
 	});
-
+	
 	// submit contact form
 	$('#contatct-form').on('submit', function(e) {
 		e.preventDefault();
-
 		if (checkAllInputs()) {
 			// get form data
 			var formData = {
@@ -86,7 +103,7 @@ $(document).ready(function() {
 				contentType : "application/json",
 				dataType : 'json',
 				data : JSON.stringify(formData),
-				beforeSend : showSpinner()
+//				beforeSend : showSpinner()
 			}).done(function() {
 				// hide spinner
 				$('#modalSpinner').css({
@@ -117,7 +134,7 @@ $(document).ready(function() {
 				});
 			});
 		} else {
-			showError(formErrMsg);
+			// showError
 		}
 	});
 });
