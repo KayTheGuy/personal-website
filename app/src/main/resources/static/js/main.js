@@ -9,7 +9,7 @@ function hideSpinner() {
 
 function triggerBackToTop() {
 	var top = $(this).scrollTop();
-	if(top > 800) {
+	if(top > 600) {
 		$('.back-to-top').show();
 	} else {
 		$('.back-to-top').hide();
@@ -23,7 +23,6 @@ function topFunction(e) {
 }
 
 $(document).ready(function() {
-	$('.back-to-top').hide();
 	$('.back-to-top').on('click touchstart', topFunction);
 	$(document).on('scroll', triggerBackToTop);
 	$(document).on('touchmove', triggerBackToTop);

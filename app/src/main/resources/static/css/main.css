@@ -31,14 +31,14 @@
 		border-bottom: solid 1px #f6f6f6;
 	}
 	
-	80% {
+	50% {
 		border-right: solid 1px #f6f6f6;
 		border-top: solid 1px #f6f6f6;
 		border-left: solid 1px #38393d;
 		border-bottom: solid 1px #f6f6f6;
 	}
 	
-	100% {
+	80% {
 		border-right: solid 1px #f6f6f6;
 		border-top: solid 1px #f6f6f6;
 		border-left: solid 1px #f6f6f6;
@@ -330,6 +330,7 @@ a {
 	margin: 20px;
 	font-size: 90%;
 	letter-spacing: 0.3em;
+	display: none;
 }
 
 .back-to-top {
@@ -360,4 +361,8 @@ a {
 
 .mdl-layout {
 	background: linear-gradient(to top right, #232529, #38393d);
+}
+
+.divide{
+	padding: 2vw;
 }

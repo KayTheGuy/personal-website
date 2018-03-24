@@ -24,6 +24,8 @@
 #contact-whole {
 	animation: contactAnim 1.2s ease;
 	animation-fill-mode: forwards;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 #home-return {
@@ -34,10 +36,6 @@
 	color: PaleGoldenRod;
 	font-size: 100%;
 	font-weight: 100;
-}
-
-.my-contacts {
-	float: right;
 }
 
 .contact-1 {
@@ -80,4 +78,8 @@ textarea {
 
 input {
  	outline:none;
+}
+
+.mdl-textfield {
+	width: 100%;
 }
