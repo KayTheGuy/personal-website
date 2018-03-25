@@ -11,28 +11,39 @@
 }
 
 #image-album-modal-metadata {
-	font-size: 80%;
 	font-weight: 100;
 	color: PaleGoldenRod;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.1em;
 }
 
 #image-modal-before {
 	float: left;
 	top: 50%;
+	background: rgba(0,0,0,0);
+	border: none;
+	font-size: 150%;
 }   
 
 #image-modal-next {
 	float: right;
 	top: 50%;
+	background: rgba(0,0,0,0);
+	border: none;
+	font-size: 150%;
 }
+
+#image-modal-before:hover, #image-modal-next:hover{
+	color: PaleGoldenRod;
+	font-size: 180%;
+}   
 
 #album-map {
-	height: 800px;
+	height: 700px;;
 	width: 100%;
+	top: 5%;
 }
 
-#image-album-counter, #image-album-counter-modal  {
+#image-album-counter {
 	padding: 20px;
 	height: 100px;
 	width: 100px;
@@ -45,11 +56,7 @@
 	z-index: 1;
 }
 
-#image-album-counter-modal {
-	color: PaleGoldenRod;
-}
-
-#image-album-counter-ratio, #image-album-counter-ratio-modal {
+#image-album-counter-ratio {
 	float: right;
 }
 
@@ -60,14 +67,8 @@
 	border-bottom: 1px solid #f6f6f6;
 }
 
-#image-album-counter-modal hr {
-	margin-top: 25px;
-	margin-left: 65px;
-	border-top: 1px solid rgba(0,0,0,0);
-	border-bottom: 1px solid PaleGoldenRod;
-}
 
-#image-album-counter-total, #image-album-counter-total-modal {
+#image-album-counter-total {
 	font-size: 130%;
 	float: right;
 }

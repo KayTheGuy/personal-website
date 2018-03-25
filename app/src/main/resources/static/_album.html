@@ -6,6 +6,7 @@
 <meta name="description" content="My personal website">
 <meta name="keywords" content="Kayhan Dehghani">
 <meta name="author" content="Kayhan Dehghani">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Image Album | Kayhan Dehghani</title>
 <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +28,7 @@
 				<li><a href="/" class="menu-item">Home</a></li>
 				<li><a href="/resume" class="menu-item">Resume</a></li>
 				<li><a href="/contact" class="menu-item">Contact</a></li>
-				<li><a href="/image-editor" class="menu-item">Image Editor</a></li>
+				<li><a href="/image-editor" class="menu-item">Editor</a></li>
 			</ul>
 		</div>
 		<!--  Main content -->
@@ -43,49 +44,59 @@
 
 			<!--  Modal Image -->
 			<div id="image-prev-div" class="modal">
-				<span class="close">&times;</span>
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--10-col"></div>
+					<div class="mdl-cell mdl-cell--2-col">
+						<span class="close">&times;</span>
+					</div>
+				</div>
+				<div class="divide"></div>
 				<div class="modal-content">
 					<div class="mdl-grid">
-						<div class="mdl-cell mdl-cell--1-col"></div>
-						<div class="mdl-cell mdl-cell--10-col">
-							<span id="image-album-modal-metadata"> <span
-								id="image-modal-location">&times;</span> <span
-								id="image-modal-date">&times;</span>
-							</span>
+						<div class="mdl-cell mdl-cell--2-col"></div>
+						<div class="mdl-cell mdl-cell--8-col">
 							<button id="image-modal-before"
 								class=" mdl-button reversed-button">❮</button>
 							<button id="image-modal-next" class="mdl-button reversed-button">❯</button>
 							<img id="image-modal" src="/" alt="image preview" />
 						</div>
-						<div class="mdl-cell mdl-cell--1-col">
-							<div id="image-album-counter-modal">
-								<span id="image-album-counter-ratio-modal">0</span>
-								<hr />
-								<span id="image-album-counter-total-modal">0</span>
-							</div>
+						<div class="mdl-cell mdl-cell--2-col"></div>
+					</div>
+					<div class="mdl-grid">
+						<div class="mdl-cell mdl-cell--2-col"></div>
+						<div class="mdl-cell mdl-cell--8-col">
+							<span id="image-album-modal-metadata"> <span
+								id="image-modal-location">&times;</span> <span
+								id="image-modal-date">&times;</span>
+							</span>
 						</div>
+						<div class="mdl-cell mdl-cell--2-col"></div>
 					</div>
 				</div>
 			</div>
 
 			<!--  Modal Map -->
 			<div id="map-prev-div" class="modal">
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--10-col"></div>
+					<div class="mdl-cell mdl-cell--2-col">
+						<span class="close">&times;</span>
+					</div>
+				</div>
+				<div class="divide"></div>
 				<div class="modal-content">
 					<div class="mdl-grid">
-						<div class="mdl-cell mdl-cell--12-col">
-							<span class="close">&times;</span>
-						</div>
-					</div>
-					<div class="mdl-grid">
-						<div class="mdl-cell mdl-cell--12-col">
+						<div class="mdl-cell mdl-cell--1-col"></div>
+						<div class="mdl-cell mdl-cell--10-col">
 							<div id="album-map"></div>
 						</div>
+						<div class="mdl-cell mdl-cell--1-col"></div>
 					</div>
 				</div>
 			</div>
 
 			<div class="mdl-grid">
-				<a class="back-to-top dark-theme">back to top</a>
+				<a class="back-to-top dark-theme">top</a>
 			</div>
 			<script async defer
 				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK1Yi0gS4cRKIqc4aklEsRumc0TTVJG8Q&callback=initMap">
