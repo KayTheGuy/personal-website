@@ -20,7 +20,7 @@
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
-  white-space: nowrap;
+  black-space: nowrap;
   direction: ltr;
 
   /* Support for all WebKit browsers. */

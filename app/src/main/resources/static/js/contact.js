@@ -7,7 +7,7 @@ function checkEmailInput(email) {
 	if (!result) {
 		formErrMsg = 'You have entered an invalid email address.';
 		$('#contact-form-email').css({
-			borderBottom : '1px solid PaleGoldenRod'
+			borderBottom : '1px solid #2a6c73'
 		});
 		return false;
 	}
@@ -23,7 +23,7 @@ function checkEmptyInput(input, field) {
 	if (input == '' || input == defaultText) { // invalid input
 		formErrMsg = 'Please provide a valid ' + field;
 		$(id).css({
-			borderBottom : '1px solid PaleGoldenRod'
+			borderBottom : '1px solid #2a6c73'
 		});
 		return false;
 	}

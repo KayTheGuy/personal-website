@@ -1,23 +1,23 @@
 @keyframes showUpContacts {
 	from {
-  		color: PaleGoldenRod;
+  		color: #2a6c73;
   		visibility: hidden;
 	}
 
 	to {
-  		color: white;
+  		color: black;
   		visibility: visible;
 	}
 }
 
 #contact-body {
-	background: linear-gradient(to bottom left, #38393d, #6a6c73);
-    color: white;
+	background: linear-gradient(to bottom left, #f6f6f6, #6a6c73);
+    color: black;
 }
 
 #my-email {
 	letter-spacing: 0.2em;
-    color: white;
+    color: black;
     font-size: 110%;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .done-icone {
-	color: PaleGoldenRod;
+	color: #2a6c73;
 	font-size: 100%;
 	font-weight: 100;
 }

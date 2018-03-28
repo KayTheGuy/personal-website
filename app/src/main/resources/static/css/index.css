@@ -25,9 +25,8 @@
 }
 
 #awards-content {
-	background: linear-gradient(to bottom left, #38393d, #6a6c73);
 	width: 100%;
-	color: white;
+	color: black;
 	padding-bottom: 20px;
 	background-size:     cover;                   
     background-repeat:   no-repeat;
@@ -45,19 +44,18 @@
 
 #intro-content {
 	margin-top: 10px;
-	background: linear-gradient(to top right, #6a6c73, #38393d);
 	padding-bottom: 20px;
 	width: 100%;
-	color: white;
+	color: black;
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
-    border-bottom: groove 1px PaleGoldenRod;
+    border-bottom: groove 1px #2a6c73;
 	animation: slideInColorRight 1s linear;
 }
 
 #sap-link {
-	color: PaleGoldenRod;
+	color: #2a6c73;
 }
 
 #intro-1-left {
@@ -72,12 +70,19 @@
 #intro-2 {
 }
 
+#course-table-container {
+	display: block;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
 #course-table-div {
-	display:none;
+	display: none;
+	margin: 0 auto;
 }
 
 .academic-box {
-	border-bottom: 1px solid PaleGoldenRod;
+	border-bottom: 1px solid #2a6c73;
 	animation: showUp 2.5s ease;
 	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
@@ -86,7 +91,7 @@
 
 .mdl-data-table {
 	font-size: 100%;
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.9);
 	color: white;
 	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
@@ -94,18 +99,16 @@
 
 .mdl-data-table th {
 	font-size: 100%;
-	color: PaleGoldenRod;
+	color: #2a6c73;
 	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
 }
 
 .td-row:hover {
 	color: black;
-	background-color: PaleGoldenRod;
+	background-color: #2a6c73;
 	animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;	
 	transform: translate3d(0, 0, 0);
-	backface-visibility: hidden;
-	perspective: 1000px;
 }
 
 .rest-bottom {

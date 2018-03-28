@@ -30,7 +30,7 @@ $(document).ready(
 				showPreview(this.files[0]);
 			});
 
-			// trigger black and white effect
+			// trigger black and black effect
 			$('#bw').click(function() {
 				filterID = 0;
 				$('#image-upload').click();
