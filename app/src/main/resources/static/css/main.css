@@ -316,7 +316,7 @@ a {
 	text-decoration: none;
 }
 
-.back-to-top {
+.back-to-top, .back-to-top-modal {
 	position: fixed;
 	text-decoration: none;
 	bottom: 0%;
@@ -334,7 +334,12 @@ a {
 	border: solid 1px black;
 }
 
-.back-to-top:hover {
+.back-to-top-modal {
+	color: #f6f6f6;
+	border: solid 1px #f6f6f6;
+}
+
+.back-to-top:hover, .back-to-top-modal:hover {
 	animation: borderColor 0.2s cubic-bezier(0.2, 0, 0.5, 0);
 }
 

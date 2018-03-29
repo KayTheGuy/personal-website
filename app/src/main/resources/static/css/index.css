@@ -115,3 +115,12 @@
 	position: relative;
 	bottom: 0;
 }
+
+#resume-page-1 img, #resume-page-2 img{
+	width: 100%;
+	height: auto;
+}
+
+#download-resume {
+	margin: 0 auto;
+}
