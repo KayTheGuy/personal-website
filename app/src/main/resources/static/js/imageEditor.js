@@ -11,13 +11,6 @@ function showPreview(file) {
 	}
 }
 
-function showSpinner() {
-	$('#img-spinner').addClass('is-active');
-}
-function hideSpinner() {
-	$('#img-spinner').removeClass('is-active');
-}
-
 $(document).ready(
 		function() {
 			var filterID = 0;
@@ -65,10 +58,7 @@ $(document).ready(
 							hideSpinner();
 						}).fail(
 								function(message) {
-									showError("Code "
-											+ message.responseJSON.status
-											+ ": "
-											+ message.responseJSON.message);
+									// show error
 								});
 					}));
 

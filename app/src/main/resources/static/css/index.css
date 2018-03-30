@@ -1,10 +1,10 @@
 #myself {
-	animation: slideInColorLeft 0.1s linear;
-	animation-fill-mode: forwards;
 	text-align: center;
 	width: 100%;
 	height: auto;
 	border-radius: 500px;
+	-webkit-animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
@@ -52,7 +52,7 @@
     background-repeat:   no-repeat;
     background-position: center center;
     border-bottom: groove 1px #2a6c73;
-	animation: slideInColorRight 1s linear;
+
 }
 
 #sap-link {
@@ -64,7 +64,8 @@
 }
 
 #intro-1-right {
-	animation: slideInColorRight 1s ease;
+	-webkit-animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 #intro-2 {

@@ -20,7 +20,6 @@ $(document).ready(function() {
 		resumeModal.style.visibility = "visible";
 	});
 	
-	
 	// close modal handlers
 	$('.close').on('click touchstart', function() {
 		resumeModal.style.visibility = "hidden";

@@ -1,11 +1,10 @@
 function showSpinner() {
-	$('.spinner').shoe();
+	$('.spinner').show();
 }
 
 function hideSpinner() {
 	$('.spinner').hide();
 }
-
 
 function triggerBackToTop() {
 	var top = $(this).scrollTop();

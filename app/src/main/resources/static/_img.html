@@ -23,63 +23,71 @@
 <body>
 	<div class="mdl-layout">
 		<div class="menu-row mdl-shadow--4dp">
-				<div class="menu-dropdown menu-item no-link">
-					<a>Projects</a>
-					<div class="menu-dropdown-content">
-						<div class="menu-dropdown-item"><a href="/image-album">Image Album</a></div>
-						<div class="menu-dropdown-item"><a href="#">Image Editor</a></div>
+			<div class="menu-dropdown menu-item no-link">
+				<a>Projects</a>
+				<div class="menu-dropdown-content">
+					<div class="menu-dropdown-item">
+						<a href="/image-album">Image Album</a>
+					</div>
+					<div class="menu-dropdown-item">
+						<a href="#">Image Editor</a>
 					</div>
 				</div>
-				<div class="menu-item"><a href="/">Home</a></div>
+			</div>
+			<div class="menu-item">
+				<a href="/">Home</a>
+			</div>
 		</div>
 		<!--  Main content -->
 		<div id="img-edit-content" class="mdl-layout__content">
-			<div>
-				<div class="mdl-grid">
-
-					<div class="spinner"></div>
-
-
+			<div class="divide"></div>
+			<div class="divide"></div>
+			<div class="divide"></div>
+			<div class="divide"></div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--3-col"></div>
+				<div id="filter-div" class="mdl-cell mdl-cell--6-col">
+					<label class="mdl-radio for="bw"> <input type="radio"
+						id="bw" class="mdl-radio__button" name="options" value="1" checked>
+						<span class="mdl-radio__label">Gray Scale</span>
+					</label> <label class="mdl-radio" for="invert"> <input type="radio"
+						id="invert" class="mdl-radio__button" name="options" value="2">
+						<span class="mdl-radio__label">Invert Color</span>
+					</label> <label class="mdl-radio" for="undo"> <input type="radio"
+						id="undo" class="mdl-radio__button" name="options" value="2">
+						<span class="mdl-radio__label">None</span>
+					</label>
 				</div>
-				<div class="mdl-grid"></div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="mdl-cell mdl-cell--3-col">
-						<a id="effects-menu-lower-left" class=" mdl-button">Filters</a>
-						<ul class="mdl-menu mdl-menu--bottom-left"
-							data-mdl-for="effects-menu-lower-left">
-							<li id="bw" class="">Gray</li>
-							<li id="invert" class="">Invert</li>
-							<li id="undo" class="">Undo</li>
-						</ul>
-					</div>
-					<div id="img-spinner" class="mdl-spinner mdl-cell mdl-cell--3-col">
-					</div>
-					<div class="mdl-cell mdl-cell--3-col">
-						<a id="image-editor-select-button" class="mdl-button">Select</a>
-					</div>
-					<div id="upload-form" class="mdl-cell mdl-cell--1-col">
-						<form id="image-form" enctype="multipart/form-data"
-							action="/upload/image" method="post">
-							<input id="image-picker" name="uploadedImg" type="file"
-								accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
-								id="image-upload" type="submit" value="Press"
-								style="display: none;" />
-						</form>
-					</div>
-				</div>
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--1-col"></div>
-					<div class="mdl-cell mdl-cell--10-col">
-						<div class="image-below">
-							<img id="image-editor-preview" src="/img/placeholder.png"
-								alt="image preview" />
-							<p id="image-label"></p>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--1-col"></div>
-				</div>
+				<div class="mdl-cell mdl-cell--3-col"></div>
 			</div>
+			<div class="divide"></div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--3-col"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<div class="image-below">
+						<div>
+							<div class="spinner image-spinner"></div>
+							<img id="image-editor-preview" src="/img/placeholder.png"
+								alt="image preview"/>			
+						</div>
+						<p id="image-label"></p>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col"></div>
+			</div>
+			<div class="mdl-grid">
+				<a id="image-editor-select-button" class=""> <i
+					class="material-icons">file_upload</i>
+				</a>
+				<form id="image-form" enctype="multipart/form-data"
+					action="/upload/image" method="post">
+					<input id="image-picker" name="uploadedImg" type="file"
+						accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
+						id="image-upload" type="submit" value="Press"
+						style="display: none;" />
+				</form>
+			</div>
+
 		</div>
 	</div>
 </body>

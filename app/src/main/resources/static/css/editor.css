@@ -1,8 +1,17 @@
-#img-spinner {
-	display: block;
-    margin: auto;
-	width: 80px;
-	height: 80px;
+#image-editor-select-button {
+	width: 60px;
+	height: 60px;
+	color: #2a6c73;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+#filter-div {
+	margin: 0 auto;
+}
+
+#image-editor-select-button:hover {
+	color: black;
 }
 
 #image-label {
@@ -13,8 +22,8 @@
 }
 
 #image-editor-preview {
-	max-height: 100%;
-	max-width: 70%;
+	height: auto;
+	width: 100%;
 }
 
 #image-editor-select-button {
@@ -24,4 +33,12 @@
 .image-below {
 	position: relative;
 	text-align: center;
+}
+
+.spinner.image-spinner {
+	display: none;
+	margine: auto;
+	position: absolute;
+	border: 3px solid #f6f6f6;
+	border-top-color: #2a6c73;
 }
