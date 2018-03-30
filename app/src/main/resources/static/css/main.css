@@ -201,7 +201,7 @@ h5, h6, .like-h6 {
 .mdl-button, .mdl-button.normal-button, .mdl-button.reversed-button:hover
 	{
 	background-color: #2a6c73;
-	color: black;
+	color: #f6f6f6;
 	border: solid 1px #2a6c73;
 	letter-spacing: 0.2em;
 	font-weight: 400;
@@ -211,9 +211,22 @@ h5, h6, .like-h6 {
 	{
 	background-color: rgba(0, 0, 0, 0);
 	border: solid 1px #2a6c73;
-	letter-spacing: 0.2em;
 	color: black;
+}
+
+.mdl-button.modal-button
+	{
+	background-color: rgba(0, 0, 0, 0);
+	color: #f6f6f6;
+	border: solid 1px #2a6c73;
+	letter-spacing: 0.2em;
 	font-weight: 400;
+}
+
+.mdl-button.modal-button:hover
+	{
+	border: solid 1px #f6f6f6;
+	color: #2a6c73;
 }
 
 .index-buttons-container {
@@ -268,7 +281,7 @@ h5, h6, .like-h6 {
 }
 
 .close:hover, .close:focus {
-	color: black;
+	color: #2a6c73;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -279,37 +292,74 @@ h5, h6, .like-h6 {
 	font-weight: 100;
 }
 
+.menu-row {
+	margin: 0 auto;
+}
+
+.menu-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
 .menu-item {
+	font-weight: 400;
+	padding: 25px;
 	letter-spacing: 0.3em;
+	color: #2a6c73;
+	display: inline-block;
+}
+
+.menu-dropdown-item {
+	font-weight: 400;
+	padding: 25px;
+	letter-spacing: 0.3em;
+	color: #2a6c73;
+	line-height: 200%;
+}
+
+.menu-item a, .menu-dropdown-item a{
+	color: #2a6c73;
 	font-size: 110%;
+}
+
+.menu-item:hover a{
 	color: black;
 }
 
-.menu-item:hover {
+.menu-dropdown-item:hover a{
 	color: #2a6c73;
 }
 
-.menu-row {
-	top: 0;
+.menu-dropdown-content {
+	display: none;
+    position: absolute;
+	font-size: 110%;
+	letter-spacing: 0.3em;
+	margin-top: 26px;
+	margin-left: -25px;
+    background-color: #f6f6f6;
+    box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
+    z-index: 111;
 }
 
-.menu-row ul {
-	margin-right: 2vw;
-	list-style: none;
-	position: relative;
-	float: left;
+.menu-dropdown-item {
 	display: block;
-	left: 50%;
 }
 
-.menu-row li {
-	list-style-type: none;
-	margin: 10px;
-	margin-right: 4vw;
-	position: relative;
-	float: left;
-	display: block;
-	right: 50%;
+.menu-dropdown:hover  .menu-dropdown-content {
+    display: block;
+}
+
+.menu-dropdown:active  .menu-dropdown-content {
+    display: block;
+}
+
+.menu-dropdown:hover ~ .menu-row {
+    opacity: 0.5;
+}
+
+.menu-dropdown:active  .menu-row {
+    opacity: 0.5;
 }
 
 a {
@@ -365,5 +415,5 @@ a {
 }
 
 .divide {
-	padding: 2vw;
+	padding: 1vw;
 }

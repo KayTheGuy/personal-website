@@ -1,5 +1,5 @@
 #myself {
-	animation: slideInColorLeft 0.3s linear;
+	animation: slideInColorLeft 0.1s linear;
 	animation-fill-mode: forwards;
 	text-align: center;
 	width: 100%;
@@ -91,7 +91,7 @@
 
 .mdl-data-table {
 	font-size: 100%;
-	background-color: rgba(0,0,0,0.9);
+	background-color: #2a6c73;
 	color: white;
 	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
@@ -99,7 +99,7 @@
 
 .mdl-data-table th {
 	font-size: 100%;
-	color: #2a6c73;
+	color: black;
 	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
 }

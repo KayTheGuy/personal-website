@@ -23,12 +23,15 @@
 
 <body>
 	<div class="mdl-layout">
-		<div class="menu-row mdl-grid mdl-shadow--4dp">
-			<ul>
-				<li><a href="/" class="menu-item">Home</a></li>
-				<li><a href="/contact" class="menu-item">Contact</a></li>
-				<li><a href="/image-editor" class="menu-item">Editor</a></li>
-			</ul>
+		<div class="menu-row mdl-shadow--4dp">
+				<div class="menu-dropdown menu-item">
+					<a>Projects</a>
+					<div class="menu-dropdown-content">
+						<div class="menu-dropdown-item"><a href="#">Image Album</a></div>
+						<div class="menu-dropdown-item"><a href="/image-editor">Image Editor</a></div>
+					</div>
+				</div>
+				<div class="menu-item"><a href="/">Home</a></div>
 		</div>
 		<!--  Main content -->
 		<div id="album-main-container" class="mdl-layout__content">
