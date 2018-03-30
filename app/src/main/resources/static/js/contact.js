@@ -65,10 +65,12 @@ function removeDefaultLabel(inputElement) {
 
 $(document).ready(function() {
 	// remove labels when typing
-	$('input').click(function() {
+	$('input').on('click touchstart', function(e) {
+		e.stopPropagation();
 		removeDefaultLabel(this);
 	});
-	$('textarea').click(function() {
+	$('textarea').on('click touchstart', function(e) {
+		e.stopPropagation();
 		removeDefaultLabel(this);
 	});
 	
@@ -81,7 +83,8 @@ $(document).ready(function() {
 	});
 	
 	// click hidden form submit
-	$('#contatct-form-button').on('click touch', function() {
+	$('#contatct-form-button').on('click touch', function(e) {
+		e.stopPropagation();
 		$('#contatct-form-upload').click();
 	});
 	
@@ -114,12 +117,14 @@ $(document).ready(function() {
 				var modal = document.getElementById('contactSentMsg');
 				modal.style.visibility = "visible";
 
-				$('.close').on('click', function() {
+				$('.close').on('click touchstart',  function(e) {
+					e.stopPropagation();
 					modal.style.visibility = "hidden";
 				});
 
-				$(document).on('click touchstart', function(event) {
-					if (event.target == modal) {
+				$(document).on('click touchstart', function(e) {
+					e.stopPropagation();
+					if (e.target == modal) {
 						modal.style.visibility = "hidden";
 					}
 				});

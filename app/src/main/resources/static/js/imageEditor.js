@@ -1,3 +1,5 @@
+var radioBtns;
+
 // show preview of selected image
 function showPreview(file) {
 	if (file) {
@@ -11,11 +13,42 @@ function showPreview(file) {
 	}
 }
 
+function changeRadioBtnsClasses(id) {
+	let slctdEl = document.getElementById(id);
+	
+	Array.prototype.forEach.call(radioBtns, function(btn) {
+		rmClasName(btn, 'selected');
+	});
+	
+	let newClass = slctdEl.className + ' selected';
+	slctdEl.className = newClass;
+}
+
+// helper function
+function rmClasName(element, className) {
+	let classes = element.className.split(/\s+/);
+    for(let i = 0; i < classes.length; i++) {
+    	if (classes[i] === className) {
+    		classes[i] = '';
+    	} 
+    }
+    element.className = classes.join(' ');
+}
+
 $(document).ready(
 		function() {
+			// get all radio buttons
+			radioBtns = document.getElementsByClassName('radio-btn');
+			
+			$('.radio-btn').on('click touchstart', function(e) {
+				e.stopPropagation();
+				changeRadioBtnsClasses($(this).attr('id'));
+			});
+			
 			var filterID = 0;
 			// trigger file picker
-			$('#image-editor-select-button').click(function() {
+			$('#image-editor-select-button').on('click touchstart', function(e) {
+				e.stopPropagation();
 				$('#image-picker').click();
 			});
 			// make upload button visible
@@ -24,13 +57,15 @@ $(document).ready(
 			});
 
 			// trigger black and black effect
-			$('#bw').click(function() {
+			$('#bw').on('click touchstart', function(e) {
+				e.stopPropagation();
 				filterID = 0;
 				$('#image-upload').click();
 			});
 
 			// trigger invert effect
-			$('#invert').click(function() {
+			$('#invert').on('click touchstart', function(e) {
+				e.stopPropagation();
 				filterID = 1;
 				$('#image-upload').click();
 			});
@@ -63,7 +98,8 @@ $(document).ready(
 					}));
 
 			// undo applied filter
-			$('#undo').click(function() {
+			$('#undo').on('click touchstart', function(e) {
+				e.stopPropagation();
 				$('#image-picker').change();
 			});
 		});

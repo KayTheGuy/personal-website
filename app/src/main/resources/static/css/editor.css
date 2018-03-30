@@ -1,6 +1,37 @@
+@-webkit-keyframes pop-up-rdbtn {
+	0% {
+    	transform: scale(0.05);
+	  	-webkit-transform: scale(0.05);
+	}
+	50% {
+         transform: scale(1.2);
+	  	-webkit-transform: scale(1.2);
+	}
+	100% {
+         transform: scale(1);
+	  	-webkit-transform: scale(1);
+	}
+}
+
+@keyframes pop-up-rdbtn {
+	0% {
+    	transform: scale(0.05);
+	  	-webkit-transform: scale(0.05);
+	}
+	50% {
+         transform: scale(1.2);
+	  	-webkit-transform: scale(1.2);
+	}
+	100% {
+         transform: scale(1);
+	  	-webkit-transform: scale(1);
+	}
+}
+
+
 #image-editor-select-button {
-	width: 60px;
-	height: 60px;
+	width: 30px;
+	height: 40px;
 	color: #2a6c73;
 	cursor: pointer;
 	margin: 0 auto;
@@ -8,6 +39,13 @@
 
 #filter-div {
 	margin: 0 auto;
+	width: auto;
+	padding: 15px;
+}
+
+#filter-div span {
+	margin: 0 auto;
+	font-size: 90%;
 }
 
 #image-editor-select-button:hover {
@@ -17,8 +55,9 @@
 #image-label {
 	color: #2a6c73;
 	font-weight: 100;
-	font-size: 110%;
+	font-size: 90%;
 	letter-spacing: 0.2em;
+	margin-top: 20px;
 }
 
 #image-editor-preview {
@@ -39,6 +78,41 @@
 	display: none;
 	margine: auto;
 	position: absolute;
-	border: 3px solid #f6f6f6;
+	border: 3px solid white;
 	border-top-color: #2a6c73;
+}
+
+.radio-btn {
+	width: 20px;
+	height: 20px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border: 1px solid #2a6c73;
+	cursor: pointer;
+	padding: 0;
+}
+
+.radio-btn.selected {
+	border: 10px solid #2a6c73;
+}
+
+.radio-btn:active {
+	-webkit-animation: pop-up-rdbtn 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: pop-up-rdbtn 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.radio-btn:hover {
+	border-color: black;
+}
+
+.btn-txt div {
+	display: inline-block;
+}
+
+.btn-txt  {
+	margin: 10px;
+}
+
+#filter-div div {
+	display: inline-block;
 }

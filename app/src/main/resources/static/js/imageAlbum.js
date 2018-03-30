@@ -186,12 +186,14 @@ $(window).on(
 			});
 
 			// navigate through album
-			$('#image-modal-before').on('click touchstart', function() {
+			$('#image-modal-before').on('click touchstart', function(e) {
+				e.stopPropagation();
 				currentImgID--;
 				setModalImage(currentImgID);
 			});
 
-			$('#image-modal-next').on('click touchstart', function() {
+			$('#image-modal-next').on('click touchstart', function(e) {
+				e.stopPropagation();
 				currentImgID++
 				setModalImage(currentImgID);
 			});
@@ -200,7 +202,8 @@ $(window).on(
 			$(document).on(
 					"click touchstart",
 					".image-map",
-					function() {
+					function(e) {
+						e.stopPropagation();
 						adjustMap(parseFloat($(this).data('lat')),
 								parseFloat($(this).data('lng')));
 						mapModal.style.visibility = "visible";
@@ -209,12 +212,14 @@ $(window).on(
 			// close modal handlers
 			$('.close').on('click touchstart', function(e) {
 				e.preventDefault()
+				e.stopPropagation();
 				imgModal.style.visibility = "hidden";
 				mapModal.style.visibility = "hidden";
 			});
 
-			$(document).on('click touchstart', function(event) {
-				if (event.target == imgModal || event.target == mapModal) {
+			$(document).on('click touchstart', function(e) {
+				e.stopPropagation();
+				if (e.target == imgModal || e.target == mapModal) {
 					imgModal.style.visibility = "hidden";
 					mapModal.style.visibility = "hidden";
 				}

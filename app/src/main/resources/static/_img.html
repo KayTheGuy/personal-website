@@ -25,7 +25,7 @@
 		<div class="menu-row mdl-shadow--4dp">
 			<div class="menu-dropdown menu-item no-link">
 				<a>Projects</a>
-				<div class="menu-dropdown-content">
+				<div class="menu-dropdown-content" style="z-index:10; -webkit-transform: translate3d(0px, 0px, 0px);">
 					<div class="menu-dropdown-item">
 						<a href="/image-album">Image Album</a>
 					</div>
@@ -47,16 +47,21 @@
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--3-col"></div>
 				<div id="filter-div" class="mdl-cell mdl-cell--6-col">
-					<label class="mdl-radio for="bw"> <input type="radio"
-						id="bw" class="mdl-radio__button" name="options" value="1" checked>
-						<span class="mdl-radio__label">Gray Scale</span>
-					</label> <label class="mdl-radio" for="invert"> <input type="radio"
-						id="invert" class="mdl-radio__button" name="options" value="2">
-						<span class="mdl-radio__label">Invert Color</span>
-					</label> <label class="mdl-radio" for="undo"> <input type="radio"
-						id="undo" class="mdl-radio__button" name="options" value="2">
-						<span class="mdl-radio__label">None</span>
-					</label>
+					<div class="btn-txt">
+						<div id="bw" class="radio-btn">
+						</div>
+						<span class="">Gray Scale</span>
+					</div>
+					<div class="btn-txt">
+						<div id="invert" class="radio-btn">
+						</div>
+						<span class="">Inverted Colors</span>
+					</div>
+					<div class="btn-txt">
+						<div id="undo" class="radio-btn selected">
+						</div>
+						<span class="">None</span>
+					</div>
 				</div>
 				<div class="mdl-cell mdl-cell--3-col"></div>
 			</div>
@@ -68,7 +73,7 @@
 						<div>
 							<div class="spinner image-spinner"></div>
 							<img id="image-editor-preview" src="/img/placeholder.png"
-								alt="image preview"/>			
+								class="mdl-shadow--2dp" alt="image preview"/>			
 						</div>
 						<p id="image-label"></p>
 					</div>
