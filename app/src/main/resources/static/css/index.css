@@ -4,6 +4,7 @@
 	text-align: center;
 	width: 100%;
 	height: auto;
+	border-radius: 500px;
 }
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
@@ -64,7 +65,6 @@
 
 #intro-1-right {
 	animation: slideInColorRight 1s ease;
-	text-align: justify;
 }
 
 #intro-2 {
