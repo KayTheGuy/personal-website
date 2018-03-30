@@ -36,6 +36,14 @@ function topFunctionMoal(e) {
 	$('.modal').scrollTop(0); 
 }
 
+function clickLinkInside() {
+	link = $(this).find("a").attr("href");
+	
+	if(link) {
+		window.location = link;
+	}
+}
+
 $(document).ready(function() {
 	$('.back-to-top').on('click touchstart', topFunction);
 	$('.back-to-top-modal').on('click touchstart', topFunctionMoal);
@@ -43,5 +51,6 @@ $(document).ready(function() {
 	$(document).on('touchmove', triggerBackToTop);
 	$('.modal').on('scroll', triggerBackToTopModal);
 	$('.modal').on('touchmove', triggerBackToTopModal);
+	$('.menu-item').on('click touchstart', clickLinkInside);
 });
 

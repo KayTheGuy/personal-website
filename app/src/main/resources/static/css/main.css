@@ -155,6 +155,7 @@
 body {
 	font-family: "Roboto","Helvetica","Arial",sans-serif;
 	font-style: normal;
+	background: #f6f6f6;
 }
 
 h5, h6, .like-h6 {
@@ -191,35 +192,16 @@ h5, h6, .like-h6 {
 	color: #2a6c73;
 }
 
-.mdl-button, .mdl-button.normal-button, .mdl-button.reversed-button:hover
-	{
-	background-color: #2a6c73;
+.mdl-button {
+	background: linear-gradient(to right, #2a6c73 , #56898e);
 	color: #f6f6f6;
 	border: solid 1px #2a6c73;
 	letter-spacing: 0.2em;
 	font-weight: 400;
 }
 
-.mdl-button:hover, .mdl-button.normal-button:hover, .mdl-button.reversed-button
-	{
-	background-color: rgba(0, 0, 0, 0);
-	border: solid 1px #2a6c73;
+.mdl-button:hover {
 	color: black;
-}
-
-.mdl-button.modal-button
-	{
-	background-color: rgba(0, 0, 0, 0);
-	color: #f6f6f6;
-	border: solid 1px #2a6c73;
-	letter-spacing: 0.2em;
-	font-weight: 400;
-}
-
-.mdl-button.modal-button:hover
-	{
-	border: solid 1px #f6f6f6;
-	color: #2a6c73;
 }
 
 .index-buttons-container {
@@ -298,13 +280,18 @@ h5, h6, .like-h6 {
 
 .menu-item {
 	padding: 20px;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.2em;
 	color: #2a6c73;
 	display: inline-block;
 }
 
 .menu-item:hover {
-	background: linear-gradient(to right, #2a6c73 , #f6f6f6);
+	background: linear-gradient(to right, #2a6c73 , #54888c);
+	cursor: pointer;
+}
+
+.menu-item:hover.no-link {
+	cursor: s-resize;
 }
 
 .menu-item:hover > a{
@@ -313,12 +300,12 @@ h5, h6, .like-h6 {
 
 .menu-dropdown-item {
 	padding: 20px;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.2em;
 	color: #2a6c73;
-	line-height: 200%;
+	line-height: 120%;
 }
 
-.menu-item a, .menu-dropdown-item a{
+.menu-item > a, .menu-dropdown-item > a{
 	font-family: "Roboto","Helvetica","Arial",sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -327,7 +314,8 @@ h5, h6, .like-h6 {
 
 
 .menu-dropdown-item:hover {
-	background: linear-gradient(to right, #2a6c73 , #f6f6f6);
+	background: linear-gradient(to right, #2a6c73 , #56898e);
+	cursor:pointer;
 }
 
 .menu-dropdown-item:hover a{
@@ -403,6 +391,8 @@ a {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	margin-top: -40px; 
+	margin-left: -40px;
 	animation: spinnerTurn 1s infinite cubic-bezier(1, 0.3, 0.3, 0.7);
 }
 

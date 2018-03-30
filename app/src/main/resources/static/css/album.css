@@ -34,7 +34,7 @@
 	color: #f6f6f6;
 }
 
-#image-modal-before:hover, #image-modal-next:hover{
+#image-modal-before:hover, #image-modal-next:hover {
 	color: #2a6c73;
 	font-size: 180%;
 }   
@@ -124,6 +124,7 @@
 	font-size: 180%;
 	font-weight: 100;
 	letter-spacing: 0.2em;
+	line-height: 150%;
 }
 
 .image-map {

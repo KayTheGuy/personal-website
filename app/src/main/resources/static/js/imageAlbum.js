@@ -207,7 +207,8 @@ $(window).on(
 					});
 
 			// close modal handlers
-			$('.close').on('click touchstart', function() {
+			$('.close').on('click touchstart', function(e) {
+				e.preventDefault()
 				imgModal.style.visibility = "hidden";
 				mapModal.style.visibility = "hidden";
 			});
