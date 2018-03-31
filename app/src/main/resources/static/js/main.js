@@ -41,15 +41,17 @@ function clickLinkInside() {
 	if(link) {
 		window.location = link;
 	}
+	e.stopPropagation();
 }
 
 $(document).ready(function() {
-	$('.back-to-top').on('click touchstart', topFunction);
-	$('.back-to-top-modal').on('click touchstart', topFunctionMoal);
 	$(document).on('scroll', triggerBackToTop);
 	$(document).on('touchmove', triggerBackToTop);
 	$('.modal').on('scroll', triggerBackToTopModal);
 	$('.modal').on('touchmove', triggerBackToTopModal);
 	$('.menu-item').on('click touchstart', clickLinkInside);
+	$('.menu-dropdown-item').on('click touchstart', clickLinkInside);
+	$('.back-to-top').on('click touchstart', topFunction);
+	$('.back-to-top-modal').on('click touchstart', topFunctionMoal);
 });
 

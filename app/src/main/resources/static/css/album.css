@@ -21,8 +21,11 @@
 	top: 50%;
 	background: rgba(0,0,0,0);
 	border: none;
-	font-size: 150%;
+	font-size: 220%;
+	font-weight: 100;
 	color: white;
+	position: relative;
+	margin: 10px;
 }   
 
 #image-modal-next {
@@ -30,14 +33,39 @@
 	top: 50%;
 	background: rgba(0,0,0,0);
 	border: none;
-	font-size: 150%;
+	font-size: 220%;
+	font-weight: 100;
 	color: white;
+	position: relative;
+	margin: 10px;
+	-webkit-transform: rotate(180deg);
 }
 
-#image-modal-before:hover, #image-modal-next:hover {
-	color: #2a6c73;
-	font-size: 180%;
-}   
+#image-modal-before img {
+	width: 40px;
+	height: 40px;
+}
+
+#image-modal-next img {
+	width: 40px;
+	height: 40px;
+}
+
+
+#image-modal-next img {
+	width: 40px;
+	height: 40px;
+}
+
+#image-modal-before img:hover, #image-modal-next img:hover {
+	-webkit-animation: shake 0.qs cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#image-modal-before img:active, #image-modal-next img:active {
+    -webkit-animation: pop-up 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: pop-up 0.1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
 
 #album-map {
 	height: 700px;;
@@ -90,14 +118,6 @@
 .image-album-row {
 	padding-top: 50px;
 	padding-bottom: 50px;
-}
-
-.image-album-div:hover .image-album {
-	opacity: 0.2;
-}
-
-.image-album-div:hover .image-album-middle {
-	opacity: 1;
 }
 
 .image-album {

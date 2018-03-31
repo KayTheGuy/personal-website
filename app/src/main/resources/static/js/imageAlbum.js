@@ -170,7 +170,15 @@ $(window).on(
 				// render first images
 				renderMoreImages();
 			}).always(function() {
-				// always
+				// hover for only mouse
+				$('.image-album-div img').mouseenter(function() {
+					$(this).css({opacity: '0.4'});
+					$(this).next('.image-album-middle').css({opacity: '1'});
+				});
+				$('.image-album-div img').mouseleave(function() {
+					$(this).css({opacity: '1'});
+					$(this).next('.image-album-middle').css({opacity: '0'});
+				});
 			}).fail(
 					function(message) {
 						showError("Failed to load images. Please Try again."
@@ -187,27 +195,40 @@ $(window).on(
 
 			// navigate through album
 			$('#image-modal-before').on('click touchstart', function(e) {
-				e.stopPropagation();
-				currentImgID--;
-				setModalImage(currentImgID);
+			    e.preventDefault(); 
+			    if(e.type == "touchstart") {
+					currentImgID--;
+					setModalImage(currentImgID);
+			    } else if(e.type == "click") {
+			    	currentImgID--;
+					setModalImage(currentImgID);
+			    }
 			});
 
 			$('#image-modal-next').on('click touchstart', function(e) {
-				e.stopPropagation();
-				currentImgID++
-				setModalImage(currentImgID);
+			    e.preventDefault(); 
+			    if(e.type == "touchstart") {
+					currentImgID++
+					setModalImage(currentImgID);
+			    } else if(e.type == "click") {
+					currentImgID++
+					setModalImage(currentImgID);
+			    }
 			});
 
 			var mapModal = document.getElementById('map-prev-div');
 			$(document).on(
-					"click touchstart",
-					".image-map",
-					function(e) {
-						e.stopPropagation();
-						adjustMap(parseFloat($(this).data('lat')),
-								parseFloat($(this).data('lng')));
-						mapModal.style.visibility = "visible";
-					});
+				"click touchstart",
+				".image-map",
+				function(e) {
+					adjustMap(
+							parseFloat($(this).data('lat')),
+							parseFloat($(this).data('lng'))
+					);
+					
+					mapModal.style.visibility = "visible";
+			});
+			
 
 			// close modal handlers
 			$('.close').on('click touchstart', function(e) {
@@ -215,13 +236,5 @@ $(window).on(
 				e.stopPropagation();
 				imgModal.style.visibility = "hidden";
 				mapModal.style.visibility = "hidden";
-			});
-
-			$(document).on('click touchstart', function(e) {
-				e.stopPropagation();
-				if (e.target == imgModal || e.target == mapModal) {
-					imgModal.style.visibility = "hidden";
-					mapModal.style.visibility = "hidden";
-				}
 			});
 		});
