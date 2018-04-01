@@ -7,12 +7,48 @@
 	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+#me {
+	display: inline;
+}
+
+#my-thoughts-container {
+	visibility: hidden;
+	display: inline;
+	position: relative;
+	left: 56%;
+	top: -77%;
+}
+
+#my-thoughts-container img {
+	width: 100px;
+	height: 100px;
+}
+
+#myself:hover ~ #my-thoughts-container img {
+	-webkit-animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+	animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#myself:hover ~ #my-thoughts-container {
+	visibility: visible;
+    -webkit-animation: pop-up 0.8s cubic-bezier(.36,.07,.19,.97) both;
+	animation: pop-up 0.8s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#my-thoughts-container span {
+	color: #2a6c73;
+	font-size: 18px;
+	font-weight: 800;
+	position: relative;
+	left: 87px;
+	bottom: 3px;
+}
+
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
 	animation: slideInColorLeft 1s;
 }
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text{
-	font-weight: 100;
 	font-size: 130%;
 }
 
@@ -52,7 +88,6 @@
     background-repeat:   no-repeat;
     background-position: center center;
     border-bottom: groove 1px #2a6c73;
-
 }
 
 #sap-link {

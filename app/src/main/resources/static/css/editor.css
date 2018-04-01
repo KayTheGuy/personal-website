@@ -1,11 +1,7 @@
-@-webkit-keyframes pop-up-rdbtn {
+@-webkit-keyframes largenRadioBtn {
 	0% {
-    	transform: scale(0.05);
-	  	-webkit-transform: scale(0.05);
-	}
-	50% {
-         transform: scale(1.2);
-	  	-webkit-transform: scale(1.2);
+         transform: scale(2);
+	  	-webkit-transform: scale(2);
 	}
 	100% {
          transform: scale(1);
@@ -13,14 +9,10 @@
 	}
 }
 
-@keyframes pop-up-rdbtn {
+@keyframes largenRadioBtn {
 	0% {
-    	transform: scale(0.05);
-	  	-webkit-transform: scale(0.05);
-	}
-	50% {
-         transform: scale(1.2);
-	  	-webkit-transform: scale(1.2);
+         transform: scale(2);
+	  	-webkit-transform: scale(2);
 	}
 	100% {
          transform: scale(1);
@@ -30,22 +22,30 @@
 
 
 #image-editor-select-button {
-	width: 30px;
-	height: 40px;
-	color: #2a6c73;
-	cursor: pointer;
 	margin: 0 auto;
 }
 
+#image-editor-select-button:hover {
+    -webkit-animation: shake 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: shake 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
 #filter-div {
+	display: none;
 	margin: 0 auto;
 	width: auto;
 	padding: 15px;
 }
 
+#filter-div.active {
+	display: block;
+    -webkit-animation: pop-up 0.5s cubic-bezier(1, 0.3, 0.3, 0.7) both;
+	animation: pop-up 0.5s cubic-bezier(1, 0.3, 0.3, 0.7) both;	
+}
+
 #filter-div span {
 	margin: 0 auto;
-	font-size: 90%;
+	font-size: 80%;
 }
 
 #image-editor-select-button:hover {
@@ -55,7 +55,7 @@
 #image-label {
 	color: #2a6c73;
 	font-weight: 100;
-	font-size: 90%;
+	font-size: 80%;
 	letter-spacing: 0.2em;
 	margin-top: 20px;
 }
@@ -83,8 +83,8 @@
 }
 
 .radio-btn {
-	width: 20px;
-	height: 20px;
+	width: 18px;
+	height: 18px;
 	box-sizing: border-box;
 	border-radius: 50%;
 	border: 1px solid #2a6c73;
@@ -93,16 +93,12 @@
 }
 
 .radio-btn.selected {
-	border: 10px solid #2a6c73;
+	border: 9px solid #2a6c73;
 }
 
 .radio-btn:active {
-	-webkit-animation: pop-up-rdbtn 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: pop-up-rdbtn 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-.radio-btn:hover {
-	border-color: black;
+	-webkit-animation: largenRadioBtn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: largenRadioBtn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .btn-txt div {

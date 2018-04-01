@@ -27,7 +27,7 @@
 				<a>Projects</a>
 				<div class="menu-dropdown-content" style="z-index:10; -webkit-transform: translate3d(0px, 0px, 0px);">
 					<div class="menu-dropdown-item">
-						<a href="/image-album">Image Album</a>
+						<a href="/image-album">Photo Gallery</a>
 					</div>
 					<div class="menu-dropdown-item">
 						<a href="#">Image Editor</a>
@@ -40,9 +40,6 @@
 		</div>
 		<!--  Main content -->
 		<div id="img-edit-content" class="mdl-layout__content">
-			<div class="divide"></div>
-			<div class="divide"></div>
-			<div class="divide"></div>
 			<div class="divide"></div>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--3-col"></div>
@@ -65,34 +62,39 @@
 				</div>
 				<div class="mdl-cell mdl-cell--3-col"></div>
 			</div>
-			<div class="divide"></div>
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--3-col"></div>
 				<div class="mdl-cell mdl-cell--6-col">
 					<div class="image-below">
 						<div>
 							<div class="spinner image-spinner"></div>
-							<img id="image-editor-preview" src="/img/placeholder.png"
-								class="mdl-shadow--2dp" alt="image preview"/>			
+							<img id="image-editor-preview" src="/img/placeholder.svg"
+								class="" alt="image preview"/>			
 						</div>
 						<p id="image-label"></p>
 					</div>
 				</div>
-				<div class="mdl-cell mdl-cell--3-col"></div>
+				<div class="mdl-cell mdl-cell--3-col">
+					<form id="image-form" enctype="multipart/form-data"
+						action="/upload/image" method="post">
+						<input id="image-picker" name="uploadedImg" type="file"
+							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
+							id="image-upload" type="submit" value="Press"
+							style="display: none;" />
+					</form>
+				</div>
 			</div>
 			<div class="mdl-grid">
-				<a id="image-editor-select-button" class=""> <i
-					class="material-icons">file_upload</i>
+				<a id="image-editor-select-button" class="mdl-button">
+					Upload
 				</a>
-				<form id="image-form" enctype="multipart/form-data"
-					action="/upload/image" method="post">
-					<input id="image-picker" name="uploadedImg" type="file"
-						accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
-						id="image-upload" type="submit" value="Press"
-						style="display: none;" />
-				</form>
 			</div>
-
+			<div id="main-message" class="mdl-grid mdl-shadow--8dp">
+				<div class="mdl-cell mdl-cell--12-col">
+					<span id="main-message-close">&times;</span>
+					<div id="main-message-txt">You can upload your photo and apply two different filters on them.</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

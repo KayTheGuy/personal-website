@@ -37,37 +37,54 @@ function rmClasName(element, className) {
 
 $(document).ready(
 		function() {
+			setTimeout(function() {
+				showMessage();
+			}, 20);
 			// get all radio buttons
 			radioBtns = document.getElementsByClassName('radio-btn');
 			
 			$('.radio-btn').on('click touchstart', function(e) {
-				e.stopPropagation();
-				changeRadioBtnsClasses($(this).attr('id'));
+			    e.preventDefault(); 
+			    if(e.type == "touchstart") {
+			    	changeRadioBtnsClasses($(this).attr('id'));
+			    } else if(e.type == "click") {
+			    	changeRadioBtnsClasses($(this).attr('id'));
+			    }
 			});
 			
 			var filterID = 0;
 			// trigger file picker
 			$('#image-editor-select-button').on('click touchstart', function(e) {
-				e.stopPropagation();
 				$('#image-picker').click();
 			});
 			// make upload button visible
 			$('#image-picker').change(function() {
 				showPreview(this.files[0]);
+				$('#filter-div').addClass('active');
 			});
 
 			// trigger black and black effect
 			$('#bw').on('click touchstart', function(e) {
-				e.stopPropagation();
-				filterID = 0;
-				$('#image-upload').click();
+			    e.preventDefault(); 
+			    if(e.type == "touchstart") {
+			    	filterID = 0;
+			    	$('#image-upload').click();
+			    } else if(e.type == "click") {
+			    	filterID = 0;
+			    	$('#image-upload').click();
+			    }
 			});
 
 			// trigger invert effect
 			$('#invert').on('click touchstart', function(e) {
-				e.stopPropagation();
-				filterID = 1;
-				$('#image-upload').click();
+			    e.preventDefault(); 
+			    if(e.type == "touchstart") {
+			    	filterID = 1;
+			    	$('#image-upload').click();
+			    } else if(e.type == "click") {
+			    	filterID = 1;
+			    	$('#image-upload').click();
+			    }
 			});
 
 			// upload image using AJAX
@@ -84,17 +101,21 @@ $(document).ready(
 													// converted to String
 							contentType : false,
 							data : new FormData(this),
-							beforeSend : showSpinner()
+							beforeSend : (function() {
+								showSpinner();
+							})()
 						}).done(
 								function(img) {
-									$('#image-editor-preview').attr('src',
-											"data:image/png;base64," + img);
-								}).always(function() {
+									$('#image-editor-preview').attr(
+											'src',
+											"data:image/png;base64," + img
+									);
+						}).always(function() {
 							hideSpinner();
 						}).fail(
 								function(message) {
 									// show error
-								});
+						});
 					}));
 
 			// undo applied filter

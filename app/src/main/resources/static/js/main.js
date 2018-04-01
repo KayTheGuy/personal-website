@@ -1,3 +1,16 @@
+function showMessage(message) {
+	var el = $('#main-message');
+	if(message != undefined) {
+		$('#main-message-txt').text(message);
+	}
+	el.css('display', 'block');
+	el.addClass('active');
+}
+
+function hideMessage(e) {
+	$('#main-message').removeClass('active');
+}
+
 function showSpinner() {
 	$('.spinner').show();
 }
@@ -41,7 +54,6 @@ function clickLinkInside() {
 	if(link) {
 		window.location = link;
 	}
-	e.stopPropagation();
 }
 
 $(document).ready(function() {
@@ -53,5 +65,6 @@ $(document).ready(function() {
 	$('.menu-dropdown-item').on('click touchstart', clickLinkInside);
 	$('.back-to-top').on('click touchstart', topFunction);
 	$('.back-to-top-modal').on('click touchstart', topFunctionMoal);
+	$('#main-message-close').on('click touchstart', hideMessage);
 });
 

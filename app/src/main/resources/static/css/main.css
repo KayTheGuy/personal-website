@@ -34,12 +34,67 @@
 	}
 }
 
+@-webkit-keyframes messageSlidBacK {
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+@keyframes messageSlidBacK {
+	0% {
+		left: 0%;
+	}
+	100% {
+		left: -400%;
+	}
+}
+
+@-webkit-keyframes messageSlid {
+	0% {
+		left: -400%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+@keyframes messageSlid {
+	0% {
+		left: -400%;
+	}
+	100% {
+		left: 0%;
+	}
+}
+
+@-webkit-keyframes comeFront {
+	0% {
+		-webkit-transform: translateZ(0);
+        transform: translateZ(0);
+	}
+	100% {
+		-webkit-transform: translateZ(160px);
+        transform: translateZ(160px);
+	}
+}
+@keyframes comeFront {
+	0% {
+		-webkit-transform: translateZ(0);
+        transform: translateZ(0);
+	}
+	100% {
+		-webkit-transform: translateZ(160px);
+        transform: translateZ(160px);
+	}
+}
+
 @-webkit-keyframes input-text {
   	0% {
 		letter-spacing: 0.1em;
   	}
-  	100% {
-    	letter-spacing: 1.8em;
+  	60% {
+    	letter-spacing: 8em;
  	}
 }
 
@@ -49,6 +104,18 @@
   	}
   	60% {
     	letter-spacing: 8em;
+ 	}
+}
+
+@-webkit-keyframes textStretch {
+  	70% {
+    	letter-spacing: 1em;
+ 	}
+}
+
+@keyframes textStretch {
+  	70% {
+    	letter-spacing: 1em;
  	}
 }
 
@@ -205,18 +272,38 @@
 	font-weight: 400;
 }
 
-@media only screen and (min-width: 401px) {
+@media only screen and (min-width: 2501px) {
 	* {
-		font-weight: 100;
+		font-size: 22px;
+		font-weight: 200;
+	}
+}
+
+@media only screen and (min-width: 1801px) and (max-width: 2500px) {
+	* {
+		font-size: 20px;
+		font-weight: 200;
+	}
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1800px) {
+	* {
+		font-size: 18px;
+		font-weight: 300;
+	}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 800px) {
+	* {
 		font-size: 16px;
+		font-weight: 400;
 	}
 }
 
 @media only screen and (max-width: 400px) {
 	* {
+		font-size: 14px;
 		font-weight: 400;
-		font-size: 16px;
-
 	}
 }
 
@@ -230,10 +317,15 @@ body {
 	background: white;
 }
 
+h1 {
+	font-size: 280%;
+	font-weight: 400;
+}
+
 h5, h6, .like-h6 {
-	font-size: 140%;
+	font-size: 120%;
 	letter-spacing: 0.2em;
-	font-style: normal;
+	font-weight: 400;
 }
 
 .mdl-mini-footer {
@@ -247,8 +339,8 @@ h5, h6, .like-h6 {
 }
 
 .content p {
-	font-size: 120%;
-	font-weight: 100;
+	font-size: 110%;
+	font-weight: 400;
 	letter-spacing: 0.1em;
 }
 
@@ -267,8 +359,8 @@ h5, h6, .like-h6 {
 .mdl-button {
 	background: linear-gradient(to right, #2a6c73 , #56898e);
 	color: white;
-	border: solid 1px #2a6c73;
 	letter-spacing: 0.2em;
+	border-radius: 30px;
 	font-weight: 400;
 }
 
@@ -344,7 +436,7 @@ h5, h6, .like-h6 {
 /* ========= MENU ==========*/
 .menu-row {
 	margin: 0 auto;
-	border-radius: 2px;
+	border-radius: 30px;
 }
 
 .menu-dropdown {
@@ -366,6 +458,7 @@ h5, h6, .like-h6 {
 	cursor: pointer;
 	-webkit-animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   	border-radius: 30px;
 }
 
 .menu-item:hover.no-link {
@@ -386,7 +479,6 @@ h5, h6, .like-h6 {
 
 .menu-item > a, .menu-dropdown-item > a {
 	font-family: "Roboto","Helvetica","Arial",sans-serif;
-	font-weight: 400;
 	text-transform: uppercase;
 	color: #2a6c73;
 }
@@ -395,9 +487,10 @@ h5, h6, .like-h6 {
 .menu-dropdown-item:hover {
 	background: linear-gradient(to right, #2a6c73 , #56898e);
 	cursor:pointer;
+	border-radius: 30px;
 }
 
-.menu-dropdown-item:hover a{
+.menu-dropdown-item:hover a {
 	color: white;
 }
 
@@ -410,7 +503,7 @@ h5, h6, .like-h6 {
 	margin-left: -20px;
     background-color: white;
     box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
-    border-radius: 2px;
+    border-radius: 30px;
 }
 
 .menu-dropdown:hover  .menu-dropdown-content {
@@ -441,18 +534,17 @@ a {
 	font-size: 60%;
 	letter-spacing: 0.3em;
 	display: none;
+	border-radius: 30px;
 }
 
 .back-to-top {
 	color: black;
 	border: solid 1px black;
-	border-radius: 2px;
 }
 
 .back-to-top-modal {
 	color: #2a6c73;
 	border: solid 1px #2a6c73;
-	border-radius: 2px;
 }
 
 .back-to-top:hover, .back-to-top-modal:hover {
@@ -495,4 +587,41 @@ input:focus ~ label {
 textarea:focus ~ label {
     -webkit-animation: input-text 1s cubic-bezier(0.8 0.575, 0.565, 1.000) both;
 	animation: input-text 1s cubic-bezier(0.8, 0.575, 0.565, 1.000) both;	
+}
+
+#main-message {
+	display: none;
+	background-color: white;
+	position: fixed;
+	top: 50%;
+	border-radius: 50px;
+	padding: 15px;
+	-webkit-animation: messageSlidBacK 1s cubic-bezier(0.8, 0.575, 0.565, 1.000) both;
+	animation: messageSlidBacK 1s cubic-bezier(0.8, 0.575, 0.565, 1.000) both;	
+}
+
+#main-message.active {
+    -webkit-animation: messageSlid 1.5s cubic-bezier(1, 0.3, 0.3, 0.7) both;
+	animation: messageSlid 1.5s cubic-bezier(1, 0.3, 0.3, 0.7) both;	
+}
+
+#main-message-txt {
+	letter-spacing: 0.1em;
+	font-weight: 500;	
+}
+
+#main-message-close {
+	margin: 15px;
+	margin-top: 0;
+	margin-right: 0;
+	color: #2a6c73;
+	font-size: 200%;
+	font-weight: 400;
+	float: right;
+}
+
+#main-message-close:hover {
+	color: black;
+	-webkit-animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

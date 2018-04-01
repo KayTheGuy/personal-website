@@ -58,7 +58,6 @@ function setModalImage(imgId) {
 	imageElement.attr('src', selectedImg.path);
 	$('#image-modal-location').html(locationIcon + selectedImg.name + ', ');
 	$('#image-modal-date').html(selectedImg.date);
-	setImageCounterModal(imgId);
 }
 
 function renderMoreImages() {
@@ -115,7 +114,16 @@ function renderMoreImages() {
 		});
 		hideSpinner();
 	}
-	setImageCounter();
+	
+	// hover for only mouse
+	$('.image-album-div').on('mouseover', function() {
+		$(this).find('img').css({opacity: '0.4'});
+		$(this).find('.image-album-middle').css({opacity: '1'});
+	});
+	$('.image-album-div').on('mouseleave', function() {
+		$(this).find('img').css({opacity: '1'});
+		$(this).find('.image-album-middle').css({opacity: '0'});
+	});
 }
 
 function dynamicImageLoad() {
@@ -132,20 +140,32 @@ function dynamicImageLoad() {
 	setImageCounter();
 }
 
-function setImageCounter() {
+var oldRatioNum = -1;
+var oldTotNum = -1;
+function setImageCounter() {	
 	var total = numOfImagePerLoad * numOfLoad;
 	var ratio = Math.round((1 - counterRatio) * total) + 1;
 	if (!loading && ratio <= total) {
-		$('#image-album-counter-ratio').text(ratio);
-		$('#image-album-counter-total').text(total);
-	}
-}
-
-function setImageCounterModal(id) {
-	var total = numOfImagePerLoad * numOfLoad;
-	if (id <= total) {
-		$('#image-album-counter-ratio-modal').text(id);
-		$('#image-album-counter-total-modal').text(total);
+		var ratioEl = document.getElementById('image-album-counter-ratio');
+		var totalEl = document.getElementById('image-album-counter-total');
+		
+		ratioEl.innerHTML = ratio;
+		totalEl.innerHTML = total;
+		
+		if(ratio != oldRatioNum) {
+			var newRatio = ratioEl.cloneNode(true);
+			ratioEl.parentNode.replaceChild(newRatio, ratioEl);
+			newRatio.classList.add('run-anim');
+			oldRatioNum = ratio;
+		}
+		
+		if(total != oldTotNum) {
+			var newTot = totalEl.cloneNode(true);
+			totalEl.parentNode.replaceChild(newTot, totalEl);
+			newTot.classList.add('run-anim');
+			oldTotNum = total;
+		}
+		
 	}
 }
 
@@ -170,15 +190,7 @@ $(window).on(
 				// render first images
 				renderMoreImages();
 			}).always(function() {
-				// hover for only mouse
-				$('.image-album-div img').mouseenter(function() {
-					$(this).css({opacity: '0.4'});
-					$(this).next('.image-album-middle').css({opacity: '1'});
-				});
-				$('.image-album-div img').mouseleave(function() {
-					$(this).css({opacity: '1'});
-					$(this).next('.image-album-middle').css({opacity: '0'});
-				});
+
 			}).fail(
 					function(message) {
 						showError("Failed to load images. Please Try again."
@@ -187,7 +199,7 @@ $(window).on(
 
 			// event handler for dynamically added elements
 			var imgModal = document.getElementById('image-prev-div');
-			$(document).on("click swipe", ".image-album", function() {
+			$(document).on("click", ".image-album", function() {
 				currentImgID = parseInt(this.id);
 				setModalImage(currentImgID);
 				imgModal.style.visibility = "visible";
