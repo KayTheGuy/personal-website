@@ -1,5 +1,3 @@
-USE personal_website;
-
 INSERT INTO IMAGE VALUES('Brown Wall', 'jpg', '/files/album/Brown-Wall.jpg', 49.2772059, -123.0829845, '2017-03-04');
 INSERT INTO IMAGE VALUES('Diez Vista View Point', 'jpg', '/files/album/Buntzen-View.jpg', 49.3467, -122.8790, '2017-04-23');
 INSERT INTO IMAGE VALUES('Cool Couples', 'jpg', '/files/album/Couple-Walking.jpg', 49.2772059, -123.08298, '2017-03-10');

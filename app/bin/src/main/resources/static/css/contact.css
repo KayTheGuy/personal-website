@@ -1,0 +1,84 @@
+@keyframes showUpContacts {
+	from {
+  		color: #2a6c73;
+  		visibility: hidden;
+	}
+
+	to {
+  		color: black;
+  		visibility: visible;
+	}
+}
+
+#contact-body {
+    color: black;
+}
+
+#my-email {
+	letter-spacing: 0.2em;
+    color: black;
+    font-size: 110%;
+}
+
+#contact-whole {
+	animation: contactAnim 1.2s ease;
+	animation-fill-mode: forwards;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#home-return {
+	float: right;
+}
+
+.done-icone {
+	color: #2a6c73;
+	font-size: 100%;
+	font-weight: 100;
+}
+
+.contact-1 {
+	animation: showUpContacts 1.3s ease;
+	animation-delay: 1.6s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.contact-2 {
+	animation: showUpContacts 1s ease;
+	animation-delay: 2s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.contact-3 {
+	animation: justShowUp 3s linear;
+	animation-delay: 2.4s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.contact-4 {
+	animation: justShowUp 4s linear;
+	animation-delay: 2.9s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+input {
+ 	outline:none;
+}
+
+.mdl-textfield {
+	width: 100%;
+}

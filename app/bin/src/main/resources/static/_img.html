@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="My personal website">
+<meta name="keywords" content="Kayhan Dehghani">
+<meta name="author" content="Kayhan Dehghani">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Image Filters | Kayhan Dehghani</title>
+<!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<link rel="stylesheet" href="/mdl/material.min.css">
+<link rel="stylesheet" href="/mdl/material-icons.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/editor.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/main.js" defer></script>
+<script src="/js/imageEditor.js" defer></script>
+</head>
+
+<body>
+	<div class="mdl-layout">
+		<div class="menu-row mdl-shadow--4dp">
+			<div class="menu-dropdown menu-item no-link">
+				<a>Projects</a>
+				<div class="menu-dropdown-content" style="z-index:10; -webkit-transform: translate3d(0px, 0px, 0px);">
+					<div class="menu-dropdown-item">
+						<a href="/image-album">Photo Gallery</a>
+					</div>
+					<div class="menu-dropdown-item">
+						<a href="#">Image Editor</a>
+					</div>
+				</div>
+			</div>
+			<div class="menu-item">
+				<a href="/">Home</a>
+			</div>
+		</div>
+		<!--  Main content -->
+		<div id="img-edit-content" class="mdl-layout__content">
+			<div class="divide"></div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--3-col"></div>
+				<div id="filter-div" class="mdl-cell mdl-cell--6-col">
+					<div class="btn-txt">
+						<div id="bw" class="radio-btn">
+						</div>
+						<span class="">Gray Scale</span>
+					</div>
+					<div class="btn-txt">
+						<div id="invert" class="radio-btn">
+						</div>
+						<span class="">Inverted Colors</span>
+					</div>
+					<div class="btn-txt">
+						<div id="undo" class="radio-btn selected">
+						</div>
+						<span class="">None</span>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col"></div>
+			</div>
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--3-col"></div>
+				<div class="mdl-cell mdl-cell--6-col">
+					<div class="image-below">
+						<div>
+							<div class="spinner image-spinner"></div>
+							<img id="image-editor-preview" src="/img/placeholder.svg"
+								class="" alt="image preview"/>			
+						</div>
+						<p id="image-label"></p>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--3-col">
+					<form id="image-form" enctype="multipart/form-data"
+						action="/upload/image" method="post">
+						<input id="image-picker" name="uploadedImg" type="file"
+							accept=".jpg,.jpeg,jpeg-2000,.png" style="display: none;" /> <input
+							id="image-upload" type="submit" value="Press"
+							style="display: none;" />
+					</form>
+				</div>
+			</div>
+			<div class="mdl-grid">
+				<a id="image-editor-select-button" class="mdl-button">
+					Upload
+				</a>
+			</div>
+			<div id="main-message" class="mdl-grid mdl-shadow--8dp">
+				<div class="mdl-cell mdl-cell--12-col">
+					<span id="main-message-close">&times;</span>
+					<div id="main-message-txt">You can upload your photo and apply two different filters on them.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

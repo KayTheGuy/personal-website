@@ -1,0 +1,162 @@
+#myself {
+	text-align: center;
+	width: 100%;
+	height: auto;
+	border-radius: 500px;
+	-webkit-animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#me {
+	display: inline;
+}
+
+#my-thoughts-container {
+	visibility: hidden;
+	display: inline;
+	position: relative;
+	left: 56%;
+	top: -77%;
+}
+
+#my-thoughts-container img {
+	width: 100px;
+	height: 100px;
+}
+
+#myself:hover ~ #my-thoughts-container img {
+	-webkit-animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+	animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#myself:hover ~ #my-thoughts-container {
+	visibility: visible;
+    -webkit-animation: pop-up 0.8s cubic-bezier(.36,.07,.19,.97) both;
+	animation: pop-up 0.8s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+#my-thoughts-container span {
+	color: #2a6c73;
+	font-size: 18px;
+	font-weight: 800;
+	position: relative;
+	left: 87px;
+	bottom: 3px;
+}
+
+#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
+	animation: slideInColorLeft 1s;
+}
+
+#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text{
+	font-size: 130%;
+}
+
+#presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
+	animation: showUp 0.5s ease;
+	animation-delay: 2.2s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+	font-size: 100%;
+	text-align: center;
+}
+
+#awards-content {
+	width: 100%;
+	color: black;
+	padding-bottom: 20px;
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+#project-github-link {
+	text-decoration: none;
+	text-align: center;
+}
+
+#copyright-info {
+	text-align: center;
+}
+
+#intro-content {
+	margin-top: 10px;
+	padding-bottom: 20px;
+	width: 100%;
+	color: black;
+	background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+    border-bottom: groove 1px #2a6c73;
+}
+
+#sap-link {
+	color: #2a6c73;
+}
+
+#intro-1-left {
+	
+}
+
+#intro-1-right {
+	-webkit-animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#intro-2 {
+}
+
+#course-table-container {
+	display: block;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+#course-table-div {
+	display: none;
+	margin: 0 auto;
+}
+
+.academic-box {
+	border-bottom: 1px solid #2a6c73;
+	animation: showUp 2.5s ease;
+	animation-delay: 2.5s;
+	animation-fill-mode: forwards;
+	visibility: hidden;
+}
+
+.mdl-data-table {
+	font-size: 100%;
+	background: linear-gradient(to right, #2a6c73 , #56898e);
+	color: white;
+	letter-spacing: 0.3em;
+	font-family: Prime, 'Open Sans', sans-serif;
+}
+
+.mdl-data-table th {
+	font-size: 100%;
+	color: black;
+	letter-spacing: 0.3em;
+	font-family: Prime, 'Open Sans', sans-serif;
+}
+
+.td-row:hover {
+	color: black;
+	background-color: #2a6c73;
+	animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;	
+	transform: translate3d(0, 0, 0);
+}
+
+.rest-bottom {
+	position: relative;
+	bottom: 0;
+}
+
+#resume-page-1 img, #resume-page-2 img{
+	width: 100%;
+	height: auto;
+}
+
+#download-resume {
+	margin: 0 auto;
+}

@@ -1,0 +1,114 @@
+@-webkit-keyframes largenRadioBtn {
+	0% {
+         transform: scale(2);
+	  	-webkit-transform: scale(2);
+	}
+	100% {
+         transform: scale(1);
+	  	-webkit-transform: scale(1);
+	}
+}
+
+@keyframes largenRadioBtn {
+	0% {
+         transform: scale(2);
+	  	-webkit-transform: scale(2);
+	}
+	100% {
+         transform: scale(1);
+	  	-webkit-transform: scale(1);
+	}
+}
+
+
+#image-editor-select-button {
+	margin: 0 auto;
+}
+
+#image-editor-select-button:hover {
+    -webkit-animation: shake 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: shake 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#filter-div {
+	display: none;
+	margin: 0 auto;
+	width: auto;
+	padding: 15px;
+}
+
+#filter-div.active {
+	display: block;
+    -webkit-animation: pop-up 0.5s cubic-bezier(1, 0.3, 0.3, 0.7) both;
+	animation: pop-up 0.5s cubic-bezier(1, 0.3, 0.3, 0.7) both;	
+}
+
+#filter-div span {
+	margin: 0 auto;
+	font-size: 80%;
+}
+
+#image-editor-select-button:hover {
+	color: black;
+}
+
+#image-label {
+	color: #2a6c73;
+	font-weight: 100;
+	font-size: 80%;
+	letter-spacing: 0.2em;
+	margin-top: 20px;
+}
+
+#image-editor-preview {
+	height: auto;
+	width: 100%;
+}
+
+#image-editor-select-button {
+	float: right;
+}
+
+.image-below {
+	position: relative;
+	text-align: center;
+}
+
+.spinner.image-spinner {
+	display: none;
+	margine: auto;
+	position: absolute;
+	border: 3px solid white;
+	border-top-color: #2a6c73;
+}
+
+.radio-btn {
+	width: 18px;
+	height: 18px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	border: 1px solid #2a6c73;
+	cursor: pointer;
+	padding: 0;
+}
+
+.radio-btn.selected {
+	border: 9px solid #2a6c73;
+}
+
+.radio-btn:active {
+	-webkit-animation: largenRadioBtn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: largenRadioBtn 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.btn-txt div {
+	display: inline-block;
+}
+
+.btn-txt  {
+	margin: 10px;
+}
+
+#filter-div div {
+	display: inline-block;
+}
