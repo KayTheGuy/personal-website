@@ -1,12 +1,7 @@
 package com.kayhandehghani.personalwebsite.controllers;
 
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -14,7 +9,6 @@ import java.util.List;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,23 +31,6 @@ import com.kayhandehghani.personalwebsite.utilities.ImageUtility;
 @RestController
 public class FilesController {
 
-	@RequestMapping(value = "/download/resume", method = RequestMethod.GET)
-	public void getResume(HttpServletResponse response) throws IOException {
-		String s = File.separator;
-		String pdfRelativePath =  ".." + s + ".." + s + ".." + s + ".." + s
-				+ "static" + s + "files" + s + "KayhanDehghani.pdf";
-		String currentPath = FilesController.class.getResource("").getPath();
-		Path pdfPath = Paths.get(currentPath + pdfRelativePath);
-		InputStream is = Files.newInputStream(pdfPath);
-		
-		response.addHeader("Content-disposition", "attachment;KayhanDehghani.pdf");
-		response.setContentType("application/pdf");
-
-		// Copy the stream to the response's output stream
-		IOUtils.copy(is, response.getOutputStream());
-		response.flushBuffer();
-	}
-	
 	@PostMapping("/filter/{filterID}")
 	public void editImage(@PathVariable(value="filterID") String id, @RequestParam("uploadedImg") MultipartFile file, HttpServletResponse response) throws IOException {
 		String contentType = file.getContentType();
@@ -70,6 +47,7 @@ public class FilesController {
 		}
 	}
 	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@PostMapping("/message")
 	public ResponseEntity getMessage(@RequestBody ContactMessage message) {
 		try {
