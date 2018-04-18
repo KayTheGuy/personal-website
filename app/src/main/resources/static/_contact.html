@@ -52,7 +52,7 @@
 						<div class="contact-1 mdl-cell mdl-cell--4-col">
 							<div class="mdl-textfield mdl-textfield--floating-label">
 								<input class="mdl-textfield__input" type="text"
-									id="contact-form-name" name="name"> <label
+									id="contact-form-name" name="name"> <label id="contact-label-name"
 									class="mdl-textfield__label" for="contact-form-name">Name...</label>
 							</div>
 						</div>
@@ -63,7 +63,7 @@
 						<div class="contact-2 mdl-cell mdl-cell--4-col">
 							<div class="mdl-textfield mdl-textfield--floating-label">
 								<input class="mdl-textfield__input" type="text"
-									id="contact-form-email" name="email"> <label
+									id="contact-form-email" name="email"> <label id="contact-label-email"
 									class="mdl-textfield__label" for="contact-form-email">Email...</label>
 							</div>
 						</div>
@@ -74,7 +74,7 @@
 						<div class="contact-3 mdl-cell mdl-cell--4-col">
 							<div class="mdl-textfield mdl-textfield--floating-label">
 								<input class="mdl-textfield__input" type="text"
-									id="contact-form-subject" name="subject"> <label
+									id="contact-form-subject" name="subject"> <label id="contact-label-subject"
 									class="mdl-textfield__label" for="contact-form-subject">Subject...</label>
 							</div>
 						</div>
@@ -86,7 +86,7 @@
 							<div class="mdl-textfield">
 								<textarea class="mdl-textfield__input" rows="6"
 									id="contact-form-message" name="message"></textarea>
-								<label class="mdl-textfield__label" for="contact-form-message">Message...</label>
+								<label id="contact-label-message" class="mdl-textfield__label" for="contact-form-message">Message...</label>
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--4-col"></div>
@@ -147,20 +147,10 @@
 				<div class="divide"></div>
 				<div class="divide"></div>
 			</div>
-			<div id="contactSentMsg" class="modal">
-				<div class="modal-content">
-					<div class="mdl-grid">
-						<div class="mdl-cell mdl-cell--4-col"></div>
-						<div class="mdl-cell mdl-cell--4-col">
-							<p>
-								<i class="done-icone material-icons">done</i> <br> I will
-								get back to you as soon as possible.
-							</p>
-						</div>
-						<div class="mdl-cell mdl-cell--4-col">
-							<span class="close">&times;</span>
-						</div>
-					</div>
+			<div id="main-message" class="mdl-grid mdl-shadow--8dp">
+				<div class="mdl-cell mdl-cell--12-col">
+					<span id="main-message-close">&times;</span>
+					<div id="main-message-txt"></div>
 				</div>
 			</div>
 		</div>

@@ -37,9 +37,7 @@ function rmClasName(element, className) {
 
 $(document).ready(
 		function() {
-			setTimeout(function() {
-				showMessage();
-			}, 20);
+			showMessage();
 			// get all radio buttons
 			radioBtns = document.getElementsByClassName('radio-btn');
 			

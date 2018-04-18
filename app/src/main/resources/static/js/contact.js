@@ -9,26 +9,39 @@ function checkEmailInput(email) {
 		$('#contact-form-email').css({
 			borderBottom : '1px solid #2a6c73'
 		});
+		$('#contact-label-email').css({
+			color : '#2a6c73'
+		});
 		return false;
 	}
 	$('#contact-form-email').css({
 		borderBottom : '1px solid rgba(0,0,0,.12)'
 	});
+	$('#contact-label-email').css({
+		color : 'black'
+	});
 	return true;
 }
 
 function checkEmptyInput(input, field) {
-	var id = '#contact-form-' + field;
-	var defaultText = defaultInpuMap.get(id);
+	var input_id = '#contact-form-' + field;
+	var label_id = '#contact-label-' + field;
+	var defaultText = defaultInpuMap.get(input_id);
 	if (input == '' || input == defaultText) { // invalid input
 		formErrMsg = 'Please provide a valid ' + field;
-		$(id).css({
+		$(input_id).css({
 			borderBottom : '1px solid #2a6c73'
+		});
+		$(label_id).css({
+			color: '#2a6c73'
 		});
 		return false;
 	}
-	$(id).css({
+	$(input_id).css({
 		borderBottom : '1px solid rgba(0,0,0,.12)'
+	});
+	$(label_id).css({
+		color: 'black'
 	});
 	return true;
 }
@@ -108,38 +121,14 @@ $(document).ready(function() {
 				data : JSON.stringify(formData),
 //				beforeSend : showSpinner()
 			}).done(function() {
-				// hide spinner
-				$('#modalSpinner').css({
-					visibility : 'hidden'
-				});
-
-				// show message
-				var modal = document.getElementById('contactSentMsg');
-				modal.style.visibility = "visible";
-
-				$('.close').on('click touchstart',  function(e) {
-					e.stopPropagation();
-					modal.style.visibility = "hidden";
-				});
-
-				$(document).on('click touchstart', function(e) {
-					e.stopPropagation();
-					if (e.target == modal) {
-						modal.style.visibility = "hidden";
-					}
-				});
-
+				showMessage('Awesome! I will get back to you as soon as possible.');
 			}).always(function() {
 				// always
 			}).fail(function(message) {
-				showError("Failed to send message. Please Try again.");
-				// hide spinner
-				$('#modalSpinner').css({
-					visibility : 'hidden'
-				});
+				showMessage('Unable to send the message. Please try again.');
 			});
 		} else {
-			// showError
+			showMessage(formErrMsg);
 		}
 	});
 });

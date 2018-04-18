@@ -1,14 +1,9 @@
 #myself {
 	text-align: center;
 	width: 100%;
-	height: auto;
 	border-radius: 500px;
 	-webkit-animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-#me {
-	display: inline;
 }
 
 #my-thoughts-container {
@@ -94,16 +89,9 @@
 	color: #2a6c73;
 }
 
-#intro-1-left {
-	
-}
-
 #intro-1-right {
 	-webkit-animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-#intro-2 {
 }
 
 #course-table-container {

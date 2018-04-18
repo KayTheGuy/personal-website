@@ -1,4 +1,4 @@
-INSERT INTO IMAGE (image_name, image_type, image_path, image_lat, image_lng, image_date) VALUES
+INSERT INTO image (image_name, image_type, image_path, image_lat, image_lng, image_date) VALUES
 
 ('Brown Wall', 'jpg', '/files/album/Brown-Wall.jpg', 49.2772059, -123.0829845, '2017-03-04'),
 ('Diez Vista View Point', 'jpg', '/files/album/Buntzen-View.jpg', 49.3467, -122.8790, '2017-04-23'),

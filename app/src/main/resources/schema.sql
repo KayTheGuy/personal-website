@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS IMAGE;  
+DROP TABLE IF EXISTS image;  
 
-CREATE TABLE IMAGE (
+CREATE TABLE image (
 	image_id bigint PRIMARY KEY NOT NULL AUTO_INCREMENT,  
     image_name varchar(200) NOT NULL,  
     image_type varchar(20) NOT NULL,  
