@@ -1,10 +1,39 @@
 @keyframes change-language {
-  0% { content:"Java"; }
-  20% { content:"JavaScript"; }
-  40% { content:"Python"; }
-  60% { content:"SQL"; }
-  80% { content:"CSS"; }
-  100% { content: "HTML"; }
+  5% { content:"Java"; }
+  25% { content:"JavaScript"; }
+  35% { content:"Python"; }
+  50% { content:"SQL"; }
+  75% { content:"CSS"; }
+  90% { content: "HTML"; }
+}
+
+@-webkit-keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+}
+@keyframes hvr-bob {
+  0% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  50% {
+    -webkit-transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
 }
 
 #myself {
@@ -13,6 +42,12 @@
 	border-radius: 500px;
 	-webkit-animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#myself:hover {
+	transform: scale(0.2); 
+	transition: all ease 750ms;
 }
 
 #skill {
@@ -31,7 +66,7 @@ h5, h6 {
 
 #skill:after {
 	content: "";
-  	animation: change-language 10s linear infinite;
+  	animation: change-language 10s ease infinite;
 }
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
