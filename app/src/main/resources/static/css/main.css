@@ -308,7 +308,7 @@
 }
 
 body {
-	font-family: "Roboto","Helvetica","Arial",sans-serif;
+	font-family: "Nunito", "Roboto","Helvetica","Arial",sans-serif;
 	font-style: normal;
 	background: white;
 }
@@ -530,7 +530,7 @@ a {
 	font-size: 60%;
 	letter-spacing: 0.3em;
 	display: none;
-	border-radius: 30px;
+	border-radius: 50%;
 }
 
 .back-to-top {

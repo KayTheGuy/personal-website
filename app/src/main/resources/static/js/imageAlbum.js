@@ -244,7 +244,7 @@ $(window).on(
 
 			// close modal handlers
 			$('.close').on('click touchstart', function(e) {
-				e.preventDefault()
+				e.preventDefault();
 				e.stopPropagation();
 				imgModal.style.visibility = "hidden";
 				mapModal.style.visibility = "hidden";

@@ -1,3 +1,14 @@
+var test = false;
+function navigateSkillItem(el) {
+	var skillEl = document.getElementById('skill');
+	if(!test) {
+		skillEl.getElementsByTagName('p')[0].innerHTML = "Java";
+	} else {
+		skillEl.getElementsByTagName('p')[0].innerHTML = "JavaScript";
+	}
+	test = !test;
+}
+
 $(document).ready(function() {
 	var coursesVisible = false;
 	
@@ -29,5 +40,15 @@ $(document).ready(function() {
 		if (event.target == resumeModal) {
 			resumeModal.style.visibility = "hidden";
 		}
+	});
+	
+	// Skills Navigation
+	$('#select-skill').on('click touchstart', function(e) {
+	    e.preventDefault(); 
+	    if(e.type == "touchstart") {
+	    	navigateSkillItem(this);
+	    } else if(e.type == "click") {
+	    	navigateSkillItem(this);
+	    }
 	});
 });

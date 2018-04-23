@@ -1,3 +1,12 @@
+@keyframes change-language {
+  0% { content:"Java"; }
+  20% { content:"JavaScript"; }
+  40% { content:"Python"; }
+  60% { content:"SQL"; }
+  80% { content:"CSS"; }
+  100% { content: "HTML"; }
+}
+
 #myself {
 	text-align: center;
 	width: 100%;
@@ -6,37 +15,23 @@
 	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-#my-thoughts-container {
-	visibility: hidden;
-	display: inline;
-	position: relative;
-	left: 56%;
-	top: -77%;
+#skill {
+	color: white;
+	font-family: "Poiret One";
+	font-size: 200%;
+	text-align: center;
+	display: inline-block;
+    transition: all ease 750ms;
 }
 
-#my-thoughts-container img {
-	width: 100px;
-	height: 100px;
+h5, h6 {
+	font-family: "Poiret One";
+	font-weight: 600;
 }
 
-#myself:hover ~ #my-thoughts-container img {
-	-webkit-animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
-	animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-#myself:hover ~ #my-thoughts-container {
-	visibility: visible;
-    -webkit-animation: pop-up 0.8s cubic-bezier(.36,.07,.19,.97) both;
-	animation: pop-up 0.8s cubic-bezier(.36,.07,.19,.97) both;
-}
-
-#my-thoughts-container span {
-	color: #2a6c73;
-	font-size: 18px;
-	font-weight: 800;
-	position: relative;
-	left: 87px;
-	bottom: 3px;
+#skill:after {
+	content: "";
+  	animation: change-language 10s linear infinite;
 }
 
 #presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
@@ -82,16 +77,20 @@
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
-    border-bottom: groove 1px #2a6c73;
 }
 
-#sap-link {
+a {
 	color: #2a6c73;
 }
 
 #intro-1-right {
 	-webkit-animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+#education-intro {
+	text-align: center;
+	margin: 0 auto;
 }
 
 #course-table-container {
@@ -147,4 +146,14 @@
 
 #download-resume {
 	margin: 0 auto;
+}
+
+#divide-image1 {
+	background-attachment: fixed;
+	background-image: url('/img/back1.png');
+}
+
+#divide-image2 {
+	background-attachment: fixed;
+	background-image: url('/img/back2.png');
 }
