@@ -1,11 +1,11 @@
-var formErrMsg = 'Please fill the form first.';
+var formErrMsg = 'Please fill the form first!';
 var defaultInpuMap = new Map();
 
 function checkEmailInput(email) {
 	var re = /\S+@\S+\.\S+/;
 	var result = re.test(email);
 	if (!result) {
-		formErrMsg = 'You have entered an invalid email address.';
+		formErrMsg = 'You have entered an invalid email address!';
 		$('#contact-form-email').css({
 			borderBottom : '1px solid #2a6c73'
 		});
@@ -28,7 +28,7 @@ function checkEmptyInput(input, field) {
 	var label_id = '#contact-label-' + field;
 	var defaultText = defaultInpuMap.get(input_id);
 	if (input == '' || input == defaultText) { // invalid input
-		formErrMsg = 'Please provide a valid ' + field;
+		formErrMsg = 'Please provide a valid ' + field + '!';
 		$(input_id).css({
 			borderBottom : '1px solid #2a6c73'
 		});

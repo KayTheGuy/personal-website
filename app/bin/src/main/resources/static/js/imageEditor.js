@@ -14,20 +14,20 @@ function showPreview(file) {
 }
 
 function changeRadioBtnsClasses(id) {
-	let slctdEl = document.getElementById(id);
+	var slctdEl = document.getElementById(id);
 	
 	Array.prototype.forEach.call(radioBtns, function(btn) {
 		rmClasName(btn, 'selected');
 	});
 	
-	let newClass = slctdEl.className + ' selected';
+	var newClass = slctdEl.className + ' selected';
 	slctdEl.className = newClass;
 }
 
 // helper function
 function rmClasName(element, className) {
-	let classes = element.className.split(/\s+/);
-    for(let i = 0; i < classes.length; i++) {
+	var classes = element.className.split(/\s+/);
+    for(var i = 0; i < classes.length; i++) {
     	if (classes[i] === className) {
     		classes[i] = '';
     	} 

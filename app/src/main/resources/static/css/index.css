@@ -52,8 +52,8 @@
 }
 
 #skills-title {
-	color: white;
-	font-size: 200%;
+	display: none;
+	font-size: 150%;
 }
 
 h5, h6 {
@@ -144,14 +144,12 @@ a {
 	background: linear-gradient(to right, #2a6c73 , #56898e);
 	color: white;
 	letter-spacing: 0.3em;
-	font-family: Prime, 'Open Sans', sans-serif;
 }
 
 .mdl-data-table th {
 	font-size: 100%;
 	color: black;
 	letter-spacing: 0.3em;
-	font-family: Prime, 'Open Sans', sans-serif;
 }
 
 .td-row:hover {
@@ -162,6 +160,7 @@ a {
 }
 
 .rest-bottom {
+	font-wiehgt: 600;
 	position: relative;
 	bottom: 0;
 }
@@ -177,10 +176,10 @@ a {
 
 #divide-image1 {
 	background-attachment: fixed;
-	background-image: url('/img/back1.png');
+	background-image: url('/img/back.jpg');
 }
 
 #divide-image2 {
 	background-attachment: fixed;
-	background-image: url('/img/back2.png');
+	background-image: url('/img/back.jpg');
 }

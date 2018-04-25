@@ -76,7 +76,7 @@
 
 .spinner.image-spinner {
 	display: none;
-	margine: auto;
+	margin: auto;
 	position: absolute;
 	border: 3px solid white;
 	border-top-color: #2a6c73;

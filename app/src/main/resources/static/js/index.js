@@ -1,5 +1,5 @@
 var myLanguage = [ "Java", "JavaScript", "Python", "SQL", "CSS", "HTML" ];
-var lanStyle = "{ color: white; font-family: \"Poiret One\"; font-size: 200%; }";
+var lanStyle = "{ font-family: \"Poiret One\"; font-size: 140%; }";
 var introStyle = "{ font-weight: 400; letter-spacing: 0.1em; }";
 
 var intro = [ "<p> Hi!<br /> <br /> My name is Kayhan. I am a Software Developer, " +
@@ -57,6 +57,8 @@ TextTyper.prototype.typeIt = function() {
 		this.isDeleting = true;
 		if(!this.loop) {
 			if(this.fallback) this.fallback();
+			$('#skills-title').show();
+			typeForClass('languages', myLanguage, 1000, true, lanStyle, 200, 400, null);
 			return;
 		}
 	} else if (this.isDeleting && this.txt === '') {
@@ -82,8 +84,7 @@ var showIntroButton = function() {
 $(window).on('load', function() {
 	var coursesVisible = false;
 	
-	typeForClass('languages', myLanguage, 1000, true, lanStyle, 200, 400, null);
-	typeForClass('my-intro-txt', intro, 500, false, introStyle, 20, 20, showIntroButton);
+	typeForClass('my-intro-txt', intro, 500, false, introStyle, -10, 0, showIntroButton);
 	
 	// COURSES
 	$('#show-courses-button').click(function() {

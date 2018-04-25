@@ -173,7 +173,7 @@
 	  	transform: scale(1);
 	  	-webkit-transform: scale(1);
 	  	opacity: 1;
-	  	z-index = 111;
+	  	z-index: 111;
 	}
 }
 
@@ -446,6 +446,7 @@ h5, h6, .like-h6 {
 	letter-spacing: 0.2em;
 	color: #2a6c73;
 	display: inline-block;
+	font-weight: 600;
 }
 
 .menu-item:hover {
@@ -525,20 +526,20 @@ a {
 	float: right;
 	padding: 8px;
 	margin: 20px;
-	font-size: 60%;
+	font-size: 80%;
 	letter-spacing: 0.3em;
 	display: none;
-	border-radius: 50%;
+	border-radius: 18px;
 }
 
 .back-to-top {
 	color: black;
-	border: solid 1px black;
+	border: solid 2px black;
 }
 
 .back-to-top-modal {
-	color: #2a6c73;
-	border: solid 1px #2a6c73;
+	color: white;
+	border: solid 2px white;
 }
 
 .back-to-top:hover, .back-to-top-modal:hover {
