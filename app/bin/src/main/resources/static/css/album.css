@@ -123,7 +123,7 @@
 	position: fixed;
 	top: 50%;
 	right: 0;
-	color: black;
+	color: #04070f;
 	font-weight: 100;
 	letter-spacing: 0.2em;
 	z-index: 1;
@@ -137,7 +137,7 @@
 	margin-top: 25px;
 	margin-left: 65px;
 	border-top: 1px solid rgba(0,0,0,0);
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #04070f;
 }
 
 
@@ -193,7 +193,7 @@
 .image-album-text {
 	text-align: center;
 	background-color: rgba(0,0,0,0); 
-	color: black;
+	color: #04070f;
 	font-size: 180%;
 	font-weight: 100;
 	letter-spacing: 0.2em;

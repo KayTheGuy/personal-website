@@ -18,7 +18,7 @@ function checkEmailInput(email) {
 		borderBottom : '1px solid rgba(0,0,0,.12)'
 	});
 	$('#contact-label-email').css({
-		color : 'black'
+		color : 'white'
 	});
 	return true;
 }
@@ -41,7 +41,7 @@ function checkEmptyInput(input, field) {
 		borderBottom : '1px solid rgba(0,0,0,.12)'
 	});
 	$(label_id).css({
-		color: 'black'
+		color: 'white'
 	});
 	return true;
 }

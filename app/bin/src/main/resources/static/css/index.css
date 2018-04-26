@@ -61,9 +61,9 @@
 	text-align: center;
 }
 
-#awards-content {
+#highlights-content {
 	width: 100%;
-	color: black;
+	color: #04070f;
 	padding-bottom: 20px;
 	background-size:     cover;                   
     background-repeat:   no-repeat;
@@ -83,7 +83,7 @@
 	margin-top: 10px;
 	padding-bottom: 20px;
 	width: 100%;
-	color: black;
+	color: #04070f;
 	background-size:     cover;                   
     background-repeat:   no-repeat;
     background-position: center center;
@@ -135,13 +135,13 @@
 
 .mdl-data-table th {
 	font-size: 100%;
-	color: black;
+	color: #04070f;
 	letter-spacing: 0.3em;
 	font-family: Prime, 'Open Sans', sans-serif;
 }
 
 .td-row:hover {
-	color: black;
+	color: #04070f;
 	background-color: #2a6c73;
 	animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;	
 	transform: translate3d(0, 0, 0);

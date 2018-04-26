@@ -20,7 +20,7 @@
   text-transform: none;
   letter-spacing: normal;
   word-wrap: normal;
-  black-space: nowrap;
+  white-space: nowrap;
   direction: ltr;
 
   /* Support for all WebKit browsers. */
@@ -33,3 +33,4 @@
 
   /* Support for IE. */
   font-feature-settings: 'liga';
+}

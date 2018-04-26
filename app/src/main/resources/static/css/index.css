@@ -36,11 +36,6 @@
 	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-#myself:hover {
-	transform: scale(0.2); 
-	transition: all ease 750ms;
-}
-
 #intro-buttons {
 	display: none;
 }
@@ -78,13 +73,19 @@ h5, h6 {
 	text-align: center;
 }
 
-#awards-content {
+#highlights-content {
 	width: 100%;
-	color: black;
+	color: #04070f;
 	padding-bottom: 20px;
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
+	background: linear-gradient(to right, #2a6c73 , #69979b);
+}
+
+#highlights-content .first-letter {
+	color: #04070f;
+}
+
+#highlights-content h1 {
+	color: white;
 }
 
 #project-github-link {
@@ -96,14 +97,15 @@ h5, h6 {
 	text-align: center;
 }
 
+#intro-with-header {
+	background: #04070f;
+}
+
 #intro-content {
 	margin-top: 10px;
 	padding-bottom: 20px;
 	width: 100%;
-	color: black;
-	background-size:     cover;                   
-    background-repeat:   no-repeat;
-    background-position: center center;
+	color: white;
 }
 
 a {
@@ -132,28 +134,37 @@ a {
 }
 
 .academic-box {
-	border-bottom: 1px solid #2a6c73;
+	border-bottom: 1px solid white;
 	animation: showUp 2.5s ease;
 	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
 	visibility: hidden;
 }
 
+#show-courses-button {
+	background: linear-gradient(to right, #04070f , #535353);
+	color: white;
+}
+
+#show-courses-button:hover {
+	color: #2a6c73;
+}
+
 .mdl-data-table {
 	font-size: 100%;
-	background: linear-gradient(to right, #2a6c73 , #56898e);
+	background: linear-gradient(to right, #04070f , #535353);
 	color: white;
 	letter-spacing: 0.3em;
 }
 
 .mdl-data-table th {
-	font-size: 100%;
-	color: black;
+	font-size: 130%;
+	color: white;
 	letter-spacing: 0.3em;
 }
 
 .td-row:hover {
-	color: black;
+	color: #04070f;
 	background-color: #2a6c73;
 	animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;	
 	transform: translate3d(0, 0, 0);
@@ -170,6 +181,10 @@ a {
 	height: auto;
 }
 
+#sfu-link {
+	color: white;
+}
+
 #download-resume {
 	margin: 0 auto;
 }
@@ -177,9 +192,23 @@ a {
 #divide-image1 {
 	background-attachment: fixed;
 	background-image: url('/img/back.jpg');
+	background-repeat:   no-repeat;
 }
 
-#divide-image2 {
-	background-attachment: fixed;
-	background-image: url('/img/back.jpg');
+.menu-dropdown-item {
+	display: block;
+	padding: 20px;
+	letter-spacing: 0.2em;
+	color: white;
+	background: #04070f;
+	line-height: 120%;
+	border-radius: 30px;
+}
+
+.menu-dropdown-item a {
+	color: white;
+}
+
+.menu-dropdown-content {
+	background: #04070f;
 }

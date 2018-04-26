@@ -7,29 +7,29 @@
 @keyframes borderColor { 
 	20% {
 		border-right: solid 1px white;
-		border-top: solid 1px black;
-		border-left: solid 1px black;
-		border-bottom: solid 1px black;
+		border-top: solid 1px #04070f;
+		border-left: solid 1px #04070f;
+		border-bottom: solid 1px #04070f;
 	}
 
 	30% {
-		border-right: solid 1px black;
+		border-right: solid 1px #04070f;
 		border-top: solid 1px white;
-		border-left: solid 1px black;
-		border-bottom: solid 1px black;
+		border-left: solid 1px #04070f;
+		border-bottom: solid 1px #04070f;
 	}
 	
 	50% {
-		border-right: solid 1px black;
-		border-top: solid 1px black;
+		border-right: solid 1px #04070f;
+		border-top: solid 1px #04070f;
 		border-left: solid 1px white;
-		border-bottom: solid 1px black;
+		border-bottom: solid 1px #04070f;
 	}
 	
 	80% {
-		border-right: solid 1px black;
-		border-top: solid 1px black;
-		border-left: solid 1px black;
+		border-right: solid 1px #04070f;
+		border-top: solid 1px #04070f;
+		border-left: solid 1px #04070f;
 		border-bottom: solid 1px white;
 	}
 }
@@ -215,7 +215,7 @@
 	}
 
 	to {
-		color: black;
+		color: #04070f;
 		opacity: 1;
 	}
 }
@@ -229,7 +229,7 @@
 
 	to {
 		opacity: 1;
-		color: black;
+		color: #04070f;
 		visibility: visible;
 	}
 }
@@ -241,7 +241,7 @@
 	}
 	
 	to {
-		color: black;
+		color: #04070f;
 		visibility: visible;
 	}
 }
@@ -324,8 +324,8 @@ h5, h6, .like-h6 {
 }
 
 .mdl-mini-footer {
-	background: black;
-	color: black;
+	background: #04070f;
+	color: #04070f;
 	height: 40px;
 }
 
@@ -360,7 +360,7 @@ h5, h6, .like-h6 {
 }
 
 .mdl-button:hover {
-	color: black;
+	color: #04070f;
 	-webkit-animation: shadow-blink 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: shadow-blink 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -377,7 +377,7 @@ h5, h6, .like-h6 {
 }
 
 .mdl-textfield__label {
-	color: black;
+	color: white;
 }
 
 .modal {
@@ -423,7 +423,7 @@ h5, h6, .like-h6 {
 }
 
 .mdl-textfield__input {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid white;
 	font-size: 100%;
 	font-weight: 100;
 }
@@ -533,8 +533,8 @@ a {
 }
 
 .back-to-top {
-	color: black;
-	border: solid 2px black;
+	color: #04070f;
+	border: solid 2px #04070f;
 }
 
 .back-to-top-modal {
@@ -551,7 +551,7 @@ a {
 	height: 100px;
 	box-sizing: border-box;
 	border-radius: 50%;
-	border: 3px solid black;
+	border: 3px solid #04070f;
 	border-top-color: #2a6c73;
 	position: fixed;
 	top: 50%;
@@ -587,6 +587,7 @@ textarea:focus ~ label {
 #main-message {
 	display: none;
 	background-color: white;
+	color: #04070f;
 	position: fixed;
 	top: 50%;
 	border-radius: 50px;
@@ -620,7 +621,7 @@ textarea:focus ~ label {
 }
 
 #main-message-close:hover {
-	color: black;
+	color: #04070f;
 	-webkit-animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }

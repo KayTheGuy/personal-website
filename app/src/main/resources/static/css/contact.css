@@ -5,18 +5,19 @@
 	}
 
 	to {
-  		color: black;
+  		color: white;
   		visibility: visible;
 	}
 }
 
 #contact-body {
-    color: black;
+    color: white;
+	background: #04070f;
 }
 
 #my-email {
 	letter-spacing: 0.2em;
-    color: black;
+    color: white;
     font-size: 110%;
 }
 
@@ -80,4 +81,22 @@ input {
 
 .mdl-textfield {
 	width: 100%;
+}
+
+.menu-dropdown-item {
+	display: block;
+	padding: 20px;
+	letter-spacing: 0.2em;
+	color: white;
+	background: #04070f;
+	line-height: 120%;
+	border-radius: 30px;
+}
+
+.menu-dropdown-item a {
+	color: white;
+}
+
+.menu-dropdown-content {
+	background: #04070f;
 }

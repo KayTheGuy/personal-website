@@ -5,18 +5,18 @@
 	}
 
 	to {
-  		color: black;
+  		color: #04070f;
   		visibility: visible;
 	}
 }
 
 #contact-body {
-    color: black;
+    color: #04070f;
 }
 
 #my-email {
 	letter-spacing: 0.2em;
-    color: black;
+    color: #04070f;
     font-size: 110%;
 }
 

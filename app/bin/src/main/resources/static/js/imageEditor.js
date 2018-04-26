@@ -63,7 +63,7 @@ $(document).ready(
 				$('#filter-div').addClass('active');
 			});
 
-			// trigger black and black effect
+			// trigger black and white effect
 			$('#bw').on('click touchstart', function(e) {
 			    e.preventDefault(); 
 			    if(e.type == "touchstart") {
