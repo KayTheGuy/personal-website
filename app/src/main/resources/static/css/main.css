@@ -308,7 +308,7 @@ html {
 body {
 	font-family: "Nunito", "Roboto","Helvetica","Arial",sans-serif !important;
 	font-style: normal;
-	background: white;
+	background: #04070f;
 	font-weight: 400;
 }
 
@@ -471,6 +471,7 @@ h5, h6, .like-h6 {
 	letter-spacing: 0.2em;
 	color: #2a6c73;
 	line-height: 120%;
+	background: #04070f''
 }
 
 .menu-item > a, .menu-dropdown-item > a {
@@ -496,7 +497,7 @@ h5, h6, .like-h6 {
 	letter-spacing: 0.3em;
 	margin-top: 21px;
 	margin-left: -20px;
-    background-color: white;
+    background-color: #04070f;
     box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
     border-radius: 30px;
 }
@@ -518,7 +519,7 @@ a {
 	text-decoration: none;
 }
 
-.back-to-top, .back-to-top-modal {
+.back-to-top {
 	position: fixed;
 	text-decoration: none;
 	bottom: 0%;
@@ -530,19 +531,11 @@ a {
 	letter-spacing: 0.3em;
 	display: none;
 	border-radius: 18px;
-}
-
-.back-to-top {
-	color: #04070f;
-	border: solid 2px #04070f;
-}
-
-.back-to-top-modal {
 	color: white;
 	border: solid 2px white;
 }
 
-.back-to-top:hover, .back-to-top-modal:hover {
+.back-to-top:hover {
 	animation: borderColor 0.1s cubic-bezier(0.2, 0, 0.5, 0);
 }
 
@@ -551,8 +544,8 @@ a {
 	height: 100px;
 	box-sizing: border-box;
 	border-radius: 50%;
-	border: 3px solid #04070f;
-	border-top-color: #2a6c73;
+	border: 3px solid #2a6c73;
+	border-top-color: white;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -567,7 +560,7 @@ a {
 }
 
 .mdl-layout {
-	background: white;
+	background: #04070f;
 }
 
 .divide {

@@ -81,8 +81,8 @@
 	left: 50%;
 	margin-top: -40px; 
 	margin-left: -40px;
-	border: 3px solid white;
-	border-top-color: #2a6c73;
+	border: 3px solid #2a6c73;
+	border-top-color: white;
 }
 
 .radio-btn {
@@ -96,7 +96,7 @@
 }
 
 .radio-btn.selected {
-	border: 9px solid #2a6c73;
+	border: 9px solid white;
 }
 
 .radio-btn:active {
@@ -114,4 +114,8 @@
 
 #filter-div div {
 	display: inline-block;
+}
+
+#filter-div span {
+	color: #2a6c73;
 }

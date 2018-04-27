@@ -82,21 +82,3 @@ input {
 .mdl-textfield {
 	width: 100%;
 }
-
-.menu-dropdown-item {
-	display: block;
-	padding: 20px;
-	letter-spacing: 0.2em;
-	color: white;
-	background: #04070f;
-	line-height: 120%;
-	border-radius: 30px;
-}
-
-.menu-dropdown-item a {
-	color: white;
-}
-
-.menu-dropdown-content {
-	background: #04070f;
-}
