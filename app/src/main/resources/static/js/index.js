@@ -2,15 +2,15 @@ var myLanguage = [ "Java", "JavaScript", "Python", "SQL", "CSS", "HTML" ];
 var lanStyle = "{ font-family: \"Poiret One\"; font-size: 140%; }";
 var introStyle = "{ font-weight: 400; letter-spacing: 0.1em; }";
 
-var intro = [ "<p> Hi!<br /> <br /> My name is Kayhan. I am a Software Developer, " +
+var intro = [ "<p> Hi there!<br/> <br/> My name is Kayhan. I am a Software Developer, " +
 			 "currently working at <a href=\"https://www.sap.com/index.html\" " +
 			 "target=\"_blank\">SAP</a> (Vancouver). I am responsible for developing" +
 			 " internal tools that scan SAP programs to make sure their open source " +
 			 "components are legally compliant.</p> " +
-			 "<p>I am a back-end developer but sometimes I play around with front-ends " +
-			 "as well. My favorite languages are Java, Python, and JavaScript, " +
-			 "respectively.</p> <p>I love coding, exercising, driving, and " +
-			 "listening to music.</p>"]
+			 "<p>I am a back-end developer for the most part but I am interested in " +
+			 "front-end development too. My favorite languages are Java, Python, and JavaScript, " +
+			 "respectively.</p> <p>I love coding, exercising, driving, music, photography, " +
+			 "and of course food! Hope you take your time to browse my website.<br/><br/> Cheers!</p>"]
 			
 var TextTyper = function(el, id, dataList, period, loop, style, delta1, delta2, fallback) {
 	this.el = el;
