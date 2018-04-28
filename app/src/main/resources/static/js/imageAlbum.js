@@ -5,23 +5,23 @@ var loading = true;
 var counterRatio = 1;
 
 // google map functions
-function initMap() {
+var initMap = function() {
 	var uluru = {
 		lat : 49.2827,
 		lng : -123.1207
 	};
 	mapHelper(8, uluru);
-}
+};
 
-function adjustMap(lat, lng) {
+var adjustMap = function(lat, lng) {
 	var uluru = {
 		lat : lat,
 		lng : lng
 	};
 	mapHelper(12, uluru);
-}
+};
 
-function mapHelper(zoom, uluru) {
+var mapHelper = function(zoom, uluru) {
 	var map = new google.maps.Map(document.getElementById('album-map'), {
 		zoom : zoom,
 		center : uluru
@@ -30,9 +30,9 @@ function mapHelper(zoom, uluru) {
 		position : uluru,
 		map : map
 	});
-}
+};
 
-function setModalImage(imgId) {
+var setModalImage = function(imgId) {
 	var nextID = imgId + 1, prevID = imgId - 1;
 	// only show next and previous buttons if there is an image next or previous
 	if ($('#' + prevID).length) {
@@ -58,9 +58,9 @@ function setModalImage(imgId) {
 	imageElement.attr('src', selectedImg.path);
 	$('#image-modal-location').html(locationIcon + selectedImg.name + ', ');
 	$('#image-modal-date').html(selectedImg.date);
-}
+};
 
-function renderMoreImages() {
+var renderMoreImages = function() {
 	var currentPic, currentPicDiv, currentSpaceDiv, currentMiddleDiv, currentRow;
 	startID = numOfLoad * numOfImagePerLoad;
 	endID = Math.min(startID + numOfImagePerLoad, imgList.length);
@@ -124,9 +124,9 @@ function renderMoreImages() {
 		$(this).find('img').css({opacity: '1'});
 		$(this).find('.image-album-middle').css({opacity: '0'});
 	});
-}
+};
 
-function dynamicImageLoad() {
+var dynamicImageLoad = function() {
     var docHeight = $(document).height();
     var winHeight = $(window).height();
     var winScrollTop = $(window).scrollTop();
@@ -138,11 +138,11 @@ function dynamicImageLoad() {
 		renderMoreImages();
 	}
 	setImageCounter();
-}
+};
 
 var oldRatioNum = -1;
 var oldTotNum = -1;
-function setImageCounter() {	
+var setImageCounter = function() {	
 	var total = numOfImagePerLoad * numOfLoad;
 	var ratio = Math.round((1 - counterRatio) * total) + 1;
 	if (!loading && ratio <= total) {
@@ -167,11 +167,12 @@ function setImageCounter() {
 		}
 		
 	}
-}
+};
 
 $(window).on(
 		'load',
 		function() {
+			showMessage();
 			// dynamically load more images on scroll
 			$(document).on('scroll', dynamicImageLoad);
 			$(document).on('touchmove', dynamicImageLoad);

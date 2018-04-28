@@ -1,25 +1,26 @@
-function showMessage(message) {
+var showMessage = function(message) {
 	var el = $('#main-message');
 	if(message != undefined) {
 		$('#main-message-txt').text(message);
 	}
 	el.css('display', 'block');
 	el.addClass('active');
-}
+	setTimeout(hideMessage, 6000);
+};
 
-function hideMessage(e) {
+var hideMessage = function(e) {
 	$('#main-message').removeClass('active');
-}
+};
 
-function showSpinner() {
+var showSpinner = function() {
 	$('.spinner').show();
-}
+};
 
-function hideSpinner() {
+var hideSpinner = function() {
 	$('.spinner').hide();
-}
+};
 
-function triggerBackToTop() {
+var triggerBackToTop = function() {
 	var top = $(this).scrollTop();
 	if(top > 500) {
 		$('.back-to-top').show();
@@ -28,7 +29,7 @@ function triggerBackToTop() {
 	}
 };
 
-function triggerBackToTopModal() {
+var triggerBackToTopModal = function() {
 	var top = $('.modal').scrollTop();
 	if(top > 500) {
 		$('.back-to-top-modal').show();
@@ -37,24 +38,24 @@ function triggerBackToTopModal() {
 	}
 };
 
-function topFunction(e) {
+var topFunction = function(e) {
 	e.preventDefault();
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0;
-}
+};
 
-function topFunctionMoal(e) {
+var topFunctionMoal = function(e) {
 	e.preventDefault();
 	$('.modal').scrollTop(0); 
-}
+};
 
-function clickLinkInside() {
+var clickLinkInside = function() {
 	link = $(this).find("a").attr("href");
 	
 	if(link) {
 		window.location = link;
 	}
-}
+};
 
 $(document).ready(function() {
 	$(document).on('scroll', triggerBackToTop);

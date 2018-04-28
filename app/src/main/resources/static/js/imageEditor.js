@@ -1,7 +1,7 @@
 var radioBtns;
 
 // show preview of selected image
-function showPreview(file) {
+var showPreview = function(file) {
 	if (file) {
 		var reader = new FileReader();
 		reader.onload = function(e) {
@@ -11,9 +11,9 @@ function showPreview(file) {
 		};
 		reader.readAsDataURL(file);
 	}
-}
+};
 
-function changeRadioBtnsClasses(id) {
+var changeRadioBtnsClasses = function(id) {
 	var slctdEl = document.getElementById(id);
 	
 	Array.prototype.forEach.call(radioBtns, function(btn) {
@@ -22,10 +22,10 @@ function changeRadioBtnsClasses(id) {
 	
 	var newClass = slctdEl.className + ' selected';
 	slctdEl.className = newClass;
-}
+};
 
 // helper function
-function rmClasName(element, className) {
+var rmClasName = function(element, className) {
 	var classes = element.className.split(/\s+/);
     for(var i = 0; i < classes.length; i++) {
     	if (classes[i] === className) {
@@ -33,7 +33,7 @@ function rmClasName(element, className) {
     	} 
     }
     element.className = classes.join(' ');
-}
+};
 
 $(document).ready(
 		function() {

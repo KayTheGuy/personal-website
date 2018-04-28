@@ -1,7 +1,7 @@
 var formErrMsg = 'Please fill the form first!';
 var defaultInpuMap = new Map();
 
-function checkEmailInput(email) {
+var checkEmailInput = function(email) {
 	var re = /\S+@\S+\.\S+/;
 	var result = re.test(email);
 	if (!result) {
@@ -21,9 +21,9 @@ function checkEmailInput(email) {
 		color : 'white'
 	});
 	return true;
-}
+};
 
-function checkEmptyInput(input, field) {
+var checkEmptyInput = function(input, field) {
 	var input_id = '#contact-form-' + field;
 	var label_id = '#contact-label-' + field;
 	var defaultText = defaultInpuMap.get(input_id);
@@ -44,16 +44,16 @@ function checkEmptyInput(input, field) {
 		color: 'white'
 	});
 	return true;
-}
+};
 
-function checkAllInputs() {
+var checkAllInputs = function() {
 	return checkEmailInput($('#contact-form-email').val())
 			&& checkEmptyInput($('#contact-form-name').val(), 'name')
 			&& checkEmptyInput($('#contact-form-subject').val(), 'subject')
 			&& checkEmptyInput($('#contact-form-message').val(), 'message');
-}
+};
 
-function setDefaultBackIfNeeded(inputElement) {
+var setDefaultBackIfNeeded = function(inputElement) {
 	var id = inputElement.id;
 	var defaultText = defaultInpuMap.get(id);
 	var itsLabel = $("label[for='" + id + "']");
@@ -62,9 +62,9 @@ function setDefaultBackIfNeeded(inputElement) {
 	if(newText == '') {
 		itsLabel.text(defaultText);
 	} 
-}
+};
 
-function removeDefaultLabel(inputElement) {
+var removeDefaultLabel = function(inputElement) {
 	var id = inputElement.id;
 	var itsLabel = $("label[for='" + id + "']");
 	var oldText = itsLabel.html();
@@ -74,7 +74,7 @@ function removeDefaultLabel(inputElement) {
 	}
 	
 	itsLabel.text('');
-}
+};
 
 $(document).ready(function() {
 	// remove labels when typing

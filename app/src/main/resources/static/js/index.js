@@ -72,10 +72,10 @@ TextTyper.prototype.typeIt = function() {
 	}, delta);
 };
 
-function typeForClass(id, data, period, loop, style, delta1, delta2, showIntroButton) {
+var typeForClass = function(id, data, period, loop, style, delta1, delta2, showIntroButton) {
 	var element = document.getElementById(id);
 	new TextTyper(element, id, data, period, loop, style, delta1, delta2, showIntroButton);
-}
+};
 
 var showIntroButton = function() {
 	$('#intro-buttons').show();
