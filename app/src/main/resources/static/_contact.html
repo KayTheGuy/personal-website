@@ -8,7 +8,8 @@
 <meta name="author" content="Kayhan Dehghani">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Contact | Kayhan Dehghani</title>
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Nunito" />
+<link rel="stylesheet" type="text/css"
+	href="//fonts.googleapis.com/css?family=Nunito" />
 <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -26,15 +27,22 @@
 <body>
 	<div id="contact-body" class="mdl-layout">
 		<div class="menu-row mdl-shadow--4dp">
-				<div class="menu-dropdown menu-item no-link">
-					<a>Projects</a>
-					
-					<div class="menu-dropdown-content" style="z-index:10; -webkit-transform: translate3d(0px, 0px, 0px);">
-						<div class="menu-dropdown-item"><a href="/image-album">Photo Gallery</a></div>
-						<div class="menu-dropdown-item"><a href="/image-editor">Image Editor</a></div>
+			<div class="menu-dropdown menu-item no-link">
+				<a>Projects</a>
+
+				<div class="menu-dropdown-content"
+					style="z-index: 10; -webkit-transform: translate3d(0px, 0px, 0px);">
+					<div class="menu-dropdown-item">
+						<a href="/image-album">Photo Gallery</a>
+					</div>
+					<div class="menu-dropdown-item">
+						<a href="/image-editor">Image Editor</a>
 					</div>
 				</div>
-				<div class="menu-item"><a href="/">Home</a></div>
+			</div>
+			<div class="menu-item">
+				<a href="/">Home</a>
+			</div>
 		</div>
 		<!--  Main content -->
 		<div class="mdl-layout__content">
@@ -54,8 +62,9 @@
 						<div class="contact-1 mdl-cell mdl-cell--4-col">
 							<div class="mdl-textfield mdl-textfield--floating-label">
 								<input class="mdl-textfield__input" type="text"
-									id="contact-form-name" name="name"> <label id="contact-label-name"
-									class="mdl-textfield__label" for="contact-form-name">Name...</label>
+									id="contact-form-name" name="name"> <label
+									id="contact-label-name" class="mdl-textfield__label"
+									for="contact-form-name">Name...</label>
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--4-col"></div>
@@ -65,8 +74,9 @@
 						<div class="contact-2 mdl-cell mdl-cell--4-col">
 							<div class="mdl-textfield mdl-textfield--floating-label">
 								<input class="mdl-textfield__input" type="text"
-									id="contact-form-email" name="email"> <label id="contact-label-email"
-									class="mdl-textfield__label" for="contact-form-email">Email...</label>
+									id="contact-form-email" name="email"> <label
+									id="contact-label-email" class="mdl-textfield__label"
+									for="contact-form-email">Email...</label>
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--4-col"></div>
@@ -76,8 +86,9 @@
 						<div class="contact-3 mdl-cell mdl-cell--4-col">
 							<div class="mdl-textfield mdl-textfield--floating-label">
 								<input class="mdl-textfield__input" type="text"
-									id="contact-form-subject" name="subject"> <label id="contact-label-subject"
-									class="mdl-textfield__label" for="contact-form-subject">Subject...</label>
+									id="contact-form-subject" name="subject"> <label
+									id="contact-label-subject" class="mdl-textfield__label"
+									for="contact-form-subject">Subject...</label>
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--4-col"></div>
@@ -88,7 +99,8 @@
 							<div class="mdl-textfield">
 								<textarea class="mdl-textfield__input" rows="6"
 									id="contact-form-message" name="message"></textarea>
-								<label id="contact-label-message" class="mdl-textfield__label" for="contact-form-message">Message...</label>
+								<label id="contact-label-message" class="mdl-textfield__label"
+									for="contact-form-message">Message...</label>
 							</div>
 						</div>
 						<div class="mdl-cell mdl-cell--4-col"></div>
@@ -134,8 +146,8 @@
 						<br /> <br />
 						<div class="contact-3 ">
 							<a href="https://github.com/kayhandehghani"><img
-								src="../icons/github-logo-green.svg" alt="Smiley face" height="25"
-								width="25"></a>
+								src="../icons/github-logo-green.svg" alt="Smiley face"
+								height="25" width="25"></a>
 						</div>
 						<br /> <br />
 						<div class="contact-4">
@@ -151,9 +163,15 @@
 			</div>
 			<div id="main-message" class="mdl-grid mdl-shadow--8dp">
 				<div id="main-message-div" class="mdl-cell mdl-cell--12-col">
-					<span id="main-message-close">&times;</span>
-					<span id="main-message-txt"></span>
+					<span id="main-message-close">&times;</span> <span
+						id="main-message-txt"></span>
 				</div>
+			</div>
+		</div>
+		<!--  Modal Resume -->
+		<div id="spinner-modal-div" class="modal">
+			<div class="modal-content">
+				<div class="spinner"></div>
 			</div>
 		</div>
 	</div>

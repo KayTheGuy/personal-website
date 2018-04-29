@@ -3,7 +3,7 @@ INSERT INTO image (image_name, image_type, image_path, image_lat, image_lng, ima
 ('Brown Wall', 'jpg', '/files/album/Brown-Wall.jpg', 49.2772059, -123.0829845, '2017-03-04'),
 ('Coal Harbour', 'jpg', '/files/album/Stanley-Harbour.jpg', 49.2975529, -123.1263058, '2017-03-04'),
 ('Cool Windows', 'jpg', '/files/album/Windows-Branches.jpg', 49.2839641, -123.1208498, '2017-03-04'),
-('Other Cool Windows', 'jpg', '/files/album/Windows.jpg', 49.2839641, -123.1208498, '2017-03-04'),
+('Cool Windows 2', 'jpg', '/files/album/Windows.jpg', 49.2839641, -123.1208498, '2017-03-04'),
 ('Cool Couples', 'jpg', '/files/album/Couple-Walking.jpg', 49.2772059, -123.08298, '2017-03-10'),
 ('Reflection', 'jpg', '/files/album/Yellow-Reflection.jpg', 49.2822651, -123.0813408, '2017-03-10'),
 ('GT4', 'jpg', '/files/album/GT4.jpg', 49.2811806, -123.1009695, '2017-03-15'),

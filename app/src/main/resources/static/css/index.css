@@ -36,10 +36,6 @@
 	animation: pop-up 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-#intro-buttons {
-	display: none;
-}
-
 #skill {
 	text-align: center;
 	display: inline-block;
@@ -47,37 +43,20 @@
 }
 
 #skills-title {
-	display: none;
-	font-size: 150%;
+	font-size: 120%;
 }
 
 h5, h6 {
 	font-family: "Poiret One";
 	font-weight: 600;
-}
-
-#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text {
-	animation: slideInColorLeft 1s;
-}
-
-#presidents-text, #deans-text, #cgpa-text, #c-cgpa-text{
-	font-size: 130%;
-}
-
-#presidents-time, #deans-time, #cgpa-num, #c-cgpa-num {
-	animation: showUp 0.5s ease;
-	animation-delay: 2.2s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
-	font-size: 100%;
-	text-align: center;
+	font-size: 90%;
 }
 
 #highlights-content {
 	width: 100%;
 	color: #04070f;
 	padding-bottom: 20px;
-	background: linear-gradient(to right, #2a6c73 , #69979b);
+	background: linear-gradient(to bottom, #2a6c73 , #2a6c73);
 }
 
 #highlights-content .first-letter {
@@ -95,6 +74,7 @@ h5, h6 {
 
 #copyright-info {
 	text-align: center;
+	bottom: 0;
 }
 
 #intro-with-header {
@@ -117,7 +97,7 @@ a {
 	animation: shrink 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-#education-intro {
+#highlights-intro {
 	text-align: center;
 	margin: 0 auto;
 }
@@ -131,18 +111,11 @@ a {
 #course-table-div {
 	display: none;
 	margin: 0 auto;
-}
-
-.academic-box {
-	border-bottom: 1px solid white;
-	animation: showUp 2.5s ease;
-	animation-delay: 2.5s;
-	animation-fill-mode: forwards;
-	visibility: hidden;
+	margin-bottom: 2vw;
 }
 
 #show-courses-button {
-	background: linear-gradient(to right, #04070f , #535353);
+	background: rgba(0,0,0,0.5);
 	color: white;
 }
 
@@ -151,32 +124,41 @@ a {
 }
 
 .mdl-data-table {
-	font-size: 100%;
-	background: linear-gradient(to right, #04070f , #535353);
+	background: rgba(0,0,0,0.5);
 	color: white;
 	letter-spacing: 0.3em;
 }
 
 .mdl-data-table th {
-	font-size: 130%;
+	font-size: 90%;
 	color: white;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.1em;
+}
+
+.mdl-data-table td {
+	font-size: 90%;
+	color: white;
+	letter-spacing: 0.1em;
 }
 
 .td-row:hover {
-	color: #04070f;
-	background-color: #2a6c73;
 	animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;	
 	transform: translate3d(0, 0, 0);
+}
+
+.td-row:hover > td {
+	color: #04070f;
 }
 
 .rest-bottom {
 	font-wiehgt: 600;
 	position: relative;
-	bottom: 0;
+	font-size: 70%;
+	color: #2a6c73;
+	margin: auto;
 }
 
-#resume-page-1 img, #resume-page-2 img{
+#resume-page-1 img, #resume-page-2 img {
 	width: 100%;
 	height: auto;
 }
@@ -189,8 +171,8 @@ a {
 	margin: 0 auto;
 }
 
-#divide-image1 {
+#divide-image1, #divide-image2 {
+	height: 200px;
 	background-attachment: fixed;
 	background-image: url('/img/back.jpg');
-	background-repeat:   no-repeat;
 }

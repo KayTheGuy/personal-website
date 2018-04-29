@@ -199,11 +199,10 @@ $(window).on(
 					});
 
 			// event handler for dynamically added elements
-			var imgModal = document.getElementById('image-prev-div');
 			$(document).on("click", ".image-album", function() {
 				currentImgID = parseInt(this.id);
 				setModalImage(currentImgID);
-				imgModal.style.visibility = "visible";
+				makeElementsVisible(['image-prev-div']);
 			});
 
 			// navigate through album
@@ -229,7 +228,6 @@ $(window).on(
 			    }
 			});
 
-			var mapModal = document.getElementById('map-prev-div');
 			$(document).on(
 				"click touchstart",
 				".image-map",
@@ -239,7 +237,7 @@ $(window).on(
 							parseFloat($(this).data('lng'))
 					);
 					
-					mapModal.style.visibility = "visible";
+					makeElementsVisible(['map-prev-div']);
 			});
 			
 
@@ -247,7 +245,6 @@ $(window).on(
 			$('.close').on('click touchstart', function(e) {
 				e.preventDefault();
 				e.stopPropagation();
-				imgModal.style.visibility = "hidden";
-				mapModal.style.visibility = "hidden";
+				makeElementsHidden(['image-prev-div', 'map-prev-div']);
 			});
 		});

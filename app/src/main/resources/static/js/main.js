@@ -20,6 +20,20 @@ var hideSpinner = function() {
 	$('.spinner').hide();
 };
 
+var makeElementsVisible = function(ids) {
+	ids.forEach(function(id) {
+		var el = document.getElementById(id);
+		el.style.visibility = 'visible';
+	});
+}
+
+var makeElementsHidden = function(ids) {
+	ids.forEach(function(id) {
+		var el = document.getElementById(id);
+		el.style.visibility = 'hidden';
+	});
+}
+
 var triggerBackToTop = function() {
 	var top = $(this).scrollTop();
 	if(top > 500) {

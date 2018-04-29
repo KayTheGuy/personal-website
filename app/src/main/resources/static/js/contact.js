@@ -14,9 +14,6 @@ var checkEmailInput = function(email) {
 		});
 		return false;
 	}
-	$('#contact-form-email').css({
-		borderBottom : '1px solid rgba(0,0,0,.12)'
-	});
 	$('#contact-label-email').css({
 		color : 'white'
 	});
@@ -37,9 +34,6 @@ var checkEmptyInput = function(input, field) {
 		});
 		return false;
 	}
-	$(input_id).css({
-		borderBottom : '1px solid rgba(0,0,0,.12)'
-	});
 	$(label_id).css({
 		color: 'white'
 	});
@@ -62,6 +56,14 @@ var setDefaultBackIfNeeded = function(inputElement) {
 	if(newText == '') {
 		itsLabel.text(defaultText);
 	} 
+};
+
+var emptyForm = function() {
+	var formElements = $('form').find("input[type=text], textarea");
+	formElements.val("");
+	formElements.each(function(i) {
+		setDefaultBackIfNeeded(formElements[i]);
+	});
 };
 
 var removeDefaultLabel = function(inputElement) {
@@ -119,11 +121,12 @@ $(document).ready(function() {
 				contentType : "application/json",
 				dataType : 'json',
 				data : JSON.stringify(formData),
-//				beforeSend : showSpinner()
+				beforeSend : makeElementsVisible(['spinner-modal-div'])
 			}).done(function() {
 				showMessage('Awesome! I will get back to you as soon as possible.');
+				emptyForm();
 			}).always(function() {
-				// always
+				makeElementsHidden(['spinner-modal-div']);
 			}).fail(function(message) {
 				showMessage('Unable to send the message. Please try again.');
 			});
