@@ -1,3 +1,7 @@
+.. image:: https://landscape.io/github/fpietka/github-labels-copy/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/fpietka/github-labels-copy/master
+   :alt: Code Health
+
 # <span style='color:#2a6c73'>My Website</span>
 
 <a style='color:#39CCCC   ' href="http://www.kayhandehghani.com/">Visit Me!</a>
