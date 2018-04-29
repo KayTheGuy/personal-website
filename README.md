@@ -1,5 +1,5 @@
 
-![Shippable](https://img.shields.io/shippable/5444c5ecb904a4b21567b0ff.svg)(https://GitHub.com/Naereen/StrapDown.js/releases/)
+![Shippable](https://img.shields.io/shippable/5444c5ecb904a4b21567b0ff.svg)
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](http://shields.io/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
