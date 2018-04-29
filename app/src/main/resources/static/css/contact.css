@@ -13,6 +13,7 @@
 #contact-body {
     color: white;
 	background: #04070f;
+	background-image: url('/img/world-map.jpg');
 }
 
 #my-email {

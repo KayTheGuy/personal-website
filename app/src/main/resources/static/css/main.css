@@ -561,6 +561,7 @@ a {
 
 .mdl-layout {
 	background: #04070f;
+	background-image: url('/img/texture.png');
 }
 
 .divide {
