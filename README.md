@@ -1,6 +1,6 @@
-.. image:: https://landscape.io/github/fpietka/github-labels-copy/master/landscape.svg?style=flat
-   :target: https://landscape.io/github/fpietka/github-labels-copy/master
-   :alt: Code Health
+[![Build Status - Master](https://travis-ci.org/IBM-Swift/Health.svg?branch=master)](https://travis-ci.org/IBM-Swift/Health)
+![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat)
+![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat)
 
 # <span style='color:#2a6c73'>My Website</span>
 
