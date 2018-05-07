@@ -104,20 +104,20 @@ a {
 }
 
 .mdl-data-table {
-	background: rgba(42,108,115,0.2);
+	background: rgba(42,108,115,1);
 	color: white;
 	letter-spacing: 0.3em;
 }
 
 .mdl-data-table th {
 	font-size: 90%;
-	color: white;
+	color: #04070f;
 	letter-spacing: 0.1em;
 }
 
 .mdl-data-table td {
 	font-size: 90%;
-	color: white;
+	color: #04070f;
 	letter-spacing: 0.1em;
 }
 
@@ -162,4 +162,16 @@ a {
 	height: 200px;
 	background-attachment: fixed;
 	background-image: url('/img/back.jpg');
+}
+
+.highlight-badge {
+	color: #2a6c73;
+	padding-top: 20px;
+	border: 1px solid #2a6c73;
+	border-radius: 60px;
+}
+
+.highlight-badge:hover {
+	-webkit-animation: borderColor 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: borderColor 0.1s cubic-bezier(0.2, 0, 0.5, 0);
 }

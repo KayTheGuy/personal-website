@@ -1,3 +1,12 @@
+@font-face {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 100;
+    src:
+      local("Nunito"),
+      url("/fonts/Nunito-Regular.ttf") format("truetype");
+}
+
 @keyframes spinnerTurn { 
 	100% {
 		transform: rotateZ(360deg);
@@ -42,6 +51,7 @@
 		left: -400%;
 	}
 }
+
 @keyframes messageSlidBacK {
 	0% {
 		left: 0%;
@@ -59,6 +69,7 @@
 		left: 0%;
 	}
 }
+
 @keyframes messageSlid {
 	0% {
 		left: -400%;
@@ -78,6 +89,7 @@
         transform: translateZ(160px);
 	}
 }
+
 @keyframes comeFront {
 	0% {
 		-webkit-transform: translateZ(0);
@@ -314,11 +326,13 @@ body {
 }
 
 h1 {
-	font-size: 280%;
+	font-family: "Nunito", "Roboto","Helvetica","Arial",sans-serif !important;
+	font-size: 170%;
 	font-weight: 400;
 }
 
 h5, h6, .like-h6 {
+	font-family: "Nunito", "Roboto","Helvetica","Arial",sans-serif !important;
 	font-size: 120%;
 	letter-spacing: 0.2em;
 	font-weight: 400;
@@ -348,20 +362,20 @@ h5, h6, .like-h6 {
 
 .first-letter {
 	font-weight: 100;
-	font-size: 110%;
+	font-size: 130%;
 	color: #2a6c73;
 }
 
 .mdl-button {
 	background: linear-gradient(to right, #2a6c73 , #56898e);
-	color: white;
+	color: #04070f;
 	letter-spacing: 0.2em;
 	border-radius: 30px;
 	font-weight: 400;
 }
 
 .mdl-button:hover {
-	color: #04070f;
+	color: white;
 	-webkit-animation: shadow-blink 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: shadow-blink 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -424,6 +438,7 @@ h5, h6, .like-h6 {
 }
 
 .mdl-textfield__input {
+	font-family: "Nunito", "Roboto","Helvetica","Arial",sans-serif !important;
 	border-bottom: 1px solid white;
 	font-size: 100%;
 	font-weight: 100;
