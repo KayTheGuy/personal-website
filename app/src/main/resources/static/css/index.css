@@ -167,11 +167,10 @@ a {
 .highlight-badge {
 	color: #2a6c73;
 	padding-top: 20px;
-	border: 1px solid #2a6c73;
 	border-radius: 60px;
 }
 
 .highlight-badge:hover {
-	-webkit-animation: borderColor 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    animation: borderColor 0.1s cubic-bezier(0.2, 0, 0.5, 0);
+	-webkit-animation: shake 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shake 0.2s cubic-bezier(0.2, 0, 0.5, 0);
 }
