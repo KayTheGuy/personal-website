@@ -41,7 +41,7 @@ var setModalImage = function(imgId) {
 		$('#image-modal-before').hide();
 	}
 
-	if (imgId < numOfLoad * numOfImagePerLoad) {
+	if (imgId < numOfLoad * numOfImagePerLoad && imgId < imgList.length) {
 		$('#image-modal-next').show();
 	} else if (imgId == numOfLoad * numOfImagePerLoad && imgId < imgList.length) {
 		renderMoreImages();
@@ -117,7 +117,7 @@ var renderMoreImages = function() {
 	
 	// hover for only mouse
 	$('.image-album-div').on('mouseover', function() {
-		$(this).find('img').css({opacity: '0.4'});
+		$(this).find('img').css({opacity: '0.6'});
 		$(this).find('.image-album-middle').css({opacity: '1'});
 	});
 	$('.image-album-div').on('mouseleave', function() {

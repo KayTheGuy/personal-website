@@ -20,6 +20,10 @@
 	}
 }
 
+body {
+	background-attachment: fixed;
+	background-image: url('/img/texture.png');	
+}
 
 #image-editor-select-button {
 	margin: 0 auto;

@@ -321,8 +321,6 @@ body {
 	font-family: "Nunito", "Roboto","Helvetica","Arial",sans-serif !important;
 	font-style: normal;
 	background: #04070f;
-	background-attachment: fixed;
-	background-image: url('/img/texture.png');
 	font-weight: 400;
 }
 
@@ -465,14 +463,14 @@ h5, h6, .like-h6 {
 	color: #2a6c73;
 	display: inline-block;
 	font-weight: 600;
+   	border-bottom: 1px solid rgba(0,0,0,0);
 }
 
 .menu-item:hover {
-	background: linear-gradient(to right, #2a6c73 , #54888c);
 	cursor: pointer;
 	-webkit-animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-   	border-radius: 30px;
+   	border-bottom: 1px solid white;
 }
 
 .menu-item:hover.no-link {
@@ -489,7 +487,9 @@ h5, h6, .like-h6 {
 	letter-spacing: 0.2em;
 	color: #2a6c73;
 	line-height: 120%;
-	background: #04070f''
+	border-radius: 30px;
+    box-shadow: 8px 8px 8px 8px rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0);
 }
 
 .menu-item > a, .menu-dropdown-item > a {
@@ -499,7 +499,6 @@ h5, h6, .like-h6 {
 
 
 .menu-dropdown-item:hover {
-	background: linear-gradient(to right, #2a6c73 , #56898e);
 	cursor:pointer;
 	border-radius: 30px;
 }
@@ -600,7 +599,7 @@ textarea:focus ~ label {
 
 #main-message {
 	display: none;
-	background-color: white;
+	background-color: #2a6c73;
 	color: #04070f;
 	position: fixed;
 	top: 50%;
@@ -628,14 +627,14 @@ textarea:focus ~ label {
 	margin: 15px;
 	margin-right: 0;
 	margin-top: auto;
-	color: #2a6c73;
+	color: #04070f;
 	font-size: 200%;
 	font-weight: 400;
 	float: right;
 }
 
 #main-message-close:hover {
-	color: #04070f;
+	color: white;
 	-webkit-animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shake 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
