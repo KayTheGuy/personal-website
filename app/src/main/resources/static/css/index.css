@@ -57,6 +57,7 @@ h5, h6 {
 	color: white;
 	padding-bottom: 20px;
 	background: #04070f;
+	background-attachment: fixed;
 	background-image: url('/img/texture.png');
 }
 
@@ -67,6 +68,7 @@ h5, h6 {
 
 #intro-with-header {
 	background: #04070f;
+	background-attachment: fixed;
 	background-image: url('/img/world-map.jpg');
 }
 
@@ -162,6 +164,10 @@ a {
 	height: 200px;
 	background-attachment: fixed;
 	background-image: url('/img/back.jpg');
+}
+
+#sfu-link {
+	color: white;
 }
 
 .highlight-badge {

@@ -62,8 +62,8 @@ var setModalImage = function(imgId) {
 
 var renderMoreImages = function() {
 	var currentPic, currentPicDiv, currentSpaceDiv, currentMiddleDiv, currentRow;
-	startID = numOfLoad * numOfImagePerLoad;
-	endID = Math.min(startID + numOfImagePerLoad, imgList.length);
+	var startID = numOfLoad * numOfImagePerLoad;
+	var endID = Math.min(startID + numOfImagePerLoad, imgList.length);
 	numOfLoad++;
 	var html = []
 	for (var i = startID; i < endID; i++) {
@@ -143,7 +143,7 @@ var dynamicImageLoad = function() {
 var oldRatioNum = -1;
 var oldTotNum = -1;
 var setImageCounter = function() {	
-	var total = numOfImagePerLoad * numOfLoad;
+	var total = Math.min(numOfImagePerLoad * numOfLoad, imgList.length);
 	var ratio = Math.round((1 - counterRatio) * total) + 1;
 	if (!loading && ratio <= total) {
 		var ratioEl = document.getElementById('image-album-counter-ratio');
