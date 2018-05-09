@@ -43,8 +43,18 @@ TextTyper.prototype.typeIt = function() {
 		if (this.isDeleting) { delta /= 1.5; }
 		
 		if (!this.isDeleting && this.txt === fullTxt) {
-			delta = this.period;
-			this.isDeleting = true;
+			if (this.count === this.dataList.length - 1) {
+				if(this.fallback) {
+					var self = this;
+					var timeoutId = setTimeout(function() {
+						self.fallback();
+					}, 2000);
+				}
+				return;
+			} else {
+				delta = this.period;				
+				this.isDeleting = true;
+			}
 		} else if (this.isDeleting && this.txt === '') {
 			this.isDeleting = false;
 			this.count++;
@@ -54,8 +64,6 @@ TextTyper.prototype.typeIt = function() {
 		setTimeout(function() {
 			that.typeIt();
 		}, delta);
-	} else {
-		if(this.fallback) this.fallback();
 	}
 };
 
@@ -66,9 +74,13 @@ var typeForClass = function(id, data, period, style, delta1, delta2, fallback) {
 
 var toggleLoop = function() {
 	var skillTitleEl = document.getElementById('skills-title');
-	if(skillTitleEl.innerHTML === 'Languages: ') {
+	if (skillTitleEl.innerHTML.startsWith('Languages: ')) {
 		skillTitleEl.innerHTML = 'Tools: '
-		typeForClass('skills-value', myTools, 1000, lanStyle, 140, 500, null);
+		typeForClass('skills-value', myTools, 1000, lanStyle, 140, 500, toggleLoop);
+	} else if (skillTitleEl.innerHTML.startsWith('Tools: ')) {
+		$('#skills-reload').show();
+		$('#skills-title').hide();
+		$('#skills-value').hide();
 	}
 };
 
@@ -86,6 +98,13 @@ $(window).on('load', function() {
 		}
 		$(this).toggleClass('reversed-button');
 		coursesVisible = !coursesVisible;
+	});
+	
+	$('#skills-reload').click(function() {
+		$('#skills-value').show();
+		$('#skills-title').show();
+		typeForClass('skills-value', myLanguage, 1000, lanStyle, 140, 500, toggleLoop);
+		$('#skills-reload').hide();
 	});
 	
 	// RESUME

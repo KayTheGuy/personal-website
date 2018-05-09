@@ -42,7 +42,13 @@
     transition: all ease 750ms;
 }
 
+#skills-reload {
+	cursor: pointer;
+	display: none;
+}
+
 #skills-title {
+	line-height: 36px;
 	font-size: 120%;
 }
 
@@ -158,6 +164,16 @@ a {
 
 #download-resume {
 	margin: 0 auto;
+}
+
+#social-links {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#social-links-git, #social-links-link {
+	margin: 3px;
+	margin-top: 82px;
 }
 
 #divide-image1, #divide-image2 {
