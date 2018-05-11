@@ -75,12 +75,13 @@ var typeForClass = function(id, data, period, style, delta1, delta2, fallback) {
 var toggleLoop = function() {
 	var skillTitleEl = document.getElementById('skills-title');
 	if (skillTitleEl.innerHTML.startsWith('Languages: ')) {
-		skillTitleEl.innerHTML = 'Tools: '
 		typeForClass('skills-value', myTools, 1000, lanStyle, 140, 500, toggleLoop);
+		skillTitleEl.innerHTML = 'Tools: '
 	} else if (skillTitleEl.innerHTML.startsWith('Tools: ')) {
 		$('#skills-reload').show();
 		$('#skills-title').hide();
 		$('#skills-value').hide();
+		skillTitleEl.innerHTML = 'Languages: '
 	}
 };
 
