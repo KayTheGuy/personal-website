@@ -1,5 +1,5 @@
 var myLanguage = [ "Java", "Python", "JavaScript", "SQL", "CSS", "HTML" ];
-var myTools = [ "Spring", "SQL Server", "MySQL", "MongoDB", "Git" ];
+var myTools = [ "Spring", "SQL Server", "MongoDB", "Git" ];
 var lanStyle = "{ font-family: \"Poiret One\"; font-size: 140%; }";
 var introStyle = "{ font-weight: 400; letter-spacing: 0.1em; }";
 
